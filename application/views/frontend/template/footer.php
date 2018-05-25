@@ -1,5 +1,6 @@
         
-
+<div class="row">
+<div class="col-md-12">
 
         <section id="pesquisa" class="newsletter">
             <div class="container">
@@ -22,7 +23,8 @@
             </div>
         </section><!-- End of Newsletter section -->
 
-
+</div>
+</div>
 
         <section id="footer" class="footer">
             <div class="container">
@@ -75,7 +77,7 @@
 
         <!-- INICIO DO MODAL -->
 
-            <div class="container" ">
+            <div class="container" >
                 
                 <div class="modal fade col-md-4 " style="background-color: rgba(1,1,1,0); box-shadow: 10px 10px rgba(1,1,1,0);" id="myModal" >
 

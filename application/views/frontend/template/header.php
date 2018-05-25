@@ -1,10 +1,10 @@
-    <body data-spy="scroll" data-target=".navbar-desktop">
+    <body data-spy="scroll" data-target=".navbar-desktop" >
         <!-- Start your project here-->
         <!--Navbar-->
 
         <div class='preloader'><div class='loaded'>&nbsp;</div></div>
 
-        <nav class="navbar navbar-fixed-top navbar-light bg-faded"  style="background-color: rgba(0,0,0,0); ">
+        <nav class="navbar navbar-fixed-top navbar-light bg-faded"  style="background-color: rgba(0,0,0,0);     overflow-y: hidden; ">
             <!--Collapse button-->
             <div class="container">
                 <a href="#" data-activates="mobile-menu" class="button-collapse right"><i class="fa fa-bars black-text"></i></a>
