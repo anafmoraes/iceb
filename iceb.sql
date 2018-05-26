@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 26-Maio-2018 às 20:55
+-- Generation Time: 26-Maio-2018 às 21:07
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -75,25 +75,12 @@ CREATE TABLE `diretoria` (
 --
 
 CREATE TABLE `noticias` (
-  `id` int(11) NOT NULL,
   `Titulo` varchar(150) NOT NULL,
   `Resumo` text NOT NULL,
   `Imagem` varbinary(1) DEFAULT NULL,
-  `link` varchar(500) NOT NULL,
+  `Link` varchar(200) NOT NULL,
   `Data` date NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `noticias`
---
-
-INSERT INTO `noticias` (`id`, `Titulo`, `Resumo`, `Imagem`, `link`, `Data`) VALUES
-(1, 'Coisas acontecem no ICEB', 'Lorem ipsum justo ornare nisi cubilia felis quisque habitant lobortis nostra mollis etiam vel, bibendum fringilla himenaeos bibendum dolor viverra porta nunc taciti tincidunt platea. accumsan imperdiet elementum nec risus class habitasse aliquet lectus amet feugiat elementum neque ultricies, fringilla fusce porta fusce fermentum rutrum taciti curabitur iaculis feugiat ac. quis etiam elit scelerisque et mi aptent nulla aliquam, eget quisque felis etiam at gravida morbi vel elit, eu aptent velit proin ac velit congue. dolor ligula lacus imperdiet ut sagittis torquent augue torquent, et urna blandit viverra habitant nisi sociosqu fusce augue, bibendum conubia erat suspendisse lobortis feugiat libero. ', NULL, 'https://www.google.com/', '2018-05-09'),
-(2, 'Coisa tosca acontece no ICEB', 'Lorem ipsum justo ornare nisi cubilia felis quisque habitant lobortis nostra mollis etiam vel, bibendum fringilla himenaeos bibendum dolor viverra porta nunc taciti tincidunt platea. accumsan imperdiet elementum nec risus class habitasse aliquet lectus amet feugiat elementum neque ultricies, fringilla fusce porta fusce fermentum rutrum taciti curabitur iaculis feugiat ac. quis etiam elit scelerisque et mi aptent nulla aliquam, eget quisque felis etiam at gravida morbi vel elit, eu aptent velit proin ac velit congue. dolor ligula lacus imperdiet ut sagittis torquent augue torquent, et urna blandit viverra habitant nisi sociosqu fusce augue, bibendum conubia erat suspendisse lobortis feugiat libero. ', NULL, 'https://www.google.com/', '2018-05-10'),
-(3, 'ICEB = coisa acontecendo!', 'Lorem ipsum justo ornare nisi cubilia felis quisque habitant lobortis nostra mollis etiam vel, bibendum fringilla himenaeos bibendum dolor viverra porta nunc taciti tincidunt platea. accumsan imperdiet elementum nec risus class habitasse aliquet lectus amet feugiat elementum neque ultricies, fringilla fusce porta fusce fermentum rutrum taciti curabitur iaculis feugiat ac. quis etiam elit scelerisque et mi aptent nulla aliquam, eget quisque felis etiam at gravida morbi vel elit, eu aptent velit proin ac velit congue. dolor ligula lacus imperdiet ut sagittis torquent augue torquent, et urna blandit viverra habitant nisi sociosqu fusce augue, bibendum conubia erat suspendisse lobortis feugiat libero. ', NULL, 'https://www.google.com/', '2018-05-04'),
-(4, 'Coisinha no ICEB', 'Lorem ipsum justo ornare nisi cubilia felis quisque habitant lobortis nostra mollis etiam vel, bibendum fringilla himenaeos bibendum dolor viverra porta nunc taciti tincidunt platea. accumsan imperdiet elementum nec risus class habitasse aliquet lectus amet feugiat elementum neque ultricies, fringilla fusce porta fusce fermentum rutrum taciti curabitur iaculis feugiat ac. quis etiam elit scelerisque et mi aptent nulla aliquam, eget quisque felis etiam at gravida morbi vel elit, eu aptent velit proin ac velit congue. dolor ligula lacus imperdiet ut sagittis torquent augue torquent, et urna blandit viverra habitant nisi sociosqu fusce augue, bibendum conubia erat suspendisse lobortis feugiat libero. ', NULL, 'https://www.google.com/', '2018-05-08'),
-(5, 'Coisa acontece no ICEB de novo', 'Lorem ipsum justo ornare nisi cubilia felis quisque habitant lobortis nostra mollis etiam vel, bibendum fringilla himenaeos bibendum dolor viverra porta nunc taciti tincidunt platea. accumsan imperdiet elementum nec risus class habitasse aliquet lectus amet feugiat elementum neque ultricies, fringilla fusce porta fusce fermentum rutrum taciti curabitur iaculis feugiat ac. quis etiam elit scelerisque et mi aptent nulla aliquam, eget quisque felis etiam at gravida morbi vel elit, eu aptent velit proin ac velit congue. dolor ligula lacus imperdiet ut sagittis torquent augue torquent, et urna blandit viverra habitant nisi sociosqu fusce augue, bibendum conubia erat suspendisse lobortis feugiat libero. ', NULL, 'https://www.google.com/', '2018-05-06'),
-(6, 'Coisa rola no Iceb novamente', 'Lorem ipsum justo ornare nisi cubilia felis quisque habitant lobortis nostra mollis etiam vel, bibendum fringilla himenaeos bibendum dolor viverra porta nunc taciti tincidunt platea. accumsan imperdiet elementum nec risus class habitasse aliquet lectus amet feugiat elementum neque ultricies, fringilla fusce porta fusce fermentum rutrum taciti curabitur iaculis feugiat ac. quis etiam elit scelerisque et mi aptent nulla aliquam, eget quisque felis etiam at gravida morbi vel elit, eu aptent velit proin ac velit congue. dolor ligula lacus imperdiet ut sagittis torquent augue torquent, et urna blandit viverra habitant nisi sociosqu fusce augue, bibendum conubia erat suspendisse lobortis feugiat libero. ', NULL, 'https://www.google.com/', '2018-05-29');
 
 -- --------------------------------------------------------
 
@@ -138,23 +125,13 @@ ALTER TABLE `diretoria`
 -- Indexes for table `noticias`
 --
 ALTER TABLE `noticias`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`Data`);
 
 --
 -- Indexes for table `pos-graduaçao`
 --
 ALTER TABLE `pos-graduaçao`
   ADD PRIMARY KEY (`Titulo`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `noticias`
---
-ALTER TABLE `noticias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
