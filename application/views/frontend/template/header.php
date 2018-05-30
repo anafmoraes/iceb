@@ -13,7 +13,7 @@
                 <center>
                 <div class="navbar-desktop " style="margin-top:-10px">
                     <!--Navbar Brand-->
-                    <a class="navbar-brand" href="#home" ><img scr="/iceb/assets/frontend/img/ufop.png" alt="" style="width: 15px;"></a>
+                    <a class="navbar-brand" href="#home" ><img scr="/iceb/assets/frontend/img/ufop.png" alt="" style="width: 155px;"></a>
                     <!--Links-->
                     <ul class="nav navbar-nav  text-uppercase" style="margin-top:20px;  ">
 
