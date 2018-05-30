@@ -12,6 +12,7 @@ body{
     background:#fff; 
     font-family: "Roboto";
     font-weight: 300;
+    overflow-x:  hidden;
 
 
 }
@@ -134,7 +135,7 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
     color: #000 !important;
     line-height: 75px;
     transition: all 0.3s;
-    
+
     
 }
 .small .navbar-brand {
@@ -150,13 +151,28 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 
 .navbar-nav .nav-link{
     padding: 0;
+
 }
+a .nav-link:hover{
+    padding: 0;
+    color:#d8702b;
+    
+}
+a .nav-link:focus{
+    padding: 0;
+    color:#d8702b;
+    
+}
+ .menu :hover{
+     color:#d8702b !important;
+ }
 
 .navbar-light .navbar-nav .nav-link{
     color:#ff00dc;
 }
+
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-    color:#d8702b;
+    color:#d8702b !important;
 }
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .active>.nav-link:focus, .navbar-light .navbar-nav .active>.nav-link:hover, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.active:focus, .navbar-light .navbar-nav .nav-link.active:hover, .navbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .nav-link.open:focus, .navbar-light .navbar-nav .nav-link.open:hover, .navbar-light .navbar-nav .open>.nav-link, .navbar-light .navbar-nav .open>.nav-link:focus, .navbar-light .navbar-nav .open>.nav-link:hover{
     color:#d8702b;
@@ -270,7 +286,7 @@ div.panel.show {
 
 
 .skill {
-    overflow:hidden;
+    overflow-x:hidden;
     margin-bottom: 0;
     padding-top: 0;
 }
@@ -380,7 +396,7 @@ div.panel.show {
 
 .main_offer_area{}
 .main_offer_area .main_offer_content{
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .main_offer_area .single_offer .single_offer_icon{
 
@@ -408,12 +424,12 @@ div.panel.show {
     font-size: 0.778rem;
     color: #d8702b;
     font-weight: 700;
-    overflow: hidden;
+    overflow-x: hidden;
     display: inline-block;
 }
 
 .carousel {
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
     width: 100%;
     height: 450px;
@@ -438,7 +454,7 @@ div.panel.show {
 .main_counter_area{
     background: url(../img/counterbg.jpg) no-repeat top center;
     background-size: cover;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .main_counter_area .main_counter_content{}
 .main_counter_area .main_counter_content .single_counter{
@@ -457,7 +473,7 @@ div.panel.show {
 .main_team_area .main_team_content .single_team{
     position: relative;
     width:100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .main_team_area .main_team_content .single_team img{
     width:100%;
@@ -563,7 +579,7 @@ div.panel.show {
 ========================================================================*/
 
 .main_works_area{
-    overflow: hidden;
+
 }
 /*======================================================================
                     Newsletter Section Style
@@ -574,7 +590,6 @@ div.panel.show {
 
 }
 .main_newsletter{
-    overflow: hidden;
 }
 
 
@@ -586,14 +601,14 @@ div.panel.show {
 
 .footer{
     background: #151515;
+     overflow-x: hidden;
 
 }
 .main_footer_area {
-    overflow: hidden;
 }
 .main_footer_area .single_f_widget{}
 .main_footer_area .single_f_widget img{
-    width:60%;
+    width:100%;
 }
 .main_footer_area .single_f_widget .single_f_widget_text{
     padding-left:10px;

@@ -1,1 +1,0 @@
-applications>config> database.php //mudar configurações para novo BD
