@@ -122,7 +122,7 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 /*==========================================================
  Navigation style
 ============================================================*/
-
+/*
 .small{
     background: #ddd !important;
     height: 60px;
@@ -133,6 +133,7 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 .small .navbar-brand {
     margin-top: .5rem;
 }
+*/
 
 .nav ul li.active{
     background-color:rgba(0, 0, 0, 0.0);
