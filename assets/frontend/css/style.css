@@ -62,6 +62,7 @@ PRE LOADER
     left: 0;
     right: 0;
     bottom: 0;
+    color: black;
     background-color: #fefefe;
     z-index: 99999;
     height: 100%;
@@ -128,14 +129,16 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 ============================================================*/
 
 .small{
-    background: #ddd !important;
+    background: url("/iceb/assets/frontend/img/ICEBERA.png") no-repeat !important;
     height: 60px;
-    line-height: 60px;
-    transition: all 0.6s;
-    color: #555;
+    color: #000 !important;
+    line-height: 75px;
+    transition: all 0.3s;
+    
+    
 }
 .small .navbar-brand {
-    margin-top: .5rem;
+  
 }
 
 .nav ul li.active{
@@ -150,7 +153,7 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 }
 
 .navbar-light .navbar-nav .nav-link{
-    color:#3f444a;
+    color:#ff00dc;
 }
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
     color:#d8702b;
@@ -663,4 +666,7 @@ a.btn.btn-danger.waves-effects.waves-red:hover
 }
 .btn:hover, .btn-large:hover {
     background-color: #ed954e;/*O laranja do hover*/
+}
+.icone{
+    width: 30px;
 }

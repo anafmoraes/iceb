@@ -11,7 +11,7 @@
                         <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="single_newsletter text-md-right text-sm-center ">
                                 <div class="md-form input-group">
-                                    <input type="text" class="form-control" placeholder="Pesquisar...">
+                                    <input type="text" class="form-control " style="padding-bottom:  5px; padding-top: 5px;" placeholder="Pesquisar...">
                                     <span class="input-group-btn">
                                         <button class="btn waves-effect waves-red" type="button"><i class="fa fa-send"></i></button>
                                     </span>
