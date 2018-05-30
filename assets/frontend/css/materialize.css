@@ -5358,7 +5358,7 @@ a.waves-effect .waves-ripple {
 
 .side-nav .collapsible-header:hover,
 .side-nav.fixed .collapsible-header:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
 .side-nav .collapsible-header i,
@@ -6684,6 +6684,7 @@ input[type=range]:focus::-ms-fill-upper {
     backface-visibility: hidden;
     -webkit-transform: translateX(-105%);
     transform: translateX(-105%);
+
 }
 
 .side-nav.right-aligned {
@@ -7341,7 +7342,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .slider .slides {
-    background-color: #9e9e9e;
+    background-color: #fff;
     margin: 0;
     height: 780px;
 }
@@ -7354,7 +7355,7 @@ input[type=range]:focus::-ms-fill-upper {
     z-index: 1;
     width: 100%;
     height: inherit;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .slider .slides li img {
@@ -7420,7 +7421,7 @@ input[type=range]:focus::-ms-fill-upper {
 }*/
 .carousel .single_client{
    width:100%;
-   overflow: hidden;
+   overflow-x: hidden;
    display: block;
    margin-bottom:30px;
 }
@@ -7927,7 +7928,7 @@ input[type=range]:focus::-ms-fill-upper {
    ========================================================================== */
 .picker__box {
     border-radius: 2px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .picker__date-display {

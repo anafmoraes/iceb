@@ -1,4 +1,4 @@
-        
+    
 <div class="row">
 <div class="col-md-12">
 
@@ -11,7 +11,7 @@
                         <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="single_newsletter text-md-right text-sm-center ">
                                 <div class="md-form input-group">
-                                    <input type="text" class="form-control" placeholder="Pesquisar...">
+                                    <input type="text" class="form-control " style="padding-bottom:  5px; padding-top: 5px;" placeholder="Pesquisar...">
                                     <span class="input-group-btn">
                                         <button class="btn waves-effect waves-red" type="button"><i class="fa fa-send"></i></button>
                                     </span>
@@ -26,13 +26,13 @@
 </div>
 </div>
 
-        <section id="footer" class="footer">
+        <section id="footer" class="footer" >
             <div class="container">
                 <div class="row">
                     <div class="main_footer_area white-text p-b-3">
                         <div class="col-md-2">
-                            <div class="single_f_widget p-t-3 wow fadeInUp">
-                                <img src="img/ufop2.png" alt="" />
+                            <div class="single_f_widget m-t-3 wow fadeInUp">
+                                <img src="/iceb/assets/frontend/img/ufop2.png" alt="" style="width: 60px;">
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -110,4 +110,5 @@
                     <!-- Fim Modal COntent -->
                 
             </div>
+
             

@@ -1,1 +1,3 @@
-applications>config> database.php //mudar configurações para novo BD
++ Usar media queries para adapatar o menu e aside a telas menores que 15 e maiores que 6
++ Tirar overflow-x do footer
+
