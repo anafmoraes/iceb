@@ -13,16 +13,16 @@
                 <center>
 
                 <div class="navbar-desktop " style="margin-top:-10px">
-                    <!--Navbar Brand-->
 
-                     <span class="nav-item navbar-brand" style="display: inline; margin:-25px; margin-top:5px;  ">
-                            <a href=""><img src="/iceb/assets/frontend/img/ufop.png" style="width: 150px"></a>
 
-                        </span>
+                     
                     <!--Links-->
                     <ul class="nav navbar-nav hidden-md-down text-uppercase" style="margin-top:10px;  ">
 
-                       
+                     <!--Navbar Brand-->
+                       <span class="nav-item navbar-brand" style="display: inline; margin-left: -65px; margin-right: 5px; margin-top:5px; ">
+                            <a href=""><img src="/iceb/assets/frontend/img/icones/ufop.png" style="width: 130px"></a>
+                        </span>
                          
                         <center><li class="nav-item" style="margin: 0px 5px 0px 5px ">
                             <a href=""><img src="/iceb/assets/frontend/img/icones/home.png" class="icone">
