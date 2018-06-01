@@ -14,6 +14,7 @@ class Contatos extends CI_Controller {
 		$dados['contatos'] = $this->modelcontatos->listar_telefones(); // Traz os dados do model noticias_model.
 
 		$dados['titulo']= 'ICEB';
+    $dados['subtitulo'] = 'Contato';
 
 		$this->load->view('frontend/template/html-header', $dados);
 		$this->load->view('frontend/template/header-outraspaginas');
