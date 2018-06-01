@@ -1,4 +1,4 @@
-
+<div class="conteudopags">
  <div class="col-sm-8">
 
   <section id="about" class="about">
@@ -30,3 +30,4 @@
         </section><!-- End of About Section-->
 
        </div>
+       <div>

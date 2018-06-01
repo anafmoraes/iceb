@@ -8,7 +8,7 @@
             <!--Collapse button-->
             <div class="container">
                 <a href="#" data-activates="mobile-menu" class="button-collapse left"><i class="fa fa-bars " style="font-size: 30px;"></i></a>
-                
+
                 <!--Content for large and medium screens-->
                 <center>
 
@@ -21,7 +21,7 @@
                        <span class="nav-item navbar-brand" style="display: inline; margin-left: -65px; margin-right: 5px; margin-top:5px; ">
                             <a href=""><img src="/iceb/assets/frontend/img/icones/ufop.png" style="width: 110px"></a>
                         </span>
-                         
+
                         <center><li class="nav-item menu" style="margin: 0px 5px 0px 5px ">
                             <a href=""><img src="/iceb/assets/frontend/img/icones/home.png" class="icone">
                                 <span style="display: block; margin-top: -45px "> Inicio </span>
@@ -65,13 +65,13 @@
                         </li></center>
 
                         <center><li class="nav-item menu" style="margin: 0px 5px 0px 5px ">
-                            <a href=""><img src="/iceb/assets/frontend/img/icones/contato.png" class="icone">
+                            <a href="<?php echo base_url('contatos')?>"><img src="/iceb/assets/frontend/img/icones/contato.png" class="icone">
                             <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Contato</span></a>
                         </li></center>
 
                     </ul>
 
-                    
+
                 </div>
                 </center>
                 <!-- Content for mobile devices-->
@@ -105,7 +105,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#newsletter">Contato</a>
                         </li>
-                        
+
                     </ul>
                 </div>
             </div>
