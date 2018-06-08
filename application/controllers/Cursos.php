@@ -13,8 +13,8 @@ class Cursos extends CI_Controller {
 		$this->load->model('cursos_model','modelcursos'); // Acessoa ao model.
 		$dados['cursos'] = $this->modelcursos->conteudo_curso($id); // Traz os dados do model noticias_model.
 
-		$dados['titulo']= 'ICEB';
-    $dados['subtitulo'] = 'Cursos';
+		$dados['titulo'] = 'ICEB';
+    	$dados['subtitulo'] = 'Cursos';
 
 		$this->load->view('frontend/template/html-header', $dados);
 		$this->load->view('frontend/template/header-outraspaginas');

@@ -31,7 +31,7 @@ class Cursos_model extends CI_Model {
     }
 
     public function conteudo_curso($id){
-        $this->db->select('cursos.id, cursos.titulo, cursos.descricao, cursos.video, cursos.link');
+        $this->db->select('cursos.id, cursos.titulo, cursos.descricao, cursos.video, cursos.link, cursos.atuacao, cursos.modalidade, cursos.duracao, cursos.vagas, cursos.turno, cursos.info');
         $this->db->from('cursos');
         $this->db->where('id = '.$id);
         return $this->db->get()->result();

@@ -19,7 +19,7 @@
 
                      <!--Navbar Brand-->
                        <span class="nav-item navbar-brand" style="display: inline; margin-left: -65px; margin-right: 5px; margin-top:5px; ">
-                            <a href=""><img src="/iceb/assets/frontend/img/icones/ufop.png" style="width: 110px"></a>
+                            <a href="<?php echo base_url('/home') ?>"><img src="/iceb/assets/frontend/img/icones/ufop.png" style="width: 110px"></a>
                         </span>
 
                         <center><li class="nav-item menu" style="margin: 0px 5px 0px 5px ">
