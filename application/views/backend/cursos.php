@@ -59,7 +59,7 @@
                                 foreach($cursos as $curso){
                                     $nomecurso = $curso->titulo;
                                     $alterar = anchor(base_url('admin/cursos'),'<i class="fa fa-refresh fa-fw"></i>Alterar');
-                                    $excluir = anchor(base_url('admin/cursos'),'<i class="fa fa-remove fa-fw"></i>Excluir');
+                                    $excluir = anchor(base_url('admin/cursos/remover/'.$curso->titulo),'<i class="fa fa-remove fa-fw"></i>Excluir');
 
                                     $this->table->add_row($nomecurso,$alterar,$excluir);
                                 }

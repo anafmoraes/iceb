@@ -56,5 +56,15 @@ class Cursos extends CI_Controller {
         }
     }
 
+    public function remover($titulo)
+    {
+        if($this->modelcursos->remover($titulo)){
+            redirect(base_url('admin/cursos'));
+        }
+        else{
+            echo "Houve um erro no sistema!";
+        }
+    }
+
 }
 ?>
