@@ -8,6 +8,12 @@ class Cursos_model extends CI_Model {
   public $descricao;
   public $video;
   public $link;
+  public $atuacao;
+  public $modalidade;
+  public $duracao;
+  public $vagas;
+  public $turno;
+  public $info;
 
 	public function __construct(){
 		parent::__construct();
@@ -18,6 +24,12 @@ class Cursos_model extends CI_Model {
         return $this->db->get('cursos')->result();
     }
 
+    public function listar_curso($id){
+        $this->db->from('cursos');
+        $this->db->where('cursos.id',$id);
+        return $this->db->get()->result();
+    }
+
     public function conteudo_curso($id){
         $this->db->select('cursos.id, cursos.titulo, cursos.descricao, cursos.video, cursos.link');
         $this->db->from('cursos');
@@ -25,16 +37,37 @@ class Cursos_model extends CI_Model {
         return $this->db->get()->result();
     }
 
-    public function adicionar($titulo, $descricao, $video, $matriz){
+    public function adicionar($titulo, $descricao, $video, $link, $atuacao, $modalidade, $duracao, $vagas, $turno, $info){
         $dados['titulo'] = $titulo;
         $dados['descricao'] = $descricao;
         $dados['video'] = $video;
-        $dados['matriz'] = $matriz;
+        $dados['link'] = $link;
+        $dados['atuacao'] = $atuacao;
+        $dados['modalidade'] = $modalidade;
+        $dados['duracao'] = $duracao;
+        $dados['vagas'] = $vagas;
+        $dados['turno'] = $turno;
+        $dados['info'] = $info;
         return $this->db->insert('cursos',$dados);
     }
 
-    public function remover($titulo){
-        $this->db->where('titulo',$titulo);
+    public function remover($id){
+        $this->db->where('id',$id);
         return $this->db->delete('cursos');
+    }
+
+    public function alterar($id, $titulo, $descricao, $video, $link, $atuacao, $modalidade, $duracao, $vagas, $turno, $info){
+        $dados['titulo'] = $titulo;
+        $dados['descricao'] = $descricao;
+        $dados['video'] = $video;
+        $dados['link'] = $link;
+        $dados['atuacao'] = $atuacao;
+        $dados['modalidade'] = $modalidade;
+        $dados['duracao'] = $duracao;
+        $dados['vagas'] = $vagas;
+        $dados['turno'] = $turno;
+        $dados['info'] = $info;
+        $this->db->where('id',$id);
+        return $this->db->update('cursos',$dados);
     }
 }

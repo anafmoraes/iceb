@@ -19,7 +19,7 @@ class Cursos extends CI_Controller {
 		$this->load->view('frontend/template/html-header', $dados);
 		$this->load->view('frontend/template/header-outraspaginas');
 
-    $this->load->view('frontend/cursos');
+    	$this->load->view('frontend/cursos');
 		$this->load->view('frontend/template/aside');
 
 		$this->load->view('frontend/template/footer');
