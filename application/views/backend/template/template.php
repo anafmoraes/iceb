@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"><?php echo $titulo ?></a>
+            <a class="navbar-brand" href="<?php echo base_url('admin/home') ?>"><?php echo $titulo ?></a>
         </div>
         <!-- /.navbar-top-links -->
 
@@ -17,16 +17,16 @@
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> Cursos</a>
+                        <a href="<?php echo base_url('admin/cursos') ?>"><i class="fa fa-sitemap fa-fw"></i> Cursos</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-edit fa-fw"></i> Notícias</a>
+                        <a href="<?php echo base_url('admin/noticias') ?>"><i class="fa fa-edit fa-fw"></i> Notícias</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i> Contatos</a>
+                        <a href="<?php echo base_url('admin/contatos') ?>"><i class="fa fa-wrench fa-fw"></i> Contatos</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-sign-out fa-fw"></i> Sair do Sistema</a>
+                        <a href="<?php echo base_url('admin/cursos') ?>"><i class="fa fa-sign-out fa-fw"></i> Sair do Sistema</a>
                     </li>
                 </ul>
             </div>

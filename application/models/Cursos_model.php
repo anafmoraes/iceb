@@ -24,4 +24,12 @@ class Cursos_model extends CI_Model {
     $this->db->where('id = '.$id);
     return $this->db->get()->result();
   }
+
+  public function adicionar($titulo, $descricao, $video, $matriz){
+      $dados['titulo'] = $titulo;
+      $dados['descricao'] = $descricao;
+      $dados['video'] = $video;
+      $dados['matriz'] = $matriz;
+      return $this->db->insert('cursos',$dados);
+  }
 }
