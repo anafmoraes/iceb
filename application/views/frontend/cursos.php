@@ -14,8 +14,18 @@
                                 <div class="row">
                                       <div class="col-md-1"></div>
                                     <div class="col-md-10" style="text-align: justify;">
-                                                        <p>   &nbsp;&nbsp; <?php echo $cursos[0]->descricao ?> <br/><br/>
-                                                        <a href="<?php echo $cursos[0]->link ?>"><strong> Matriz Curricular </strong></a> </p>
+                                                        <p>   &nbsp;&nbsp; <?php echo $cursos[0]->descricao ?> <br/>
+                                                        <p><strong> Área de Atuação: </strong> <?php echo $cursos[0]->atuacao ?> </p>
+                                                        <hr/>
+                                                        <p><strong> Modalidade: </strong> <?php echo $cursos[0]->modalidade ?> </p>
+                                                        <p><strong> Duração: </strong> <?php echo $cursos[0]->duracao ?> </p>
+                                                        <p><strong> Vagas: </strong> <?php echo $cursos[0]->vagas ?> </p>
+                                                        <p><strong> Turno: </strong> <?php echo $cursos[0]->turno ?> </p>
+                                                        <p><strong> Campus: </strong> Morro do Cruzeiro - Ouro Preto/MG </p> <br/>
+
+                                                        <a href="<?php echo $cursos[0]->link ?>"><strong> Matriz Curricular </strong></a> </p> </br>
+                                                        <a href="<?php echo $cursos[0]->info ?>"><strong> Informações sobre reconhecimento do curso </strong></a> </p> </br> </br>
+
                                     </div>
                                     <div class="col-md-1"></div>
                                             </div>
