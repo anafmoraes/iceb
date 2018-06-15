@@ -10,7 +10,7 @@
         <div class="col-lg-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                   <?php echo 'Adicionar'.' '.$subtitulo?>
+                   <?php echo 'Alterar'.' '.$subtitulo?>
                 </div>
                 <div class="panel-body">
                     <div class="row">
