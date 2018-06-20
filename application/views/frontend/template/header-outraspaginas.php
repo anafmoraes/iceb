@@ -44,11 +44,6 @@
                         </li></center>
 
                         <center><li class="nav-item menu" style="margin: 0px 5px 0px 5px ">
-                            <a href=""><img src="/iceb/assets/frontend/img/icones/laboratorio.png" class="icone" >
-                            <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Laboratórios</span></a>
-                        </li></center>
-
-                        <center><li class="nav-item menu" style="margin: 0px 5px 0px 5px ">
                             <a href=""><img src="/iceb/assets/frontend/img/icones/agenda.png" class="icone" ">
                             <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Agenda</span></a>
                         </li></center>
