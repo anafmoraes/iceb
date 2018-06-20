@@ -60,7 +60,7 @@
 
 
                         <center><li class="nav-item menu" style="margin: 0px 5px 0px 5px ">
-                            <a href=""><img src="/iceb/assets/frontend/img/icones/news.png" class="icone">
+                            <a href="<?php echo base_url('/noticias') ?>"><img src="/iceb/assets/frontend/img/icones/news.png" class="icone">
                             <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Noticias</span></a>
                         </li></center>
 

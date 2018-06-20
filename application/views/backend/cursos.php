@@ -95,14 +95,10 @@
                                         <div class="modal-content">
 
                                             <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
-                                                </button>
                                                 <h4 class="modal-title" id="myModalLabel2">Exclusão de curso</h4>
                                             </div>
                                             <div class="modal-body">
                                                 <h4>Deseja Realmente excluir o curso '.$curso->titulo.'?</h4>
-                                                <p>Após Excluido o curso <b>'.$curso->titulo.'</b> não ficara mais disponível no Sistema.</p>
-                                                <p>Todos os itens relacionados ao curso <b>'.$curso->titulo.'</b> serão afetados e não aparecerão no site até que sejam editados.</p>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
