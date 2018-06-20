@@ -31,14 +31,17 @@
                                 <h4 > Contato:</h4>
                                 <div class="single_f_widget_text f_reatures">
                                     
-                                    <b>E-mail :</b> iceb@ufop.edu.br                                    
+                                    <b>E-mail :</b> iceb@ufop.edu.br    
+                                    <br><br>
+                                    <span   data-toggle="modal" data-target="#myModal" ><b> Login </b></span>                                
                                 </div>
+
                             </div>
                         </div>
                         <div class="col-md-2">
                              <div class="single_f_widget m-t-3 wow fadeInUp">
                                 <div class="single_f_widget_text f_reatures">
-                                    <button class="btn" data-toggle="modal" data-target="#myModal" ><b> Login </b></button>
+                                   
                                     </div></div>
                         </div>
                             <div class="col-md-2"></div>
