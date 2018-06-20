@@ -7,7 +7,7 @@
     </div>
     <!-- /.row -->
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
                    <?php echo 'Alterar'.' '.$subtitulo?>
@@ -34,7 +34,7 @@
                                  <input id="txt-link" name="txt-link" type="text" class="form-control" placeholder="link da noticia" value="<?php echo $noticia->link ?>">
 
                                  <label id="txt-data">data</label>
-                                 <input id="txt-data" name="txt-data" type="text" class="form-control" placeholder="Digite a data" value="<?php echo $noticia->data ?>">
+                                 <input id="txt-data" name="txt-data" type="date" class="form-control" placeholder="Digite a data" value="<?php echo $noticia->data ?>">
 
                              </div>
                              <button type="submit" class="btn btn-default">Salvar Alterações</button>
@@ -52,35 +52,7 @@
             <!-- /.panel -->
         </div>
         <!-- /.col-lg-6 -->
-        <div class="col-lg-6">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                   <?php echo 'Alterar'.' '.$subtitulo ?>
-                </div>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <?php
-                                $this->table->set_heading("titulo","Alterar","Excluir");
-                                foreach($noticias as $noticia){
-                                    $titulonoticia = $noticia->titulo;
-                                    $alterar = anchor(base_url('admin/noticias/alterar/'.$noticia->id),'<i class="fa fa-refresh fa-fw"></i>Alterar');
-                                    $excluir = anchor(base_url('admin/noticias/remover/'.$noticia->id),'<i class="fa fa-remove fa-fw"></i>Excluir');
 
-                                    $this->table->add_row($titulonoticia,$alterar,$excluir);
-                                }
-                                $this->table->set_template(array('table_open' => '<table class="table table-striped">'));
-                                echo $this->table->generate();
-                             ?>
-                        </div>
-
-                    </div>
-                    <!-- /.row (nested) -->
-                </div>
-                <!-- /.panel-body -->
-            </div>
-            <!-- /.panel -->
-        </div>
         <!-- /.col-lg-6 -->
     </div>
     <!-- /.row -->
