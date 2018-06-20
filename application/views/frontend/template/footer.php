@@ -1,4 +1,8 @@
     
+
+
+
+</br>
 <div class="row">
 </br>
 </div>
@@ -6,6 +10,7 @@
         <section id="footer" class="footer" >
             <div class="container">
                 <div class="row">
+                    <div class="col-md-2"> </div>
                     <div class="main_footer_area white-text p-b-3">
                         <div class="col-md-2">
                             <div class="single_f_widget m-t-3 wow fadeInUp">
@@ -39,18 +44,18 @@
                             </div>
                         </div>
                         <div class="col-md-2">
-                             <div class="single_f_widget m-t-3 wow fadeInUp">
-                                <div class="single_f_widget_text f_reatures">
-                                   
-                                    </div></div>
+
                         </div>
-                            <div class="col-md-2"></div>
+
                         
 
                         
                     </div>
                 </div>
             </div>
+              <div class="row">
+                <br><br>
+              </div>
                     <center><h6 class="copyright" style="color: white;">Copyright ©2018 Universidade Federal de Ouro Preto</h6></center>
         </section>
 
