@@ -46,8 +46,19 @@
                                  <label id="txt-vagas">Vagas</label>
                                  <input id="txt-vagas" name="txt-vagas" type="text" class="form-control" placeholder="Vagas" value="<?php echo $curso->vagas ?>">
 
-                                 <label id="txt-turnos">Turnos</label>
-                                 <input id="txt-turnos" name="txt-turnos" type="text" class="form-control" placeholder="(Diurno/Noturno)" value="<?php echo $curso->turno ?>">
+                                 <label id="txt-turnos">Turnos</label><br/>
+
+                                 <label class="custom-control custom-checkbox">
+                                     <input id="txt-turnos" name="txt-turnos" type="checkbox" class="custom-control-input" class="form-control" value="diurno">
+                                     <span class="custom-control-indicator"></span>
+                                     <span class="custom-control-description">Diurno</span></label></br>
+
+                                 <label class="custom-control custom-checkbox">
+                                     <input id="txt-turnos" name="txt-turnos" type="checkbox" class="custom-control-input" class="form-control" vaue="noturno">
+                                     <span class="custom-control-indicator"></span>
+                                     <span class="custom-control-description">Noturno</span>
+                                 </label><br/>
+                             
 
                                  <label id="txt-info">Informacoes reconhecimento de curso</label>
                                  <input id="txt-info" name="txt-info" type="url" class="form-control" placeholder="Link das informações" value="<?php echo $curso->info ?>">

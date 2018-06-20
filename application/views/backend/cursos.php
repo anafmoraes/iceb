@@ -44,8 +44,20 @@
                                  <label id="txt-vagas">Vagas</label>
                                  <input id="txt-vagas" name="txt-vagas" type="text" class="form-control" placeholder="Vagas">
 
-                                 <label id="txt-turnos">Turnos</label>
-                                 <input id="txt-turnos" name="txt-turnos" type="text" class="form-control" placeholder="(Diurno/Noturno)">
+                                 <label id="txt-turnos">Turnos</label><br/>
+
+                                 <div class="container">
+                                 <label class="custom-control custom-checkbox">
+                                     <input id="txt-turnos" name="txt-turnos" type="checkbox" class="custom-control-input" class="form-control" value="diurno">
+                                     <span class="custom-control-indicator"></span>
+                                     <span class="custom-control-description">Diurno</span></label></br>
+
+                                 <label class="custom-control custom-checkbox">
+                                     <input id="txt-turnos" name="txt-turnos" type="checkbox" class="custom-control-input" class="form-control" value="noturno">
+                                     <span class="custom-control-indicator"></span>
+                                     <span class="custom-control-description">Noturno</span>
+                                 </label><br/>
+                             </div>
 
                                  <label id="txt-info">Informacoes reconhecimento de curso</label>
                                  <input id="txt-info" name="txt-info" type="text" class="form-control" placeholder="Link das informações">
@@ -77,7 +89,29 @@
                                 foreach($cursos as $curso){
                                     $nomecurso = $curso->titulo;
                                     $alterar = anchor(base_url('admin/cursos/pagina_alterar/'.$curso->id),'<i class="fa fa-refresh fa-fw"></i>Alterar');
-                                    $excluir = anchor(base_url('admin/cursos/remover/'.$curso->id),'<i class="fa fa-remove fa-fw"></i>Excluir');
+                                    $excluir = $excluir= '<button type="button" class="btn btn-link" data-toggle="modal" data-target=".excluir-modal-'.$curso->id.'"><span style="color:red"><i class="fa fa-remove fa-fw"></i> Excluir</span></button>';
+                                    echo $modal= ' <div class="modal fade excluir-modal-'.$curso->id.'" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-sm">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel2">Exclusão de curso</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h4>Deseja Realmente excluir o curso '.$curso->titulo.'?</h4>
+                                                <p>Após Excluido o curso <b>'.$curso->titulo.'</b> não ficara mais disponível no Sistema.</p>
+                                                <p>Todos os itens relacionados ao curso <b>'.$curso->titulo.'</b> serão afetados e não aparecerão no site até que sejam editados.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                                <a type="button" class="btn btn-primary" href="'.base_url("admin/cursos/remover/".$curso->id).'">Excluir</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>';
 
                                     $this->table->add_row($nomecurso,$alterar,$excluir);
                                 }

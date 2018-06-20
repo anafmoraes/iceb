@@ -33,7 +33,7 @@
                                  <input id="txt-link" name="txt-link" type="text" class="form-control" placeholder="link da noticia">
 
                                  <label id="txt-data">data</label>
-                                 <input id="txt-data" name="txt-data" type="text" class="form-control" placeholder="Digite a data">
+                                 <input id="txt-data" name="txt-data" type="date" class="form-control" placeholder="Digite a data">
 
                              </div>
                              <button type="submit" class="btn btn-default">Cadastrar</button>
@@ -63,7 +63,29 @@
                                 foreach($noticias as $noticia){
                                     $titulonoticia = $noticia->titulo;
                                     $alterar = anchor(base_url('admin/noticias/pagina_alterar/'.$noticia->id),'<i class="fa fa-refresh fa-fw"></i>Alterar');
-                                    $excluir = anchor(base_url('admin/noticias/remover/'.$noticia->id),'<i class="fa fa-remove fa-fw"></i>Excluir');
+                                    $excluir = '<button type="button" class="btn btn-link" data-toggle="modal" data-target=".excluir-modal-'.$noticia->id.'"><i class="fa fa-remove fa-fw"></i> Excluir</button>';
+                                    echo $modal= ' <div class="modal fade excluir-modal-'.$noticia->id.'" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-dialog modal-sm">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel2">Exclusão de noticia</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h4>Deseja Realmente excluir a noticia '.$noticia->titulo.'?</h4>
+                                                <p>Após Excluido a noticia <b>'.$noticia->titulo.'</b> não ficara mais disponível no Sistema.</p>
+                                                <p>Todos os itens relacionados a noticia <b>'.$noticia->titulo.'</b> serão afetados e não aparecerão no site até que sejam editados.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                                <a type="button" class="btn btn-primary" href="'.base_url("admin/noticias/remover/".$noticia->id).'">Excluir</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>';
 
                                     $this->table->add_row($titulonoticia,$alterar,$excluir);
                                 }

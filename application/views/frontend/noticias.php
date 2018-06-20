@@ -19,9 +19,9 @@
                                             </div>
                                         </div>
                                         <div class="single_portfolio_text">
-                                            <h3><?php echo $noticia->Titulo ?></h3>
-                                            <p><?php echo $noticia->Resumo ?></p>
-                                            <?php echo $noticia->Data ?>
+                                            <h3><?php echo $noticia->titulo ?></h3>
+                                            <p><?php echo $noticia->resumo ?></p>
+                                            <?php echo $noticia->data ?>
                                         </div>
                                     </div>
                                 </div>
