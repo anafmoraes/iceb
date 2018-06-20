@@ -1,29 +1,6 @@
     
 <div class="row">
-<div class="col-md-12">
-
-        <section id="pesquisa" class="newsletter">
-            <div class="container">
-                <div class="row">
-                    <div class="main_newsletter white-text p-y-2 m-t-3">
-                        <div class="col-md-6 col-sm-12 col-xs-12">
-                        </div>
-                        <div class="col-md-6 col-sm-12 col-xs-12">
-                            <div class="single_newsletter text-md-right text-sm-center ">
-                                <div class="md-form input-group">
-                                    <input type="text" class="form-control " style="padding-bottom:  5px; padding-top: 5px;" placeholder="Pesquisar...">
-                                    <span class="input-group-btn">
-                                        <button class="btn waves-effect waves-red" type="button"><i class="fa fa-send"></i></button>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!-- End of Newsletter section -->
-
-</div>
+</br>
 </div>
 
         <section id="footer" class="footer" >
