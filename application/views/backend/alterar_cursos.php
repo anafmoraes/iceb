@@ -7,7 +7,7 @@
     </div>
     <!-- /.row -->
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
                    <?php echo 'Alterar'.' '.$subtitulo?>
@@ -29,7 +29,7 @@
                                  <input id="txt-descricao" name="txt-descricao" type="text" class="form-control" placeholder="Descreva o curso" value="<?php echo $curso->descricao ?>">
 
                                  <label id="txt-video">Link do Video</label>
-                                 <input id="txt-video" name="txt-video" type="text" class="form-control" placeholder="Link do Video" value="<?php echo $curso->video ?>">
+                                 <input id="txt-video" name="txt-video" type="text" class="form-control" placeholder="Link do Video" value="<?php echo htmlspecialchars($curso->video) ?>" >
 
                                  <label id="txt-link">Matriz Curricular</label>
                                  <input id="txt-link" name="txt-link" type="text" class="form-control" placeholder="Matriz Curricular" value="<?php echo $curso->link ?>">
@@ -46,11 +46,22 @@
                                  <label id="txt-vagas">Vagas</label>
                                  <input id="txt-vagas" name="txt-vagas" type="text" class="form-control" placeholder="Vagas" value="<?php echo $curso->vagas ?>">
 
-                                 <label id="txt-turnos">Turnos</label>
-                                 <input id="txt-turnos" name="txt-turnos" type="text" class="form-control" placeholder="(Diurno/Noturno)" value="<?php echo $curso->turno ?>">
+                                 <label id="txt-turnos">Turnos</label><br/>
+
+                                 <label class="custom-control custom-checkbox">
+                                     <input id="txt-turnos" name="txt-turnos" type="checkbox" class="custom-control-input" class="form-control" value="diurno">
+                                     <span class="custom-control-indicator"></span>
+                                     <span class="custom-control-description">Diurno</span></label></br>
+
+                                 <label class="custom-control custom-checkbox">
+                                     <input id="txt-turnos" name="txt-turnos" type="checkbox" class="custom-control-input" class="form-control" vaue="noturno">
+                                     <span class="custom-control-indicator"></span>
+                                     <span class="custom-control-description">Noturno</span>
+                                 </label><br/>
+                             
 
                                  <label id="txt-info">Informacoes reconhecimento de curso</label>
-                                 <input id="txt-info" name="txt-info" type="text" class="form-control" placeholder="Link das informações" value="<?php echo $curso->info ?>">
+                                 <input id="txt-info" name="txt-info" type="url" class="form-control" placeholder="Link das informações" value="<?php echo $curso->info ?>">
                              </div>
                              <button type="submit" class="btn btn-default">Salvar Alterações</button>
                             <?php
@@ -67,35 +78,7 @@
             <!-- /.panel -->
         </div>
         <!-- /.col-lg-6 -->
-        <div class="col-lg-6">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                   <?php echo 'Alterar'.' '.$subtitulo ?>
-                </div>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <?php
-                                $this->table->set_heading("Nome","Alterar","Excluir");
-                                foreach($cursos as $curso){
-                                    $nomecurso = $curso->titulo;
-                                    $alterar = anchor(base_url('admin/cursos/alterar/'.$curso->id),'<i class="fa fa-refresh fa-fw"></i>Alterar');
-                                    $excluir = anchor(base_url('admin/cursos/remover/'.$curso->id),'<i class="fa fa-remove fa-fw"></i>Excluir');
 
-                                    $this->table->add_row($nomecurso,$alterar,$excluir);
-                                }
-                                $this->table->set_template(array('table_open' => '<table class="table table-striped">'));
-                                echo $this->table->generate();
-                             ?>
-                        </div>
-
-                    </div>
-                    <!-- /.row (nested) -->
-                </div>
-                <!-- /.panel-body -->
-            </div>
-            <!-- /.panel -->
-        </div>
         <!-- /.col-lg-6 -->
     </div>
     <!-- /.row -->
