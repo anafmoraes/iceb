@@ -21,7 +21,7 @@ class Noticias_model extends CI_Model {
   }
 
   public function listar_noticias(){
-    $this->db->order_by('titulo','DSC');
+    $this->db->order_by('data','DSC');
     return $this->db->get('noticias')->result();
   }
 
