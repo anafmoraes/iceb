@@ -15,45 +15,55 @@
                 <div class="navbar-desktop " style="margin-top:-10px">
 
                     <!--Links-->
+                    <center>
                     <ul class="nav navbar-nav hidden-md-down text-uppercase" style="margin-top:10px;  ">
 
                      <!--Navbar Brand-->
                        <span class="nav-item navbar-brand" style="display: inline; margin-left: -65px; margin-right: 5px; margin-top:5px; ">
-                            <a href="<?php echo base_url('/home') ?>"><img src="/iceb/assets/frontend/img/icones/ufop.png" style="width: 110px"></a>
+                            <a href="<?php echo base_url() ?>"><img src="/iceb/assets/frontend/img/icones/ufop.png" style="width: 150px"></a>
                         </span>
 
-                        <center><li class="nav-item menu" style="margin: 0px 5px 0px 5px ">
+                        <center><li class="nav-item menu" >
                             <a href=""><img src="/iceb/assets/frontend/img/icones/home.png" class="icone">
                                 <span style="display: block; margin-top: -45px "> Inicio </span>
                           <span class="sr-only">(current)</span></a>
                         </li></center>
 
-                        <center><li class="nav-item menu" style="margin: 0px 5px 0px 5px ">
+                        <center><li class="nav-item menu" >
                             <a href=""><img src="/iceb/assets/frontend/img/icones/instituto.png" class="icone">
                             <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >O Instituto</span></a>
+
                         </li></center>
 
-                        <center><li class="nav-item menu" style="margin: 0px 5px 0px 5px ">
+                        
+                        <center><li class="nav-item menu "  >
                             <a href=""><img src="/iceb/assets/frontend/img/icones/departamento.png" class="icone">
-                            <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Departamentos</span></a>
+                            <span  style=" display: block;margin-top: -45px;" >Departamentos</span></a>
+
+                        </li></center>
+                        
+                        
+
+                        <center><li class="nav-item menu dropdown" >
+                            <a data-toggle="dropdown"><img src="/iceb/assets/frontend/img/icones/ensino.png" class="icone" >
+                            <span class="nav-link" " style=" display: block;margin-top: -45px;" >Ensino</span></a>
+                            <ul class="dropdown-menu drop-ul">
+                                <?php foreach($cursos as $curso){ ?>
+                          <li ><a class="drop-li" href="<?php echo base_url('/cursos/'. $curso->id .'/'.  $curso->titulo)?>"> <?php echo $curso->titulo?> <hr></a>
+                            </li> 
+                            <?php }?>  
+
+                          </ul>
                         </li></center>
 
-                        <center><li class="nav-item menu" style="margin: 0px 5px 0px 5px ">
-                            <a href=""><img src="/iceb/assets/frontend/img/icones/ensino.png" class="icone" >
-                            <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Ensino</span></a>
-                        </li></center>
 
-                        <center><li class="nav-item menu" style="margin: 0px 5px 0px 5px ">
-                            <a href=""><img src="/iceb/assets/frontend/img/icones/laboratorio.png" class="icone" >
-                            <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Laboratórios</span></a>
-                        </li></center>
 
-                        <center><li class="nav-item menu" style="margin: 0px 5px 0px 5px ">
+                        <center><li class="nav-item menu">
                             <a href=""><img src="/iceb/assets/frontend/img/icones/agenda.png" class="icone" ">
                             <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Agenda</span></a>
                         </li></center>
 
-                        <center><li class="nav-item menu" style="margin: 0px 5px 0px 5px ">
+                        <center><li class="nav-item menu" >
                             <a href=""><img src="/iceb/assets/frontend/img/icones/pesquisa.png" class="icone"">
                             <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Pesquisa</span></a>
                         </li></center>
@@ -61,16 +71,17 @@
 
                         <center><li class="nav-item menu" style="margin: 0px 5px 0px 5px ">
                             <a href="<?php echo base_url('/noticias') ?>"><img src="/iceb/assets/frontend/img/icones/news.png" class="icone">
+
                             <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Noticias</span></a>
                         </li></center>
 
-                        <center><li class="nav-item menu" style="margin: 0px 5px 0px 5px ">
+                        <center><li class="nav-item menu" >
                             <a href="<?php echo base_url('contatos')?>"><img src="/iceb/assets/frontend/img/icones/contato.png" class="icone">
                             <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Contato</span></a>
                         </li></center>
 
                     </ul>
-
+                        </center>
 
                 </div>
                 </center>
@@ -90,9 +101,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#portfolio">Ensino</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#newsletter">Laboratórios</a>
-                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="#!">Agenda</a>
                         </li>
