@@ -10,7 +10,10 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
+
 		$this->load->model('noticias_model','modelnoticias'); // Acessoa ao model.
+		$this->load->model('cursos_model','modelcursos'); // Acessoa ao model.
+		$dados['cursos'] = $this->modelcursos->listar_cursos();
 		$dados['noticias'] = $this->modelnoticias->noticias_home(); // Traz os dados do model noticias_model.
 
 		$dados['titulo'] = 'ICEB';

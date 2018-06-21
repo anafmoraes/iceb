@@ -163,8 +163,12 @@ a .nav-link:focus{
     color:#d8702b;
     
 }
+.menu{
+    margin: 0px 5px 0px 5px !important;
+}
  .menu :hover{
      color:#d8702b !important;
+
  }
 
 .navbar-light .navbar-nav .nav-link{
@@ -687,4 +691,18 @@ a.btn.btn-danger.waves-effects.waves-red:hover
 }
 .conteudopags{
     margin-top: 90px;
+}
+
+.drop-li{
+     color: #d8702b !important;
+}
+.drop-li:hover{
+     color: #e2a67f !important;
+}
+.drop-ul
+{
+    margin: -10px 0px -10px 0px !important;  
+    line-height: 20px !important;
+   
+
 }
