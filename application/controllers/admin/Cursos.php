@@ -5,6 +5,9 @@ class Cursos extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
+		if(!$this->session->userdata('logado')){
+			redirect(base_url('admin/login'));
+		}
 
         $this->load->model('cursos_model','modelcursos'); // Acessoa ao model.
 

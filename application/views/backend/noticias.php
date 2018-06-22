@@ -20,19 +20,20 @@
                                 echo form_open('admin/noticias/inserir');
                              ?>
                              <div class="form-group">
-                                 <label id="txt-noticia">titulo da noticia</label>
+                                 <br/>
+                                 <label id="txt-noticia">Titulo da noticia</label>
                                  <input id="txt-noticia" name="txt-noticia" type="text" class="form-control" placeholder="Digite o titulo da noticia">
-
-                                 <label id="txt-resumo">resumo</label>
+                                 <br/>
+                                 <label id="txt-resumo">Resumo (opcional)</label>
                                  <input id="txt-resumo" name="txt-resumo" type="text" class="form-control" placeholder="Descreva o noticia">
-
-                                 <label id="txt-imagem">link da imagem</label>
+                                 <br/>
+                                 <label id="txt-imagem">Imagem</label>
                                  <input id="txt-imagem" name="txt-imagem" type="text" class="form-control" placeholder="link da imagem">
-
-                                 <label id="txt-link">link da noticia</label>
+                                 <br/>
+                                 <label id="txt-link">Link da noticia</label>
                                  <input id="txt-link" name="txt-link" type="text" class="form-control" placeholder="link da noticia">
-
-                                 <label id="txt-data">data</label>
+                                 <br/>
+                                 <label id="txt-data">Data</label>
                                  <input id="txt-data" name="txt-data" type="date" class="form-control" placeholder="Digite a data">
 
                              </div>
@@ -70,7 +71,7 @@
 
                                             <div class="modal-header">
 
-                                                
+
                                                 <h4 class="modal-title" id="myModalLabel2">Exclusão de noticia</h4>
                                             </div>
                                             <div class="modal-body">
