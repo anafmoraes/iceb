@@ -5,6 +5,9 @@ class noticias extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
+		if(!$this->session->userdata('logado')){
+			redirect(base_url('admin/login'));
+		}
 
         $this->load->model('noticias_model','modelnoticias'); // Acessoa ao model.
 
@@ -32,14 +35,14 @@ class noticias extends CI_Controller {
         $this->load->library('form_validation');
         $this->form_validation->set_rules('txt-noticia','titulo da noticia',
             'required|min_length[3]');
-        $this->form_validation->set_rules('txt-resumo','resumo',
-            'required|min_length[20]');
+        $this->form_validation->set_rules('txt-resumo','resumo'
+            );
         $this->form_validation->set_rules('txt-imagem','Link do imagem'
             );
         $this->form_validation->set_rules('txt-link','Link da Noticia',
             'required|min_length[10]');
-        $this->form_validation->set_rules('txt-data','data'
-            );
+        $this->form_validation->set_rules('txt-data','data',
+            'required');
         if($this->form_validation->run() == FALSE){
             $this->index();
         }
@@ -90,10 +93,10 @@ class noticias extends CI_Controller {
         $this->load->library('form_validation');
         $this->form_validation->set_rules('txt-noticia','titulo da noticia',
             'required|min_length[3]');
-        $this->form_validation->set_rules('txt-resumo','resumo',
-            'required|min_length[20]');
-        $this->form_validation->set_rules('txt-imagem','Link do imagem',
-            'required');
+        $this->form_validation->set_rules('txt-resumo','resumo'
+            );
+        $this->form_validation->set_rules('txt-imagem','Link do imagem'
+            );
         $this->form_validation->set_rules('txt-link','Link da Noticia',
             'required|min_length[10]');
         $this->form_validation->set_rules('txt-data','Area de data','required'

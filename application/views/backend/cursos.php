@@ -20,45 +20,40 @@
                                 echo form_open('admin/cursos/inserir');
                              ?>
                              <div class="form-group">
+                                 <br/>
                                  <label id="txt-curso">Nome do Curso</label>
                                  <input id="txt-curso" name="txt-curso" type="text" class="form-control" placeholder="Digite o nome do curso">
-
+                                 <br/>
                                  <label id="txt-descricao">Descricao</label>
                                  <input id="txt-descricao" name="txt-descricao" type="text" class="form-control" placeholder="Descreva o curso">
-
+                                 <br/>
                                  <label id="txt-video">Link do Video</label>
                                  <input id="txt-video" name="txt-video" type="text" class="form-control" placeholder="Link do Video">
-
+                                 <br/>
                                  <label id="txt-link">Matriz Curricular</label>
                                  <input id="txt-link" name="txt-link" type="text" class="form-control" placeholder="Matriz Curricular">
-
+                                 <br/>
                                  <label id="txt-atuacao">Area de Atuacao</label>
                                  <input id="txt-atuacao" name="txt-atuacao" type="text" class="form-control" placeholder="Digite a área de atuação">
-
+                                 <br/>
                                  <label id="txt-modalidade">Modalidade</label>
                                  <input id="txt-modalidade" name="txt-modalidade" type="text" class="form-control" placeholder="Digite a modalidade(bacharelado/licenciatura)">
-
+                                 <br/>
                                  <label id="txt-duracao">Duracao</label>
                                  <input id="txt-duracao" name="txt-duracao" type="text" class="form-control" placeholder="Duração (em semestres)">
-
+                                 <br/>
                                  <label id="txt-vagas">Vagas</label>
                                  <input id="txt-vagas" name="txt-vagas" type="text" class="form-control" placeholder="Vagas">
-
+                                 <br/>
                                  <label id="txt-turnos">Turnos</label><br/>
-
-                                 <div class="container">
-                                 <label class="custom-control custom-checkbox">
-                                     <input id="txt-turnos" name="txt-turnos" type="checkbox" class="custom-control-input" class="form-control" value="diurno">
-                                     <span class="custom-control-indicator"></span>
-                                     <span class="custom-control-description">Diurno</span></label></br>
-
-                                 <label class="custom-control custom-checkbox">
-                                     <input id="txt-turnos" name="txt-turnos" type="checkbox" class="custom-control-input" class="form-control" value="noturno">
-                                     <span class="custom-control-indicator"></span>
-                                     <span class="custom-control-description">Noturno</span>
-                                 </label><br/>
-                             </div>
-
+                                 <select id="txt-turnos" name="txt-turnos">
+                                     <option> Escolha uma opção: </option>
+                                     <option value="Diurno">Diurno</option>
+                                     <option value="Noturno">Noturno</option>
+                                     <option value="Integral">Integral</option>
+                                 </select>
+                                <br/>
+                                <br/>
                                  <label id="txt-info">Informacoes reconhecimento de curso</label>
                                  <input id="txt-info" name="txt-info" type="text" class="form-control" placeholder="Link das informações">
                              </div>
