@@ -17,22 +17,22 @@
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="<?php echo base_url('admin/cursos') ?>"><i class="fa fa-sitemap fa-fw"></i> Cursos</a>
+                        <a href="<?php echo base_url('admin/cursos') ?>"><i class="fa fa-book fa-fw"></i> Cursos</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('admin/noticias') ?>"><i class="fa fa-edit fa-fw"></i> Notícias</a>
+                        <a href="<?php echo base_url('admin/noticias') ?>"><i class="fa fa-newspaper-o"></i> Notícias</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('admin/contatos') ?>"><i class="fa fa-wrench fa-fw"></i> Contatos</a>
+                        <a href="<?php echo base_url('admin/contatos') ?>"><i class="fa fa-phone fa-fw"></i> Contatos</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('admin/pos-graduacao') ?>"><i class="fa fa-wrench fa-fw"></i> Pós-Graduação</a>
+                        <a href="<?php echo base_url('admin/posgraduacao') ?>"><i class="fa fa-flask fa-fw"></i> Pós-Graduação</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('admin/departamentos') ?>"><i class="fa fa-edit fa-fw"></i> Departamentos</a>
+                        <a href="<?php echo base_url('admin/departamentos') ?>"><i class="fa fa-briefcase"></i> Departamentos</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('admin/diretorias') ?>"><i class="fa fa-edit fa-fw"></i> Diretorias</a>
+                        <a href="<?php echo base_url('admin/diretorias') ?>"><i class="fa fa-university "></i> Diretorias</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url() ?>"><i class="fa fa-sign-out fa-fw"></i> Sair do Sistema</a>

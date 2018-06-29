@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: 22-Jun-2018 às 22:12
--- Versão do servidor: 10.1.32-MariaDB
--- PHP Version: 7.2.5
+-- Host: 127.0.0.1
+-- Generation Time: 29-Jun-2018 às 21:29
+-- Versão do servidor: 10.1.30-MariaDB
+-- PHP Version: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -40,10 +40,17 @@ CREATE TABLE `ci_session` (
 --
 
 INSERT INTO `ci_session` (`id`, `ip_address`, `timestamp`, `data`) VALUES
-('20c77b7eaafee8aa5cc4222b5c25343843d8a99e', '127.0.0.1', 1529697829, 0x5f5f63695f6c6173745f726567656e65726174657c693a313532393639373832393b6c6f6761646f7c623a313b),
-('5d0947471c482f57b9fc7d7d12b6fe71329af0d6', '127.0.0.1', 1529698173, 0x5f5f63695f6c6173745f726567656e65726174657c693a313532393639383137333b6c6f6761646f7c623a313b),
-('8c3aed935e345eb220a2b537184d2ebaff3a6440', '127.0.0.1', 1529697781, 0x5f5f63695f6c6173745f726567656e65726174657c693a313532393639373734353b6c6f6761646f7c623a313b),
-('cc9800500c0912573018d41d59024754edc7f3b1', '127.0.0.1', 1529698174, 0x5f5f63695f6c6173745f726567656e65726174657c693a313532393639383137333b6c6f6761646f7c623a313b);
+('22pvtbsutbh9jhmh7bb4b5l8960kfk4k', '::1', 1530297565, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533303239373536353b6c6f6761646f7c623a313b),
+('2uicddj1fb2luu14bar5qfkpqkibd0hf', '::1', 1530300084, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533303239393934383b),
+('9baagnikcq7r05si4c51m7qkq9meo4ds', '::1', 1530300318, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533303330303039343b6c6f6761646f7c623a313b),
+('dionp5tnbskprtvob9d5kub2n5hauvkq', '::1', 1530297263, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533303239373236333b6c6f6761646f7c623a313b),
+('hlf1no1b3bmafj0mnduloocm36lf72r2', '::1', 1530297946, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533303239373934363b6c6f6761646f7c623a313b),
+('n3u4gfbcrudrad2k80rdducgiooh8dt0', '::1', 1530299108, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533303239393130383b6c6f6761646f7c623a313b),
+('nga8mlr7huab8qeb1rmcbsdmgunb4b1h', '::1', 1530299740, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533303239393734303b6c6f6761646f7c623a313b),
+('no7al7nno2dfd9rpuu98v2ce5cvm8f2d', '::1', 1530296821, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533303239363832313b6c6f6761646f7c623a313b),
+('u2e0lgkghmut9eq2bmlfikb3k6abpn2o', '::1', 1530299409, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533303239393430393b6c6f6761646f7c623a313b),
+('v9qefe5rb8ndr1m59ibtlk3nd1fklhdm', '::1', 1530295731, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533303239353733313b6c6f6761646f7c623a313b),
+('vikl9dqd7isg7n45u23aenimldmbcd5g', '::1', 1530300094, 0x5f5f63695f6c6173745f726567656e65726174657c693a313533303330303039343b6c6f6761646f7c623a313b);
 
 -- --------------------------------------------------------
 
@@ -52,6 +59,7 @@ INSERT INTO `ci_session` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 --
 
 CREATE TABLE `contatos` (
+  `id` int(11) NOT NULL,
   `nome` varchar(200) NOT NULL,
   `telefone` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -60,24 +68,24 @@ CREATE TABLE `contatos` (
 -- Extraindo dados da tabela `contatos`
 --
 
-INSERT INTO `contatos` (`nome`, `telefone`) VALUES
-('DECBI', 1672),
-('Biblioteca do ICEB', 1502),
-('Colegiados', 1312),
-('Laboratório Multiusuário', 1743),
-('Seção de Ensino', 1337),
-('Portaria do ICEB', 1661),
-('Administrador de Prédios', 1273),
-('Biotério', 1673),
-('DEQUI', 1707),
-('DEMAT', 1700),
-('DEFIS', 1667),
-('DECOM', 1692),
-('DEEST', 1400),
-('DEBIO', 1603),
-('DEEMA', 1293),
-('Bloco de Salas(1)', 1028),
-('Bloco de Salas(2)', 1029);
+INSERT INTO `contatos` (`id`, `nome`, `telefone`) VALUES
+(1, 'DECBI', 1672),
+(2, 'Biblioteca do ICEB', 1502),
+(3, 'Colegiados', 1312),
+(4, 'Laboratório Multiusuário', 1743),
+(5, 'Seção de Ensino', 1337),
+(6, 'Portaria do ICEB', 1661),
+(7, 'Administrador de Prédios', 1273),
+(8, 'Biotério', 1673),
+(9, 'DEQUI', 1707),
+(10, 'DEMAT', 1700),
+(11, 'DEFIS', 1667),
+(12, 'DECOM', 1692),
+(13, 'DEEST', 1400),
+(14, 'DEBIO', 1603),
+(15, 'DEEMA', 1293),
+(16, 'Bloco de Salas(1)', 1028),
+(17, 'Bloco de Salas(2)', 1029);
 
 -- --------------------------------------------------------
 
@@ -105,7 +113,6 @@ CREATE TABLE `cursos` (
 
 INSERT INTO `cursos` (`id`, `titulo`, `descricao`, `video`, `link`, `atuacao`, `modalidade`, `duracao`, `vagas`, `turno`, `info`) VALUES
 (1, 'Física', ' O curso localizado no Instituto de Ci?ncias Exatas e Biol?gicas (ICEB) oferece duas ?nfases na modalidade de bacharelado: F?sica B?sica e Ci?ncias dos Materiais. Nos dois primeiros anos as disciplinas s?o comuns ?s duas ?reas de atua??o. A partir do quinto per?odo, o aluno opta por se especializar em uma das ?reas e, assim, passa a cursar disciplinas espec?ficas de cada ?nfase.O profissional de Ci?ncia dos Materiais est? apto a atuar tanto na pesquisa e desenvolvimento quanto na produ??o e utiliza??o de diferentes materiais, tais como: cer?micas, pol?meros, vidros, metais e ligas, materiais nanoestruturados, semicondutores, etc.O curso foi planejado para formar profissionais com s?lida base cient?fica e com compet?ncia em ci?ncias aplicadas, voltadas para a pesquisa e para o desenvolvimento de novos materiais, an?lise estrutural e de propriedades, ensaios e aplica??es de materiais tradicionais e novos materiais. Assim, a forma??o em F?sica/Ci?ncia dos Materiais habilita o graduando a trabalhar nas ind?strias, nos centros de pesquisa, em empresas de consultoria ou, ainda, a continuar seus estudos em ci?ncias f?sicas ou ci?ncias aplicadas.A ?nfase em F?sica B?sica forma profissionais voltados ?s quest?es de f?sica b?sica e fenomenologias. Em geral, estes profissionais encaminham-se para a carreira acad?mica de ensino superior e pesquisa. O curso oferece ao aluno uma forma??o s?lida e atualizada, combinando ci?ncias matem?ticas e f?sicas. O programa de curso visa a proporcionar ao estudante a capacidade de abordar problemas f?sicos diversos aplicando modelos f?sicos e matem?ticos para o seu entendimento e desenvolvimento de aplica??es. Assim, o profissional formado em F?sica B?sica pode estudar e interagir em temas de interesse multidisciplinar, atuando juntamente com matem?ticos, qu?micos, bi?logos e engenheiros.Al?m da habilita??o de Bacharelado em F?sica, o curso localizado no ICEB/UFOP passa a oferecer, a partir de 2012, a habilita??o em Licenciatura em F?sica. Esta habilita??o visa ? forma??o de profissionais com s?lidas bases no entendimento de fen?menos f?sicos e aplica??es de ferramentas matem?ticas, voltados para a atua??o no ensino de F?sica e ci?ncias. Nesse caso, al?m das disciplinas comuns e de forma??o b?sica, o licenciando cursa tamb?m disciplinas de cunho pedag?gico, did?tico e psico-pedag?gico. O exerc?cio da doc?ncia tem um vasto campo em institui??es de ensino p?blicas e particulares. H? tamb?m a op??o de continua??o de estudos, voltado ? carreira acad?mica de ensino superior e pesquisa.', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/sllAIF99h3s\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>', 'https://zeppelin10.ufop.br/SistemaAcademico/MatrizCurricular?codCurso=FSB', '?reas de Atua??o:O mercado de trabalho do bacharel em F?sica ? vasto e abrange setores do ensino superior, de centros de pesquisa p?blicos e privados e ind?strias. O profissional pode se especializar em diversas ?reas, tais como: f?sica de materiais, propriedades fundamentais da mat?ria, f?sica te?rica e computacional, biof?sica, econof?sica, f?sica de part?culas, f?sica nuclear e ensino de ci?ncias.', 'bacharelado', '8 semestres', 25, 'on', 'https://docs.google.com/spreadsheets/d/1o8Zv2qmS3oLOemIHLXH17Vlk-lkCHGrm_j0QKle3Hhw/pubhtml'),
-(2, 'Ciências Biológicas', ' Com a proposta de formar profissionais capacitados a compreender os fenômenos da natureza, a interferência do homem no meio ambiente e promover o desenvolvimento sustentável e conservação da biodiversidade, o curso oferece duas modalidades de formação: licenciatura e bacharelado. Com duração de oito semestres no bacharelado e nove semestres na licenciatura, ao longo da graduação o aluno é formado para lidar com desenvolvimento tecnológico e científico que envolve toda a área da biologia.\r\nA licenciatura tem como objetivo formar um profissional capacitado a trabalhar nos ensinos fundamental, médio e superior. A formação é composta por conhecimentos práticos interdisciplinares de biologia e pedagogia. O bacharelado forma profissionais qualificados a realizar pesquisas nas grandes áreas das Ciências Biológicas como a Parasitologia, Genética, Bioquímica, Ecologia, entre outras.\r\nA localização do curso na cidade de Ouro Preto se torna um fator de vantagem, já que as condições geológicas e biogeográficas são favoráveis para o desenvolvimento de pesquisas em Interações Biológicas, Biologia Evolutiva e Ecologia. O Parque do Itacolomy, o Parque Municipal das Andorinhas, a APA das Andorinhas e a Estação Ecológica do Tripuí são exemplos de ambientes amplamente estudados no curso.\r\n', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/JUVD5QYyXzs\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>', 'https://zeppelin10.ufop.br/SistemaAcademico/MatrizCurricular?codCurso=CBB', '\r\nAlém de seguir carreira na educação nos ensinos fundamental, médio e superior, o biólogo formado na UFOP está apto a formular e elaborar estudos, projetos ou pesquisa científica básica e aplicada nos diversos setores da biologia. Há também a possibilidade de orientar, dirigir, assessorar e prestar consultoria à empresas e fundações de âmbito público e privado relacionadas com biotecnologia, conservação biológica e estudos de impacto ambiental.', 'bacharelado e licenciatura', '8 semestres (Bacharelado) e 9 semestres (Licenciatura)', 30, 'diurno (Bacharelado) e noturno (Licenciatura)', ''),
 (3, 'Ciencia da Computacao', 'sdfgsadjfgsafsadfggrygfyrgfyrgfyrgfryfyrfyrgfyryrrfrfrfrfrf', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/_hs-Lf1IKUs?rel=0&amp;controls=0&amp;showinfo=0\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>', 'https://zeppelin10.ufop.br/SistemaAcademico/MatrizCurricular?codCurso=COM', 'Alunos formados no curso podem atuar em empresas, órgãos públicos, ou instituições de pesquisa das mais diferentes áreas, sejam em empresas que têm no desenvolvimento software a sua atividade fim, ou naquelas que utilizem sistemas de computação para apoio a suas atividades principais.As atividades na área são variadas: especificação, projeto, implantação e testes de software para diferentes aplicações, projeto e gerenciamento de redes de computadores e de bases de dados, pesquisas e inovação tecnológica. O aluno poderá também empreender seu próprio negócio ou dar continuidade a seus estudos em cursos de pós-graduação, ingressando em atividades de ensino e de pesquisa.', 'bacharelado', '8 semestres', 40, 'Integral', 'https://www.w3schools.com/tags/tag_input.asp'),
 (4, 'Estatística', ' Autorizado pelo MEC em dezembro de 2007, desde o início de 2008 o curso de Estatística vem oferecendo 40 vagas anuais no turno da noite. Com oito semestres letivos de duração, o curso tem como meta propiciar uma formação sólida e atual aos alunos por meio de disciplinas que vão desde as áreas de fundamentos até as disciplinas mais profissionalizantes.\r\nO curso de Bacharelado em Estatística da UFOP permite ao aluno formado atuar em três grandes perfis específicos. O Estatístico-Pesquisador se ocupará das atividades de pesquisa em estatística em universidades e centros de pesquisa. O Estatístico-Educador forma com a capacidade de disseminação do conhecimento estatístico em diferentes organizações sociais, mas de forma especial nas escolas de ensino médio. Por fim, o Estatístico Aplicado é o profissional capacitado a formular e resolver problemas que envolvem a coleta, sistematização e análise de dados.', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/pK7CPwV2fzQ\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>', 'https://zeppelin10.ufop.br/SistemaAcademico/MatrizCurricular?codCurso=EST', 'O curso oferecido pela UFOP apresenta um programa flexível, de forma a qualificar os seus graduados tanto para a pesquisa e o ensino de nível superior como para qualificá-lo para o mercado de trabalho  fora do ambiente acadêmico nas mais variadas áreas de aplicação da Estatística, como indústrias, hospitais, centros de pesquisa médica, empresas de pesquisa de opinião e mercado, bancos e seguradoras, mercados financeiros, instituições públicas e universidades.', 'bacharelado', '8 semestres', 40, 'noturno', ''),
 (5, 'Matemática', ' Com o objetivo de atender à demanda regional de professores com licenciatura plena em Matemática, a Universidade Federal de Ouro Preto (UFOP) criou, em 1998, o curso de Matemática na modalidade Licenciatura. Atualmente, o curso conta também com habilitação em Bacharelado. O primeiro ano de estudos é comum a ambas as formações e, ao final do segundo semestre, o aluno deve optar por uma delas.\r\nO Bacharelado capacita o estudante para a pesquisa científica. Por meio da continuidade de estudos em nível de mestrado e doutorado o aluno também está apto à docência no ensino superior.\r\nA Licenciatura forma professores de Matemática para atuarem na educação básica (ensino fundamental, a partir do 6º ano, e no ensino médio). Assim como no bacharelado o estudante que der continuidade aos estudos em nível de mestrado e doutorado nas áreas de educação, também estará apto à docência.\r\nSediado no Instituto de Ciências Exatas e Biológicas (ICEB), o Departamento de Matemática (Demat) da UFOP dispõe de estruturas que permitem a imersão do aluno, como biblioteca, sala de seminários, laboratório de informática e uma sala para estudos e pesquisa em Educação Matemática. O corpo docente é formado por mestres e doutores que, além de ensinarem na graduação e na pós-graduação, fomentam as iniciativas de projetos de pesquisa e extensão, envolvendo os alunos.\r\n\r\nÁreas de atuação:\r\nA presença da Matemática vai além do suporte teórico para as novas tecnologias; serve também como instrumento para interpretar e organizar informações, como na construção de tabelas de planos de saúde e imposto de renda. Assim, a compreensão matemática é fundamental para a vida em sociedade. O matemático poderá especializar-se em nível de pós-graduação para exercer a docência superior, especializar-se em áreas da Matemática pura ou aplicada a campos da engenharia, física, finanças, computação teórica, computação gráfica, entre outras.\r\n\r\nModalidades: Bacharelado e Licenciatura\r\nDuração: 8 semestres para uma modalidade, 10 semestres para as duas\r\nVagas: 40\r\nTurno: noturno, com algumas disciplinas do bacharelado no período vespertino\r\nCampus: Morro do Cruzeiro – Ouro Preto/MG ', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/xosjzD3nPxE\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>', 'https://zeppelin10.ufop.br/SistemaAcademico/MatrizCurricular?codCurso=MTB', '', '', '', 0, '', ''),
@@ -120,9 +127,18 @@ INSERT INTO `cursos` (`id`, `titulo`, `descricao`, `video`, `link`, `atuacao`, `
 --
 
 CREATE TABLE `departamento` (
-  `Titulo` varchar(1) NOT NULL,
-  `link para o departamento` varchar(1) NOT NULL
+  `id` int(11) NOT NULL,
+  `link` text NOT NULL,
+  `titulo` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `departamento`
+--
+
+INSERT INTO `departamento` (`id`, `link`, `titulo`) VALUES
+(1, 'ssssssssssssssssssssssssssssssssssssssssssssss', 'FURRY'),
+(4, 'aaagggaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'Rodrigo');
 
 -- --------------------------------------------------------
 
@@ -164,9 +180,17 @@ INSERT INTO `noticias` (`id`, `titulo`, `resumo`, `imagem`, `link`, `data`) VALU
 --
 
 CREATE TABLE `pos-graduaçao` (
-  `Titulo` varchar(1) NOT NULL,
-  `link para o departamento` varchar(1) NOT NULL
+  `id` int(11) NOT NULL,
+  `titulo` varchar(300) NOT NULL,
+  `link` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `pos-graduaçao`
+--
+
+INSERT INTO `pos-graduaçao` (`id`, `titulo`, `link`) VALUES
+(3, 'Fabricio', 'aaaaaaaaa2aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
 
 -- --------------------------------------------------------
 
@@ -201,7 +225,8 @@ ALTER TABLE `ci_session`
 -- Indexes for table `contatos`
 --
 ALTER TABLE `contatos`
-  ADD PRIMARY KEY (`nome`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `nome` (`nome`) USING BTREE;
 
 --
 -- Indexes for table `cursos`
@@ -213,7 +238,7 @@ ALTER TABLE `cursos`
 -- Indexes for table `departamento`
 --
 ALTER TABLE `departamento`
-  ADD PRIMARY KEY (`Titulo`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `diretoria`
@@ -231,22 +256,41 @@ ALTER TABLE `noticias`
 -- Indexes for table `pos-graduaçao`
 --
 ALTER TABLE `pos-graduaçao`
-  ADD PRIMARY KEY (`Titulo`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `Titulo` (`titulo`) USING BTREE;
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
+-- AUTO_INCREMENT for table `contatos`
+--
+ALTER TABLE `contatos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
 -- AUTO_INCREMENT for table `cursos`
 --
 ALTER TABLE `cursos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `departamento`
+--
+ALTER TABLE `departamento`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `noticias`
 --
 ALTER TABLE `noticias`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `pos-graduaçao`
+--
+ALTER TABLE `pos-graduaçao`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
