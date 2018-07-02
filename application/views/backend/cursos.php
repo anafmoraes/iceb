@@ -17,7 +17,7 @@
                         <div class="col-lg-12">
                             <?php
                                 echo validation_errors('<div class="alert alert-danger">','</div>');
-                                echo form_open('admin/cursos/inserir');
+                                echo form_open_multipart('admin/cursos/inserir');
                              ?>
                              <div class="form-group">
                                  <br/>
@@ -31,7 +31,7 @@
                                  <input id="txt-video" name="txt-video" type="text" class="form-control" placeholder="Link do Video">
                                  <br/>
                                  <label id="txt-link">Matriz Curricular</label>
-                                 <input id="txt-link" name="txt-link" type="text" class="form-control" placeholder="Matriz Curricular">
+                                 <input id="txt-link" name="txt-link" type="file" value="Procurar arquivo..." placeholder="nenhum arquivo selecionado">
                                  <br/>
                                  <label id="txt-atuacao">Area de Atuacao</label>
                                  <input id="txt-atuacao" name="txt-atuacao" type="text" class="form-control" placeholder="Digite a área de atuação">

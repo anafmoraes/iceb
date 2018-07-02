@@ -39,8 +39,8 @@ class Cursos extends CI_Controller {
             'required|min_length[20]');
         $this->form_validation->set_rules('txt-video','Link do Video',
             'required|min_length[10]');
-        $this->form_validation->set_rules('txt-link','Matriz Curricular',
-            'required|min_length[10]');
+        $this->form_validation->set_rules('txt-link','Matriz Curricular'
+          	);
         $this->form_validation->set_rules('txt-atuacao','Area de Atuacao',
             'required|min_length[20]');
         $this->form_validation->set_rules('txt-modalidade','Modalidade',
@@ -60,7 +60,16 @@ class Cursos extends CI_Controller {
             $titulo = $this->input->post('txt-curso');
             $descricao = $this->input->post('txt-descricao');
             $video = $this->input->post('txt-video');
-            $link = $this->input->post('txt-link');
+
+            $link = $_FILES['txt-link'];
+						$original_name = $_FILES['txt-link']["name"];
+						$new_name = strtr(utf8_decode($original_name), utf8_decode(' àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ'), '_aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY');
+						$configuracao['upload_path'] = './assets/arquivos/matrizes/';
+						$configuracao['allowed_types'] = 'pdf';
+						$configuracao['file_name'] = $new_name;
+						$this->load->library('upload', $configuracao);
+						$this->upload->initialize($configuracao);
+
             $atuacao = $this->input->post('txt-atuacao');
             $modalidade = $this->input->post('txt-modalidade');
             $duracao = $this->input->post('txt-duracao');
@@ -68,11 +77,14 @@ class Cursos extends CI_Controller {
             $turno = $this->input->post('txt-turnos');
             $info = $this->input->post('txt-info');
 
-            if($this->modelcursos->adicionar($titulo, $descricao, $video, $link, $atuacao, $modalidade, $duracao, $vagas, $turno, $info)){
-                redirect(base_url('admin/cursos'));
-            }
+						if($this->upload->do_upload('txt-link')){
+							if($this->modelcursos->adicionar($titulo, $descricao, $video, $link, $atuacao, $modalidade, $duracao, $vagas, $turno, $info)){
+	                redirect(base_url('admin/cursos'));
+	            }
+						}
             else{
                 echo "Houve um erro no sistema!";
+								echo $this->upload->display_errors();
             }
         }
     }
@@ -92,15 +104,15 @@ class Cursos extends CI_Controller {
         $this->load->library('table');
         $dados['cursos'] = $this->modelcursos->listar_curso($id); // Traz os dados do model noticias_model.
 
-		$dados['titulo']= 'Painel Administrativo';
+				$dados['titulo']= 'Painel Administrativo';
         $dados['subtitulo'] = 'Cursos';
 
-		$this->load->view('backend/template/html-header', $dados);
+				$this->load->view('backend/template/html-header', $dados);
 
-		$this->load->view('backend/template/template');
+				$this->load->view('backend/template/template');
         $this->load->view('backend/alterar_cursos');
 
-		$this->load->view('backend/template/html-footer');
+				$this->load->view('backend/template/html-footer');
     }
 
     public function alterar($id)
