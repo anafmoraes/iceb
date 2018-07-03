@@ -12,10 +12,10 @@
                                 <div class="col-md-4 mix cat4 cat2">
                                     <div class="single_mixi_portfolio center">
                                         <div class="single_portfolio_img">
-                                            <img src="/iceb/assets/frontend/img/pf1.jpg" alt="" />
+                                            <img src="./assets/frontend/noticiasimg/sfoto.jpg" alt="" />
                                             <div class="mixi_portfolio_overlay">
                                                 <a href="#!"><i class="fa fa-search"></i></a>
-                                                <a href="/iceb/assets/frontend/img/pf1.jpg" class="gallery-img"><i class="fa fa-link"></i></a>
+                                                <a href="./assets/frontend/noticiasimg/sfoto.jpg" class="gallery-img"><i class="fa fa-link"></i></a>
                                             </div>
                                         </div>
                                         <div class="single_portfolio_text">

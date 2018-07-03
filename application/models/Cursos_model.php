@@ -56,11 +56,10 @@ class Cursos_model extends CI_Model {
         return $this->db->delete('cursos');
     }
 
-    public function alterar($id, $titulo, $descricao, $video, $new_name, $atuacao, $modalidade, $duracao, $vagas, $turno, $info){
+    public function alterar($id, $titulo, $descricao, $video, $atuacao, $modalidade, $duracao, $vagas, $turno, $info){
         $dados['titulo'] = $titulo;
         $dados['descricao'] = $descricao;
         $dados['video'] = $video;
-        $dados['link'] = $new_name;
         $dados['atuacao'] = $atuacao;
         $dados['modalidade'] = $modalidade;
         $dados['duracao'] = $duracao;
@@ -71,9 +70,10 @@ class Cursos_model extends CI_Model {
         return $this->db->update('cursos',$dados);
     }
 
-    public function altera_matriz($id, $new_name)
+    public function nova_matriz($id, $new_name)
     {
       $dados['link'] = $new_name;
+      $this->db->where('id',$id);
       return $this->db->update('cursos',$dados);
     }
 }

@@ -53,7 +53,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <?php
-                                $this->table->set_heading("Nome","Alterar","Excluir");
+                                $this->table->set_heading("Nome da Pós-Graduação","Alterar Dados","Excluir");
                                 foreach($cursos as $curso){
                                     $nomecurso = $curso->titulo;
                                     $alterar = anchor(base_url('admin/posgraduacao/pagina_alterar/'.$curso->id),'<button type="button" class="btn btn-link"><span style="color:#337ab7"><i class="fa fa-refresh fa-fw"></i>Alterar</span></button>');

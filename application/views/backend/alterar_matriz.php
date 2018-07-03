@@ -1,7 +1,7 @@
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header"><?php echo $subtitulo ?></h1>
+            <h1 class="page-header"><?php echo $subtitulo.' - Upload de nova Matriz Curricular' ?></h1>
         </div>
         <!-- /.col-lg-12 -->
     </div>
@@ -28,7 +28,7 @@
                                  <input id="txt-link" name="txt-link" type="file" placeholder="Matriz Curricular">
                                  <br/>
 
-                                 <button type="submit" class="btn btn-default">Salvar Alterações</button>
+                                 <button type="submit" class="btn btn-primary">Salvar Alterações</button>
                             <?php
                                 }
                                 echo form_close();

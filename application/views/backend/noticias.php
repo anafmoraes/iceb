@@ -60,7 +60,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <?php
-                                $this->table->set_heading("titulo","Alterar","Excluir");
+                                $this->table->set_heading("Titulo da noticia","Alterar Noticia","Excluir Noticia");
                                 foreach($noticias as $noticia){
                                     $titulonoticia = $noticia->titulo;
                                     $alterar = anchor(base_url('admin/noticias/pagina_alterar/'.$noticia->id),'<button type="button" class="btn btn-link"><span style="color:#337ab7"><i class="fa fa-refresh fa-fw"></i>Alterar</span></button>');

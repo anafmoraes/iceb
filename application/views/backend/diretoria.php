@@ -53,7 +53,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <?php
-                                $this->table->set_heading("Nome","Alterar","Excluir");
+                                $this->table->set_heading("Nome","Alterar Dados","Excluir");
                                 foreach($nomes as $nome){
                                     $nomenome = $nome->nome;
                                     $alterar = anchor(base_url('admin/diretoria/pagina_alterar/'.$nome->id),'<button type="button" class="btn btn-link"><span style="color:#337ab7"><i class="fa fa-refresh fa-fw"></i>Alterar</span></button>');
