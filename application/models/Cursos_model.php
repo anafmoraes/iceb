@@ -37,11 +37,11 @@ class Cursos_model extends CI_Model {
         return $this->db->get()->result();
     }
 
-    public function adicionar($titulo, $descricao, $video, $link, $atuacao, $modalidade, $duracao, $vagas, $turno, $info){
+    public function adicionar($titulo, $descricao, $video, $new_name, $atuacao, $modalidade, $duracao, $vagas, $turno, $info){
         $dados['titulo'] = $titulo;
         $dados['descricao'] = $descricao;
         $dados['video'] = $video;
-        $dados['link'] = $link;
+        $dados['link'] = $new_name;
         $dados['atuacao'] = $atuacao;
         $dados['modalidade'] = $modalidade;
         $dados['duracao'] = $duracao;
@@ -56,11 +56,11 @@ class Cursos_model extends CI_Model {
         return $this->db->delete('cursos');
     }
 
-    public function alterar($id, $titulo, $descricao, $video, $link, $atuacao, $modalidade, $duracao, $vagas, $turno, $info){
+    public function alterar($id, $titulo, $descricao, $video, $new_name, $atuacao, $modalidade, $duracao, $vagas, $turno, $info){
         $dados['titulo'] = $titulo;
         $dados['descricao'] = $descricao;
         $dados['video'] = $video;
-        $dados['link'] = $link;
+        $dados['link'] = $new_name;
         $dados['atuacao'] = $atuacao;
         $dados['modalidade'] = $modalidade;
         $dados['duracao'] = $duracao;

@@ -23,7 +23,7 @@
                                                         <p><strong> Turno: </strong> <?php echo $cursos[0]->turno ?> </p>
                                                         <p><strong> Campus: </strong> Morro do Cruzeiro - Ouro Preto/MG </p> <br/>
 
-                                                        <a href="<?php echo $cursos[0]->link ?>"><strong> Matriz Curricular </strong></a> </p> </br>
+                                                        <a href="<?php echo base_url('assets/arquivos/matrizes/'.$cursos[0]->link) ?>"><strong> Matriz Curricular </strong></a> </p> </br>
                                                         <a href="<?php echo $cursos[0]->info ?>"><strong> Informações sobre reconhecimento do curso </strong></a> </p> </br> </br>
 
                                     </div>
