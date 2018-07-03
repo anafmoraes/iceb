@@ -31,15 +31,9 @@ class Cursos extends CI_Controller {
 	}
 
 	public function nova_matriz($id){
-		$this->load->library('form_validation');
-		$this->form_validation->set_rules('txt-link','Matriz Curricular');
-		if($this->form_validation->run() == FALSE){
-				$this->index();
-		}
-		else{
 			$link = $_FILES['txt-link'];
 			$original_name = $_FILES['txt-link']['name'];
-			$new_name = strtr(utf8_decode($original_name), utf8_decode(' àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ'), '_aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY');;
+			$new_name = strtr(utf8_decode($original_name), utf8_decode(' àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ'), '_aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY');
 			$configuracao['upload_path'] = './assets/arquivos/matrizes';
 			$configuracao['allowed_types'] = 'pdf';
 			$configuracao['file_name'] = $new_name;
@@ -57,7 +51,6 @@ class Cursos extends CI_Controller {
 				echo "Houve um erro no sistema!";
 				echo $this->upload->display_errors();
 			}
-		}
 	}
 
 		public function pagina_matriz($id)
