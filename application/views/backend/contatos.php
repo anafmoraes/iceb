@@ -17,16 +17,16 @@
                         <div class="col-lg-12">
                             <?php
                                 echo validation_errors('<div class="alert alert-danger">','</div>');
-                                echo form_open('admin/posgraduacao/inserir');
+                                echo form_open('admin/contatos/inserir');
                              ?>
                              <div class="form-group">
                                  <br/>
-                                 <label id="txt-curso">Nome do Curso</label>
-                                 <input id="txt-curso" name="txt-curso" type="text" class="form-control" placeholder="Digite o nome do curso de Pós-graduação">
+                                 <label id="txt-nome">Nome do local</label>
+                                 <input id="txt-nome" name="txt-nome" type="text" class="form-control" placeholder="Digite o nome">
                                  <br/>
 
-                                 <label id="txt-link">Link</label>
-                                 <input id="txt-link" name="txt-link" type="text" class="form-control" placeholder="Link">
+                                 <label id="txt-telefone">Telefone</label>
+                                 <input id="txt-telefone" name="txt-telefone" type="tel" class="form-control" placeholder="1234-5678" pattern="[0-9]{4}-[0-9]{4}">
                                  <br/>
 
                              <button type="submit" class="btn btn-default">Cadastrar</button>
@@ -54,30 +54,30 @@
                         <div class="col-lg-12">
                             <?php
                                 $this->table->set_heading("Nome","Alterar","Excluir");
-                                foreach($cursos as $curso){
-                                    $nomecurso = $curso->titulo;
-                                    $alterar = anchor(base_url('admin/posgraduacao/pagina_alterar/'.$curso->id),'<button type="button" class="btn btn-link"><span style="color:#337ab7"><i class="fa fa-refresh fa-fw"></i>Alterar</span></button>');
-                                    $excluir = $excluir= '<button type="button" class="btn btn-link" data-toggle="modal" data-target=".excluir-modal-'.$curso->id.'"><span style="color:red"><i class="fa fa-remove fa-fw"></i> Excluir</span></button>';
-                                    echo $modal= ' <div class="modal fade excluir-modal-'.$curso->id.'" tabindex="-1" role="dialog" aria-hidden="true">
+                                foreach($nomes as $nome){
+                                    $nomenome = $nome->nome;
+                                    $alterar = anchor(base_url('admin/contatos/pagina_alterar/'.$nome->id),'<button type="button" class="btn btn-link"><span style="color:#337ab7"><i class="fa fa-refresh fa-fw"></i>Alterar</span></button>');
+                                    $excluir = $excluir= '<button type="button" class="btn btn-link" data-toggle="modal" data-target=".excluir-modal-'.$nome->id.'"><span style="color:red"><i class="fa fa-remove fa-fw"></i> Excluir</span></button>';
+                                    echo $modal= ' <div class="modal fade excluir-modal-'.$nome->id.'" tabindex="-1" role="dialog" aria-hidden="true">
                                     <div class="modal-dialog modal-sm">
                                         <div class="modal-content">
 
                                             <div class="modal-header">
-                                                <h4 class="modal-title" id="myModalLabel2">Exclusão de curso</h4>
+                                                <h4 class="modal-title" id="myModalLabel2">Exclusão de nome</h4>
                                             </div>
                                             <div class="modal-body">
-                                                <h4>Deseja Realmente excluir o curso '.$curso->titulo.'?</h4>
+                                                <h4>Deseja Realmente excluir o nome '.$nome->nome.'?</h4>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                                                <a type="button" class="btn btn-primary" href="'.base_url("admin/posgraduacao/remover/".$curso->id).'">Excluir</a>
+                                                <a type="button" class="btn btn-primary" href="'.base_url("admin/contatos/remover/".$nome->id).'">Excluir</a>
                                             </div>
 
                                         </div>
                                     </div>
                                 </div>';
 
-                                    $this->table->add_row($nomecurso,$alterar,$excluir);
+                                    $this->table->add_row($nomenome,$alterar,$excluir);
                                 }
                                 $this->table->set_template(array('table_open' => '<table class="table table-striped">'));
                                 echo $this->table->generate();

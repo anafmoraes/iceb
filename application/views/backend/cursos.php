@@ -83,7 +83,7 @@
                                 $this->table->set_heading("Nome","Alterar","Excluir");
                                 foreach($cursos as $curso){
                                     $nomecurso = $curso->titulo;
-                                    $alterar = anchor(base_url('admin/cursos/pagina_alterar/'.$curso->id),'<i class="fa fa-refresh fa-fw"></i>Alterar');
+                                    $alterar = anchor(base_url('admin/cursos/pagina_alterar/'.$curso->id),'<button type="button" class="btn btn-link"><span style="color:#337ab7"><i class="fa fa-refresh fa-fw"></i>Alterar</span></button>');
                                     $excluir = $excluir= '<button type="button" class="btn btn-link" data-toggle="modal" data-target=".excluir-modal-'.$curso->id.'"><span style="color:red"><i class="fa fa-remove fa-fw"></i> Excluir</span></button>';
                                     echo $modal= ' <div class="modal fade excluir-modal-'.$curso->id.'" tabindex="-1" role="dialog" aria-hidden="true">
                                     <div class="modal-dialog modal-sm">
