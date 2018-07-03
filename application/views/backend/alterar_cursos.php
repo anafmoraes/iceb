@@ -32,9 +32,6 @@
                                  <label id="txt-video">Link do Video</label>
                                  <input id="txt-video" name="txt-video" type="text" class="form-control" placeholder="Link do Video" value="<?php echo htmlspecialchars($curso->video) ?>" >
                                  <br/>
-                                 <label id="txt-link">Matriz Curricular</label>
-                                 <input id="txt-link" name="txt-link" type="file" placeholder="Matriz Curricular">
-                                 <br/>
                                  <label id="txt-atuacao">Area de Atuacao</label>
                                  <input id="txt-atuacao" name="txt-atuacao" type="text" class="form-control" placeholder="Digite a área de atuação" value="<?php echo $curso->atuacao ?>">
                                  <br/>

@@ -30,6 +30,48 @@ class Cursos extends CI_Controller {
 		$this->load->view('backend/template/html-footer');
 	}
 
+	public function nova_matriz(){
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('txt-link','Matriz Curricular');
+		if($this->form_validation->run() == FALSE){
+				$this->index();
+		}
+		else{
+			$link = $_FILES['txt-link'];
+			$original_name = $_FILES['txt-link']["name"];
+			$new_name = strtr(utf8_decode($original_name), utf8_decode(' àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ'), '_aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY');
+			$configuracao['upload_path'] = './assets/arquivos/matrizes/';
+			$configuracao['allowed_types'] = 'pdf';
+			$configuracao['file_name'] = $new_name;
+			$this->load->library('upload', $configuracao);
+			$this->upload->initialize($configuracao);
+			if($this->modelcursos->altera_matriz($id, $link)){
+				redirect(base_url('admin/cursos'));
+			}
+			else{
+				echo "Houve um erro no sistema!";
+			}
+		}
+	}
+
+		public function pagina_matriz($id)
+    {
+        $this->load->library('table');
+        $dados['cursos'] = $this->modelcursos->listar_curso($id); // Traz os dados do model noticias_model.
+
+				$dados['titulo']= 'Painel Administrativo';
+        $dados['subtitulo'] = 'Cursos';
+
+				$this->load->view('backend/template/html-header', $dados);
+
+				$this->load->view('backend/template/template');
+        $this->load->view('backend/alterar_matriz');
+
+				$this->load->view('backend/template/html-footer');
+    }
+
+
+
     public function inserir()
     {
         $this->load->library('form_validation');
@@ -154,7 +196,7 @@ class Cursos extends CI_Controller {
 						$configuracao['file_name'] = $new_name;
 						$this->load->library('upload', $configuracao);
 						$this->upload->initialize($configuracao);
-						
+
             $atuacao = $this->input->post('txt-atuacao');
             $modalidade = $this->input->post('txt-modalidade');
             $duracao = $this->input->post('txt-duracao');

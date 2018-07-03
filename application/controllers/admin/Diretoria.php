@@ -20,7 +20,7 @@ class Diretoria extends CI_Controller {
         $dados['nomes'] = $this->modelnomes->listar_nomes(); // Traz os dados do model noticias_model.
 
 		$dados['titulo']= 'Painel Administrativo';
-        $dados['subtitulo'] = 'diretoria';
+        $dados['subtitulo'] = 'Diretoria';
 
 		$this->load->view('backend/template/html-header', $dados);
 

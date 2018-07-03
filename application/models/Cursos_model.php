@@ -70,4 +70,10 @@ class Cursos_model extends CI_Model {
         $this->db->where('id',$id);
         return $this->db->update('cursos',$dados);
     }
+
+    public function altera_matriz($id, $new_name)
+    {
+      $dados['link'] = $new_name;
+      return $this->db->update('cursos',$dados);
+    }
 }
