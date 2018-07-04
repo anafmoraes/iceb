@@ -31,7 +31,7 @@
                                  <br/>
 
                              </div>
-                             <button type="submit" class="btn btn-default">Salvar Alterações</button>
+                             <button type="submit" class="btn btn-primary">Salvar Alterações</button>
                             <?php
                                 }
                                 echo form_close();
@@ -55,4 +55,3 @@
 
 </div>
 <!-- /#wrapper -->
-

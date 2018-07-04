@@ -25,20 +25,14 @@
                                  <label id="txt-noticia">Titulo da noticia</label>
                                  <input id="txt-noticia" name="txt-noticia" type="text" class="form-control" placeholder="Digite o titulo da noticia" value="<?php echo $noticia->titulo ?>">
                                  <br/>
-                                 <label id="txt-resumo">Resumo (opcional)</label>
-                                 <input id="txt-resumo" name="txt-resumo" type="text" class="form-control" placeholder="Descreva o noticia" value="<?php echo $noticia->resumo ?>">
-                                 <br/>
-                                 <label id="txt-imagem">Imagem</label>
-                                 <input id="txt-imagem" name="txt-imagem" type="text" class="form-control" placeholder="link da imagem" value="<?php echo $noticia->imagem ?>">
-                                 <br/>
                                  <label id="txt-link">Link da noticia</label>
-                                 <input id="txt-link" name="txt-link" type="text" class="form-control" placeholder="link da noticia" value="<?php echo $noticia->link ?>">
+                                 <input id="txt-link" name="txt-link" type="text" class="form-control" placeholder="Link para a noticia" value="<?php echo $noticia->link ?>">
                                  <br/>
                                  <label id="txt-data">Data</label>
-                                 <input id="txt-data" name="txt-data" type="date" class="form-control" placeholder="Digite a data" value="<?php echo $noticia->data ?>">
+                                 <input id="txt-data" name="txt-data" type="date" class="form-control" placeholder="Escolha a data" value="<?php echo $noticia->data ?>">
 
                              </div>
-                             <button type="submit" class="btn btn-default">Salvar Alterações</button>
+                             <button type="submit" class="btn btn-primary">Salvar Alterações</button>
                             <?php
                                 }
                                 echo form_close();

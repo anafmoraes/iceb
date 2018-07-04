@@ -29,7 +29,7 @@
                                  <input id="txt-telefone" name="txt-telefone" type="tel" class="form-control" placeholder="1234-5678" pattern="[0-9]{4}-[0-9]{4}">
                                  <br/>
 
-                             <button type="submit" class="btn btn-default">Cadastrar</button>
+                             <button type="submit" class="btn btn-primary">Cadastrar</button>
                             <?php
                                 echo form_close();
                              ?>

@@ -29,7 +29,7 @@
                                  <input id="txt-cargo" name="txt-cargo" type="text" class="form-control" placeholder="Digite o cargo">
                                  <br/>
 
-                             <button type="submit" class="btn btn-default">Cadastrar</button>
+                             <button type="submit" class="btn btn-primary">Cadastrar</button>
                             <?php
                                 echo form_close();
                              ?>

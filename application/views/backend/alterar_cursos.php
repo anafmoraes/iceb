@@ -56,7 +56,7 @@
                                  <label id="txt-info">Informacoes reconhecimento de curso</label>
                                  <input id="txt-info" name="txt-info" type="url" class="form-control" placeholder="Link das informações" value="<?php echo $curso->info ?>">
                              </div>
-                             <button type="submit" class="btn btn-default">Salvar Alterações</button>
+                             <button type="submit" class="btn btn-primary">Salvar Alterações</button>
                             <?php
                                 }
                                 echo form_close();

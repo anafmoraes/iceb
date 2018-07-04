@@ -29,7 +29,7 @@
                                  <input id="txt-link" name="txt-link" type="text" class="form-control" placeholder="Link">
                                  <br/>
 
-                             <button type="submit" class="btn btn-default">Cadastrar</button>
+                             <button type="submit" class="btn btn-primary">Cadastrar</button>
                             <?php
                                 echo form_close();
                              ?>

@@ -24,20 +24,14 @@
                                  <label id="txt-noticia">Titulo da noticia</label>
                                  <input id="txt-noticia" name="txt-noticia" type="text" class="form-control" placeholder="Digite o titulo da noticia">
                                  <br/>
-                                 <label id="txt-resumo">Resumo (opcional)</label>
-                                 <input id="txt-resumo" name="txt-resumo" type="text" class="form-control" placeholder="Descreva o noticia">
-                                 <br/>
-                                 <label id="txt-imagem">Imagem</label>
-                                 <input id="txt-imagem" name="txt-imagem" type="text" class="form-control" placeholder="link da imagem">
-                                 <br/>
                                  <label id="txt-link">Link da noticia</label>
-                                 <input id="txt-link" name="txt-link" type="text" class="form-control" placeholder="link da noticia">
+                                 <input id="txt-link" name="txt-link" type="text" class="form-control" placeholder="Link para a noticia">
                                  <br/>
                                  <label id="txt-data">Data</label>
-                                 <input id="txt-data" name="txt-data" type="date" class="form-control" placeholder="Digite a data">
+                                 <input id="txt-data" name="txt-data" type="date" class="form-control" placeholder="Escolha a data">
 
                              </div>
-                             <button type="submit" class="btn btn-default">Cadastrar</button>
+                             <button type="submit" class="btn btn-primary">Cadastrar</button>
                             <?php
                                 echo form_close();
                              ?>
