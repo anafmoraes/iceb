@@ -14,12 +14,12 @@ class Noticias extends CI_Controller {
 		$dados['noticias'] = $this->modelnoticias->listar_noticias(); // Traz os dados do model noticias_model.
 
 		$dados['titulo']= 'ICEB';
-        $dados['subtitulo'] = 'Notícias';
+    $dados['subtitulo'] = 'Notícias';
 
 		$this->load->view('frontend/template/html-header', $dados);
 		$this->load->view('frontend/template/header-outraspaginas');
 
-        $this->load->view('frontend/noticias_page');
+    $this->load->view('frontend/noticias_page');
 		$this->load->view('frontend/template/aside');
 
 		$this->load->view('frontend/template/footer');

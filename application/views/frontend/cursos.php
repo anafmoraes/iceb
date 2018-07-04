@@ -15,6 +15,7 @@
                                       <div class="col-md-1"></div>
                                     <div class="col-md-10" style="text-align: justify;">
                                                         <p>   &nbsp;&nbsp; <?php echo $cursos[0]->descricao ?> <br/>
+                                                        <hr/>
                                                         <p><strong> Área de Atuação: </strong> <?php echo $cursos[0]->atuacao ?> </p>
                                                         <hr/>
                                                         <p><strong> Modalidade: </strong> <?php echo $cursos[0]->modalidade ?> </p>
