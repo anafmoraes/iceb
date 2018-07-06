@@ -17,7 +17,7 @@
                         <div class="col-lg-12">
                             <?php
                                 echo validation_errors('<div class="alert alert-danger">','</div>');
-                                echo form_open('admin/cursos/inserir');
+                                echo form_open_multipart('admin/cursos/inserir');
                              ?>
                              <div class="form-group">
                                  <br/>
@@ -31,7 +31,7 @@
                                  <input id="txt-video" name="txt-video" type="text" class="form-control" placeholder="Link do Video">
                                  <br/>
                                  <label id="txt-link">Matriz Curricular</label>
-                                 <input id="txt-link" name="txt-link" type="text" class="form-control" placeholder="Matriz Curricular">
+                                 <input id="txt-link" name="txt-link" type="file" value="Procurar arquivo..." placeholder="nenhum arquivo selecionado">
                                  <br/>
                                  <label id="txt-atuacao">Area de Atuacao</label>
                                  <input id="txt-atuacao" name="txt-atuacao" type="text" class="form-control" placeholder="Digite a área de atuação">
@@ -57,7 +57,7 @@
                                  <label id="txt-info">Informacoes reconhecimento de curso</label>
                                  <input id="txt-info" name="txt-info" type="text" class="form-control" placeholder="Link das informações">
                              </div>
-                             <button type="submit" class="btn btn-default">Cadastrar</button>
+                             <button type="submit" class="btn btn-primary">Cadastrar</button>
                             <?php
                                 echo form_close();
                              ?>
@@ -80,10 +80,11 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <?php
-                                $this->table->set_heading("Nome","Alterar","Excluir");
+                                $this->table->set_heading("Nome do Curso","Alterar Dados","Alterar Matriz","Excluir Curso");
                                 foreach($cursos as $curso){
                                     $nomecurso = $curso->titulo;
-                                    $alterar = anchor(base_url('admin/cursos/pagina_alterar/'.$curso->id),'<i class="fa fa-refresh fa-fw"></i>Alterar');
+                                    $alterar = anchor(base_url('admin/cursos/pagina_alterar/'.$curso->id),'<button type="button" class="btn btn-link"><span style="color:#337ab7"><i class="fa fa-refresh fa-fw"></i>Alterar</span></button>');
+                                    $matriz = anchor(base_url('admin/cursos/pagina_matriz/'.$curso->id),'<button type="button" class="btn btn-link"><span style="color:purple"><i class="fa fa-file-pdf-o fa-fw"></i>Upload</span></button>');
                                     $excluir = $excluir= '<button type="button" class="btn btn-link" data-toggle="modal" data-target=".excluir-modal-'.$curso->id.'"><span style="color:red"><i class="fa fa-remove fa-fw"></i> Excluir</span></button>';
                                     echo $modal= ' <div class="modal fade excluir-modal-'.$curso->id.'" tabindex="-1" role="dialog" aria-hidden="true">
                                     <div class="modal-dialog modal-sm">
@@ -104,7 +105,7 @@
                                     </div>
                                 </div>';
 
-                                    $this->table->add_row($nomecurso,$alterar,$excluir);
+                                    $this->table->add_row($nomecurso,$alterar,$matriz,$excluir);
                                 }
                                 $this->table->set_template(array('table_open' => '<table class="table table-striped">'));
                                 echo $this->table->generate();

@@ -19,41 +19,35 @@ class noticias extends CI_Controller {
         $this->load->library('table');
         $dados['noticias'] = $this->modelnoticias->listar_noticias(); // Traz os dados do model noticias_model.
 
-		$dados['titulo']= 'Painel Administrativo';
+				$dados['titulo']= 'Painel Administrativo';
         $dados['subtitulo'] = 'Noticias';
 
-		$this->load->view('backend/template/html-header', $dados);
+				$this->load->view('backend/template/html-header', $dados);
 
-		$this->load->view('backend/template/template');
+				$this->load->view('backend/template/template');
         $this->load->view('backend/noticias');
 
-		$this->load->view('backend/template/html-footer');
+				$this->load->view('backend/template/html-footer');
 	}
 
     public function inserir()
     {
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('txt-noticia','titulo da noticia',
+        $this->form_validation->set_rules('txt-noticia','Titulo da noticia',
             'required|min_length[3]');
-        $this->form_validation->set_rules('txt-resumo','resumo'
-            );
-        $this->form_validation->set_rules('txt-imagem','Link do imagem'
-            );
         $this->form_validation->set_rules('txt-link','Link da Noticia',
-            'required|min_length[10]');
-        $this->form_validation->set_rules('txt-data','data',
+            'required');
+        $this->form_validation->set_rules('txt-data','Data',
             'required');
         if($this->form_validation->run() == FALSE){
             $this->index();
         }
         else{
             $titulo = $this->input->post('txt-noticia');
-            $resumo = $this->input->post('txt-resumo');
-            $imagem = $this->input->post('txt-imagem');
             $link = $this->input->post('txt-link');
             $data = $this->input->post('txt-data');
 
-            if($this->modelnoticias->adicionar($titulo, $resumo, $imagem, $link, $data)){
+            if($this->modelnoticias->adicionar($titulo, $link, $data)){
                 redirect(base_url('admin/noticias'));
             }
             else{
@@ -93,12 +87,8 @@ class noticias extends CI_Controller {
         $this->load->library('form_validation');
         $this->form_validation->set_rules('txt-noticia','titulo da noticia',
             'required|min_length[3]');
-        $this->form_validation->set_rules('txt-resumo','resumo'
-            );
-        $this->form_validation->set_rules('txt-imagem','Link do imagem'
-            );
         $this->form_validation->set_rules('txt-link','Link da Noticia',
-            'required|min_length[10]');
+            'required');
         $this->form_validation->set_rules('txt-data','Area de data','required'
             );
         if($this->form_validation->run() == FALSE){
@@ -106,12 +96,10 @@ class noticias extends CI_Controller {
         }
         else{
             $titulo = $this->input->post('txt-noticia');
-            $resumo = $this->input->post('txt-resumo');
-            $imagem = $this->input->post('txt-imagem');
             $link = $this->input->post('txt-link');
             $data = $this->input->post('txt-data');
 
-            if($this->modelnoticias->alterar($id, $titulo, $resumo, $imagem, $link, $data)){
+            if($this->modelnoticias->alterar($id, $titulo, $link, $data)){
                 redirect(base_url('admin/noticias'));
             }
             else{

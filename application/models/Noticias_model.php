@@ -5,8 +5,6 @@ class Noticias_model extends CI_Model {
   // Variáveis de instância da classe notícias - vindo do banco de dados.
   public $id;
   public $titulo;
-  public $resumo;
-  public $imagem;
   public $link;
   public $data;
 
@@ -32,16 +30,14 @@ class Noticias_model extends CI_Model {
   }
 
   public function conteudo_noticia($id){
-      $this->db->select('noticias.id, noticias.titulo, noticias.resumo, noticias.imagem, noticias.link, noticias.data');
+      $this->db->select('noticias.id, noticias.titulo, noticias.link, noticias.data');
       $this->db->from('noticias');
       $this->db->where('id = '.$id);
       return $this->db->get()->result();
   }
 
-  public function adicionar($titulo, $resumo, $imagem, $link, $data){
+  public function adicionar($titulo, $link, $data){
       $dados['titulo'] = $titulo;
-      $dados['resumo'] = $resumo;
-      $dados['imagem'] = $imagem;
       $dados['link'] = $link;
       $dados['data'] = $data;
       return $this->db->insert('noticias',$dados);
@@ -52,10 +48,8 @@ class Noticias_model extends CI_Model {
       return $this->db->delete('noticias');
   }
 
-  public function alterar($id, $titulo, $resumo, $imagem, $link, $data){
+  public function alterar($id, $titulo, $link, $data){
       $dados['titulo'] = $titulo;
-      $dados['resumo'] = $resumo;
-      $dados['imagem'] = $imagem;
       $dados['link'] = $link;
       $dados['data'] = $data;
       $this->db->where('id',$id);

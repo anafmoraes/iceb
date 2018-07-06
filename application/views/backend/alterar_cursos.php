@@ -32,9 +32,6 @@
                                  <label id="txt-video">Link do Video</label>
                                  <input id="txt-video" name="txt-video" type="text" class="form-control" placeholder="Link do Video" value="<?php echo htmlspecialchars($curso->video) ?>" >
                                  <br/>
-                                 <label id="txt-link">Matriz Curricular</label>
-                                 <input id="txt-link" name="txt-link" type="text" class="form-control" placeholder="Matriz Curricular" value="<?php echo $curso->link ?>">
-                                 <br/>
                                  <label id="txt-atuacao">Area de Atuacao</label>
                                  <input id="txt-atuacao" name="txt-atuacao" type="text" class="form-control" placeholder="Digite a área de atuação" value="<?php echo $curso->atuacao ?>">
                                  <br/>
@@ -59,7 +56,7 @@
                                  <label id="txt-info">Informacoes reconhecimento de curso</label>
                                  <input id="txt-info" name="txt-info" type="url" class="form-control" placeholder="Link das informações" value="<?php echo $curso->info ?>">
                              </div>
-                             <button type="submit" class="btn btn-default">Salvar Alterações</button>
+                             <button type="submit" class="btn btn-primary">Salvar Alterações</button>
                             <?php
                                 }
                                 echo form_close();

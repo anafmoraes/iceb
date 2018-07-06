@@ -17,25 +17,24 @@
                         <div class="col-lg-12">
                             <?php
                                 echo validation_errors('<div class="alert alert-danger">','</div>');
-                                echo form_open_multipart('admin/noticias/inserir');
+                                echo form_open('admin/contatos/inserir');
                              ?>
                              <div class="form-group">
                                  <br/>
-                                 <label id="txt-noticia">Titulo da noticia</label>
-                                 <input id="txt-noticia" name="txt-noticia" type="text" class="form-control" placeholder="Digite o titulo da noticia">
+                                 <label id="txt-nome">Nome do local</label>
+                                 <input id="txt-nome" name="txt-nome" type="text" class="form-control" placeholder="Digite o nome">
                                  <br/>
-                                 <label id="txt-link">Link da noticia</label>
-                                 <input id="txt-link" name="txt-link" type="text" class="form-control" placeholder="Link para a noticia">
-                                 <br/>
-                                 <label id="txt-data">Data</label>
-                                 <input id="txt-data" name="txt-data" type="date" class="form-control" placeholder="Escolha a data">
 
-                             </div>
+                                 <label id="txt-telefone">Telefone</label>
+                                 <input id="txt-telefone" name="txt-telefone" type="tel" class="form-control" placeholder="1234-5678" pattern="[0-9]{4}-[0-9]{4}">
+                                 <br/>
+
                              <button type="submit" class="btn btn-primary">Cadastrar</button>
                             <?php
                                 echo form_close();
                              ?>
                         </div>
+                    </div>
 
                     </div>
                     <!-- /.row (nested) -->
@@ -54,33 +53,31 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <?php
-                                $this->table->set_heading("Titulo da noticia","Alterar Noticia","Excluir Noticia");
-                                foreach($noticias as $noticia){
-                                    $titulonoticia = $noticia->titulo;
-                                    $alterar = anchor(base_url('admin/noticias/pagina_alterar/'.$noticia->id),'<button type="button" class="btn btn-link"><span style="color:#337ab7"><i class="fa fa-refresh fa-fw"></i>Alterar</span></button>');
-                                    $excluir = '<button type="button" class="btn btn-link" data-toggle="modal" data-target=".excluir-modal-'.$noticia->id.'"><span style="color:red"><i class="fa fa-remove fa-fw"></i> Excluir</span></button>';
-                                    echo $modal= ' <div class="modal fade excluir-modal-'.$noticia->id.'" tabindex="-1" role="dialog" aria-hidden="true">
+                                $this->table->set_heading("Nome do Contato","Alterar Registro","Excluir Contato");
+                                foreach($nomes as $nome){
+                                    $nomenome = $nome->nome;
+                                    $alterar = anchor(base_url('admin/contatos/pagina_alterar/'.$nome->id),'<button type="button" class="btn btn-link"><span style="color:#337ab7"><i class="fa fa-refresh fa-fw"></i>Alterar</span></button>');
+                                    $excluir = $excluir= '<button type="button" class="btn btn-link" data-toggle="modal" data-target=".excluir-modal-'.$nome->id.'"><span style="color:red"><i class="fa fa-remove fa-fw"></i> Excluir</span></button>';
+                                    echo $modal= ' <div class="modal fade excluir-modal-'.$nome->id.'" tabindex="-1" role="dialog" aria-hidden="true">
                                     <div class="modal-dialog modal-sm">
                                         <div class="modal-content">
 
                                             <div class="modal-header">
-
-
-                                                <h4 class="modal-title" id="myModalLabel2">Exclusão de noticia</h4>
+                                                <h4 class="modal-title" id="myModalLabel2">Exclusão de nome</h4>
                                             </div>
                                             <div class="modal-body">
-                                                <h4>Deseja Realmente excluir a noticia '.$noticia->titulo.'?</h4>
+                                                <h4>Deseja Realmente excluir o nome '.$nome->nome.'?</h4>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                                                <a type="button" class="btn btn-primary" href="'.base_url("admin/noticias/remover/".$noticia->id).'">Excluir</a>
+                                                <a type="button" class="btn btn-primary" href="'.base_url("admin/contatos/remover/".$nome->id).'">Excluir</a>
                                             </div>
 
                                         </div>
                                     </div>
                                 </div>';
 
-                                    $this->table->add_row($titulonoticia,$alterar,$excluir);
+                                    $this->table->add_row($nomenome,$alterar,$excluir);
                                 }
                                 $this->table->set_template(array('table_open' => '<table class="table table-striped">'));
                                 echo $this->table->generate();
@@ -102,35 +99,3 @@
 
 </div>
 <!-- /#wrapper -->
-
-<!--
-
-<form role="form">
-    <div class="form-group">
-        <label>titulo</label>
-        <input class="form-control" placeholder="Entre com o texto">
-    </div>
-    <div class="form-group">
-        <label>Foto Destaque</label>
-        <input type="file">
-    </div>
-    <div class="form-group">
-        <label>Conteúdo</label>
-        <textarea class="form-control" rows="3"></textarea>
-    </div>
-
-    <div class="form-group">
-        <label>Selects</label>
-        <select class="form-control">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-        </select>
-    </div>
-    <button type="submit" class="btn btn-default">Cadastrar</button>
-    <button type="reset" class="btn btn-default">Limpar</button>
-</form>
-
--->

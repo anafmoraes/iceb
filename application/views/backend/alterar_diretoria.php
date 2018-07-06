@@ -17,17 +17,17 @@
                         <div class="col-lg-12">
                             <?php
                                 echo validation_errors('<div class="alert alert-danger">','</div>');
-                                foreach($cursos as $curso){
-                                echo form_open('admin/departamentos/alterar/'.$curso->id);
+                                foreach($nomes as $nome){
+                                echo form_open('admin/diretoria/alterar/'.$nome->id);
 
                              ?>
                              <div class="form-group">
                                  <br/>
-                                 <label id="txt-curso">Nome do Departamento</label>
-                                 <input id="txt-curso" name="txt-curso" type="text" class="form-control" placeholder="Digite o nome do curso" value="<?php echo $curso->titulo ?>">
+                                 <label id="txt-nome">Nome</label>
+                                 <input id="txt-nome" name="txt-nome" type="text" class="form-control" placeholder="Digite o nome do nome" value="<?php echo $nome->nome ?>">
                                  <br/>
-                                 <label id="txt-link">Link</label>
-                                 <input id="txt-link" name="txt-link" type="text" class="form-control" placeholder="Matriz Curricular" value="<?php echo $curso->link ?>">
+                                 <label id="txt-cargo">Cargo</label>
+                                 <input id="txt-cargo" name="txt-cargo" type="text" class="form-control" placeholder="Matriz Curricular" value="<?php echo $nome->cargo ?>">
                                  <br/>
 
                              </div>

@@ -3,29 +3,21 @@
             <div class="container">
                 <div class="row">
                     <div class="main_portfolio_area m-y-3">
+                      <br/><br/><br/>
                         <div class="head_title center wow ">
                             <h2>Noticias</h2>
 
                         </div>
+                        <div style="text-align: center; border: 2px solid #BBB">
+                          <br/>
                             <?php foreach($noticias as $noticia) {?>
-                            <div id="mixcontent" class="mixcontent  wow">
-                                <div class="col-md-4 mix cat4 cat2">
-                                    <div class="single_mixi_portfolio center">
-                                        <div class="single_portfolio_img">
-                                            <img src="/iceb/assets/frontend/img/pf1.jpg" alt="" />
-                                            <div class="mixi_portfolio_overlay">
-                                                <a href="#!"><i class="fa fa-search"></i></a>
-                                                <a href="/iceb/assets/frontend/img/pf1.jpg" class="gallery-img"><i class="fa fa-link"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="single_portfolio_text">
-                                            <h3><?php echo $noticia->titulo ?></h3>
-                                            <p><?php echo $noticia->resumo ?></p>
-                                            <?php echo $noticia->data ?>
-                                        </div>
-                                    </div>
-                                </div>
+
+                              <h3><a href="<?php echo $noticia->link ?>"><?php echo $noticia->titulo ?></a></h3><br/>
+                              <p><?php echo $noticia->data ?></p>
+                              <br/>
+                              <hr/>
                               <?php } ?>
+                        </div>
                                 <br>
                             </hr>
                             <br>

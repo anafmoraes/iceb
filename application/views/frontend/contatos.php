@@ -15,7 +15,7 @@
 
                                      <div class="col-md-1"></div>
                                      <div class="col-md-10" style="text-align: justify;">
-                                      <p> <strong><?php echo $contato->nome ?> -</strong> 3559-<?php echo $contato->telefone ?> </p>
+                                      <p> <strong><?php echo $contato->nome ?>:</strong> <span style="text-align: right;"><?php echo $contato->telefone ?></span> </p>
                                     </div>
                                     <div class="col-md-1"></div>
                                     </div>

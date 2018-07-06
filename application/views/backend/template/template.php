@@ -32,7 +32,7 @@
                         <a href="<?php echo base_url('admin/departamentos') ?>"><i class="fa fa-briefcase"></i> Departamentos</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('admin/diretorias') ?>"><i class="fa fa-university "></i> Diretorias</a>
+                        <a href="<?php echo base_url('admin/diretoria') ?>"><i class="fa fa-university"></i> Diretoria</a>
                     </li>
                     <li>
                         <a href="<?php echo base_url() ?>"><i class="fa fa-sign-out fa-fw"></i> Sair do Sistema</a>
