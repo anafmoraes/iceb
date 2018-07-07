@@ -1,4 +1,4 @@
-    <body data-spy="scroll" data-target=".navbar-desktop" >
+    <body data-spy="scroll" data-target=".navbar-desktop"  style="overflow-x: hidden !important">
         <!-- Start your project here-->
         <!--Navbar-->
 
@@ -35,28 +35,28 @@
 
                         </li></center>
 
-                        
+
                         <center><li class="nav-item menu dropdown"  >
                             <a data-toggle="dropdown"><img src="/iceb/assets/frontend/img/icones/departamento.png" class="icone">
                             <span  style=" display: block;margin-top: -45px;" >Departamentos</span></a>
                             <ul class="dropdown-menu drop-ul">
                                 <?php foreach($departamentos as $departamento){ ?>
                           <li ><a class="drop-li" href="<?php echo ($departamento->link)?>"> <?php echo $departamento->titulo?> <hr></a>
-                            </li> 
-                            <?php }?>  
+                            </li>
+                            <?php }?>
 
                         </li></center>
-                        
-                        
+
+
 
                         <center><li class="nav-item menu dropdown" >
                             <a data-toggle="dropdown"><img src="/iceb/assets/frontend/img/icones/ensino.png" class="icone" >
-                            <span class="nav-link" " style=" display: block;margin-top: -45px;" >Ensino</span></a>
+                            <span class="nav-link" style=" display: block;margin-top: -45px;" >Ensino</span></a>
                             <ul class="dropdown-menu drop-ul">
                                 <?php foreach($cursos as $curso){ ?>
                           <li ><a class="drop-li" href="<?php echo base_url('/cursos/'. $curso->id .'/'.  $curso->titulo)?>"> <?php echo $curso->titulo?> <hr></a>
-                            </li> 
-                            <?php }?>  
+                            </li>
+                            <?php }?>
 
                           </ul>
                         </li></center>
@@ -71,12 +71,12 @@
                         <center><li class="nav-item menu dropdown" >
                             <a data-toggle="dropdown"><img src="/iceb/assets/frontend/img/icones/pesquisa.png" class="icone"">
                             <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Pós-graduação</span></a>
-                        
+
                          <ul class="dropdown-menu drop-ul">
                                 <?php foreach($posgraduacao as $pos){ ?>
                           <li ><a class="drop-li" href="<?php echo($pos->titulo)?>"> <?php echo $pos->titulo?> <hr></a>
-                            </li> 
-                            <?php }?>  
+                            </li>
+                            <?php }?>
                             </li></center>
 
 

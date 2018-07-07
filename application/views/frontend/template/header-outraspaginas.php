@@ -1,4 +1,4 @@
-    <body data-spy="scroll" data-target=".navbar-desktop" >
+    <body data-spy="scroll" data-target=".navbar-desktop" style="overflow-x: hidden !important">
         <!-- Start your project here-->
         <!--Navbar-->
 
