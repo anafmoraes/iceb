@@ -1,4 +1,4 @@
-    
+
 
 
 
@@ -30,15 +30,15 @@
                                 </div>
                             </div>
                         </div>
-            
+
                         <div class="col-md-3">
                             <div class="single_f_widget m-t-3 wow fadeInUp">
                                 <h4 > Contato:</h4>
                                 <div class="single_f_widget_text f_reatures">
-                                    
-                                    <b>E-mail :</b> iceb@ufop.edu.br    
+
+                                    <b>E-mail :</b> iceb@ufop.edu.br
                                     <br><br>
-                                    <a href="<?php echo base_url('/admin') ?>"><b> Admin Login </b></a>                                
+                                    <a href="<?php echo base_url('/admin') ?>"><b> Login administrador </b></a>
                                 </div>
 
                             </div>
@@ -47,17 +47,16 @@
 
                         </div>
 
-                        
 
-                        
+
+
                     </div>
                 </div>
             </div>
               <div class="row">
                 <br><br>
               </div>
-                    <center><h6 class="copyright" style="color: white;">Copyright ©2018 Universidade Federal de Ouro Preto</h6></center>
+                    <div style="background-color: rgba(255,255,255,0.1); padding-top: 15px; padding-bottom: 10px;">
+                      <center><h6 class="copyright" style="color: white;">Copyright &copy;2018 Universidade Federal de Ouro Preto</h6></center>
+                    </div>
         </section>
-
-
-            

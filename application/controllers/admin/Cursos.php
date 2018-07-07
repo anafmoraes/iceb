@@ -31,7 +31,13 @@ class Cursos extends CI_Controller {
 	}
 
 	public function nova_matriz($id){
+			$filename = $link;
 			$link = $_FILES['txt-link'];
+			if($link != ''){
+				$this->load->helper("file");
+				$caminho = './assets/arquivos/matrizes/'.$filename.'.pdf';
+				delete_files($caminho);
+			}
 			$original_name = $_FILES['txt-link']['name'];
 			$new_name = strtr(utf8_decode($original_name), utf8_decode(' àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ'), '_aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY');
 			$configuracao['upload_path'] = './assets/arquivos/matrizes';
