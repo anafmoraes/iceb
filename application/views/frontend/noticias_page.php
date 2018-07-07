@@ -3,15 +3,16 @@
     <div class="col-md-1">
     </div>
    <section id="newsletter" class="portfolio col-md-7">
-     <div class="head_title center wow ">
-         <h2>Noticias</h2>
 
-     </div>
               <div class="container">
+
 
                       <div class="main_portfolio_area m-y-3">
 
+                            <div class="head_title center wow ">
+                                <h2>Noticias</h2>
 
+                            </div>
 
                             <br/>
                             <div>

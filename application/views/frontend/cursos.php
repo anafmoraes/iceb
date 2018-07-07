@@ -1,5 +1,6 @@
 
 <div class="conteudopags">
+  <div class="row">
  <div class="col-sm-8">
 
   <section id="about" class="about">

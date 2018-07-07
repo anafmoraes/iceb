@@ -1,4 +1,4 @@
-<!-- <div class="conteudopags"> -->
+<div class="conteudopags">
   <div class="row">
 <div class="col-md-1">
 </div>
