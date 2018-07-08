@@ -35,17 +35,21 @@
                                  <label id="txt-atuacao">Area de Atuacao</label>
                                  <input id="txt-atuacao" name="txt-atuacao" type="text" class="form-control" placeholder="Digite a área de atuação" value="<?php echo $curso->atuacao ?>">
                                  <br/>
-                                 <label id="txt-modalidade">Modalidade</label>
-                                 <input id="txt-modalidade" name="txt-modalidade" type="text" class="form-control" placeholder="Digite a modalidade(bacharelado/licenciatura)" value="<?php echo $curso->modalidade ?>">
+                                 <label id="txt-modalidade">Modalidade</label><br/>
+                                 <select id="txt-modalidade" name="txt-modalidade">
+                                   <option value="Bacharelado" <?php if($curso->modalidade == "Bacharelado"){ echo "selected";} ?>>Bacharelado</option>
+                                   <option value="Licenciatura" <?php if($curso->modalidade == "Licenciatura"){ echo "selected";} ?>>Licenciatura</option>
+                                 </select>
                                  <br/>
-                                 <label id="txt-duracao">Duracao</label>
-                                 <input id="txt-duracao" name="txt-duracao" type="text" class="form-control" placeholder="Duração (em semestres)" value="<?php echo $curso->duracao ?>">
                                  <br/>
-                                 <label id="txt-vagas">Vagas</label>
-                                 <input id="txt-vagas" name="txt-vagas" type="text" class="form-control" placeholder="Vagas" value="<?php echo $curso->vagas ?>">
+                                 <label id="txt-duracao">Duracao (em semestres)</label><br/>
+                                 <input id="txt-duracao" name="txt-duracao" type="number" min="1" value="<?php echo $curso->duracao ?>"><br/>
+                                 <br/>
+                                 <label id="txt-vagas">Vagas</label><br/>
+                                 <input id="txt-vagas" name="txt-vagas" type="number" min="0" value="<?php echo $curso->vagas ?>">
+                                 <br/>
                                  <br/>
                                  <label id="txt-turnos">Turnos</label><br/>
-
                                  <select id="txt-turnos" name="txt-turnos">
                                      <option value="Diurno" <?php if($curso->turno == "Diurno"){ echo "selected";} ?>>Diurno</option>
                                      <option value="Noturno" <?php if($curso->turno == "Noturno"){ echo "selected";} ?>>Noturno</option>

@@ -91,7 +91,7 @@ class Cursos extends CI_Controller {
         $this->form_validation->set_rules('txt-atuacao','Area de Atuacao',
             'required|min_length[20]');
         $this->form_validation->set_rules('txt-modalidade','Modalidade',
-            'required|min_length[2]');
+            'required');
         $this->form_validation->set_rules('txt-duracao','Duracao',
             'required');
         $this->form_validation->set_rules('txt-vagas','Vagas',
@@ -174,7 +174,7 @@ class Cursos extends CI_Controller {
         $this->form_validation->set_rules('txt-atuacao','Area de Atuacao',
             'required|min_length[20]');
         $this->form_validation->set_rules('txt-modalidade','Modalidade',
-            'required|min_length[2]');
+            'required');
         $this->form_validation->set_rules('txt-duracao','Duracao',
             'required');
         $this->form_validation->set_rules('txt-vagas','Vagas',
