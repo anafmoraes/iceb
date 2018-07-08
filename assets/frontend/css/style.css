@@ -1,4 +1,4 @@
-/* 
+/*
 
 Authore Name : Bootstrapthemes
 Authore link : http://bootstrapthemes.co
@@ -9,7 +9,7 @@ html,
 body{
 
     font-size:14px;
-    background:#fff; 
+    background:#fff;
     font-family: "Roboto";
     font-weight: 300;
     overflow-x:  hidden;
@@ -55,7 +55,7 @@ h4 {
     background: rgba(0, 0, 0, 0.5);
 }
 /*==========================================
-PRE LOADER 
+PRE LOADER
 ==========================================*/
 .preloader {
     position: fixed;
@@ -136,10 +136,10 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
     line-height: 75px;
     transition: all 0.3s;
 
-    
+
 }
 .small .navbar-brand {
-  
+
 }
 
 .nav ul li.active{
@@ -156,12 +156,12 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 a .nav-link:hover{
     padding: 0;
     color:#d8702b;
-    
+
 }
 a .nav-link:focus{
     padding: 0;
     color:#d8702b;
-    
+
 }
 .menu{
     margin: 0px 5px 0px 5px !important;
@@ -213,7 +213,7 @@ a .nav-link:focus{
 .single_about .panel-default>.panel-heading p{
     margin-top: 0;
     margin-bottom: 0;
-} 
+}
 
 .panel-heading.bgg.bg{
     background:url(../img/accordion.png) no-repeat right 7px #d8702b;
@@ -523,7 +523,7 @@ div.panel.show {
 
 
 /*.main_portfolio_area{
-    overflow: hidden;  
+    overflow: hidden;
 }*/
 .main_mixi_content{
     max-height: 900px;
@@ -579,7 +579,7 @@ div.panel.show {
     -webkit-transform-origin: 50% 0;
 }
 /*======================================================================
-                    ours works 
+                    ours works
 ========================================================================*/
 
 .main_works_area{
@@ -605,8 +605,7 @@ div.panel.show {
 
 .footer{
     background: #151515;
-     overflow-x: hidden;
-
+    overflow-x: hidden;
 }
 .main_footer_area {
 }
@@ -701,8 +700,8 @@ a.btn.btn-danger.waves-effects.waves-red:hover
 }
 .drop-ul
 {
-    margin: -10px 0px -10px 0px !important;  
+    margin: -10px 0px -10px 0px !important;
     line-height: 20px !important;
-   
+
 
 }
