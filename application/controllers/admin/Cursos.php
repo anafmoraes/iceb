@@ -15,45 +15,52 @@ class Cursos extends CI_Controller {
 
 	public function index()
 	{
+        $this->load->library('table');
+        $dados['cursos'] = $this->modelcursos->listar_cursos(); // Traz os dados do model noticias_model.
 
-    $this->load->library('table');
-    $dados['cursos'] = $this->modelcursos->listar_cursos(); // Traz os dados do model noticias_model.
+    	$dados['titulo']= 'Painel Administrativo';
+        $dados['subtitulo'] = 'Cursos';
 
-		$dados['titulo']= 'Painel Administrativo';
-    $dados['subtitulo'] = 'Cursos';
+    	$this->load->view('backend/template/html-header', $dados);
 
-		$this->load->view('backend/template/html-header', $dados);
+    	$this->load->view('backend/template/template');
+        $this->load->view('backend/cursos');
 
-		$this->load->view('backend/template/template');
-    $this->load->view('backend/cursos');
-
-		$this->load->view('backend/template/html-footer');
+    	$this->load->view('backend/template/html-footer');
 	}
 
-	public function nova_matriz($id){
-			$link = $_FILES['txt-link'];
-			$original_name = $_FILES['txt-link']['name'];
-			$new_name = strtr(utf8_decode($original_name), utf8_decode(' àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ'), '_aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY');
-			$configuracao['upload_path'] = './assets/arquivos/matrizes';
-			$configuracao['allowed_types'] = 'pdf';
-			$configuracao['file_name'] = $new_name;
-			$configuracao['overwrite'] = TRUE;
-			$this->load->library('upload', $configuracao);
-			$this->upload->overwrite = true;
-			$this->upload->initialize($configuracao);
+	public function nova_matriz($id, $link){
+        /*Exclusão do arquivo antigo*/
+        $this->load->helper("file");
+       $caminhoArquivo = './assets/arquivos/matrizes/'. $link;
 
-			if($this->upload->do_upload('txt-link')){
-				if($this->modelcursos->nova_matriz($id, $new_name)){
-					redirect(base_url('admin/cursos'));
-				}
-			}
-			else{
-				echo "Houve um erro no sistema!";
-				echo $this->upload->display_errors();
-			}
+        if (!unlink($caminhoArquivo)){
+            echo 'Não foi possível excluir o arquivo antigo';
+        }
+        else
+        {
+            $link = $_FILES['txt-link'];
+            $original_name = $_FILES['txt-link']['name'];
+            $new_name = strtr(utf8_decode($original_name), utf8_decode('âãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ'), '_aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY');
+            $configuracao['upload_path'] = './assets/arquivos/matrizes';
+            $configuracao['allowed_types'] = 'pdf';
+            $configuracao['file_name'] = $new_name;
+            $configuracao['overwrite'] = TRUE;
+            $this->load->library('upload', $configuracao);
+            $this->upload->overwrite = true;
+            $this->upload->initialize($configuracao);
+            if($this->upload->do_upload('txt-link')){
+                if($this->modelcursos->nova_matriz($id, $new_name)){
+                    redirect(base_url('admin/cursos'));
+                }
+            }else{
+                echo "Houve um erro no sistema!";
+                echo $this->upload->display_errors();
+            }
+        }	
 	}
 
-		public function pagina_matriz($id)
+	public function pagina_matriz($id)
     {
         $this->load->library('table');
         $dados['cursos'] = $this->modelcursos->listar_curso($id); // Traz os dados do model noticias_model.
@@ -85,7 +92,7 @@ class Cursos extends CI_Controller {
         $this->form_validation->set_rules('txt-atuacao','Area de Atuacao',
             'required|min_length[20]');
         $this->form_validation->set_rules('txt-modalidade','Modalidade',
-            'required|min_length[2]');
+            'required');
         $this->form_validation->set_rules('txt-duracao','Duracao',
             'required');
         $this->form_validation->set_rules('txt-vagas','Vagas',
@@ -168,7 +175,7 @@ class Cursos extends CI_Controller {
         $this->form_validation->set_rules('txt-atuacao','Area de Atuacao',
             'required|min_length[20]');
         $this->form_validation->set_rules('txt-modalidade','Modalidade',
-            'required|min_length[2]');
+            'required');
         $this->form_validation->set_rules('txt-duracao','Duracao',
             'required');
         $this->form_validation->set_rules('txt-vagas','Vagas',

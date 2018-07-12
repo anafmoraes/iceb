@@ -14,12 +14,12 @@ class Noticias_model extends CI_Model {
 
   public function noticias_home(){
     $this->db->limit(6);
-    $this->db->order_by('data','DSC');
+    $this->db->order_by('data','DESC');
     return $this->db->get('noticias')->result();
   }
 
   public function listar_noticias(){
-    $this->db->order_by('data','DSC');
+    $this->db->order_by('data','DESC');
     return $this->db->get('noticias')->result();
   }
 

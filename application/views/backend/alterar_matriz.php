@@ -18,7 +18,7 @@
                             <?php
                                 echo validation_errors('<div class="alert alert-danger">','</div>');
                                 foreach($cursos as $curso){
-                                echo form_open_multipart('admin/cursos/nova_matriz/'.$curso->id);
+                                echo form_open_multipart('admin/cursos/nova_matriz/'.$curso->id.'/'.$curso->link);
 
                              ?>
                              <div class="form-group">

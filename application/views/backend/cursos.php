@@ -36,14 +36,20 @@
                                  <label id="txt-atuacao">Area de Atuacao</label>
                                  <input id="txt-atuacao" name="txt-atuacao" type="text" class="form-control" placeholder="Digite a área de atuação">
                                  <br/>
-                                 <label id="txt-modalidade">Modalidade</label>
-                                 <input id="txt-modalidade" name="txt-modalidade" type="text" class="form-control" placeholder="Digite a modalidade(bacharelado/licenciatura)">
+                                 <label id="txt-modalidade">Modalidade</label><br/>
+                                 <select id="txt-modalidade" name="txt-modalidade">
+                                   <option> Escolha uma opção: </option>
+                                   <option value="Bacharelado">Bacharelado</option>
+                                   <option value="Licenciatura">Licenciatura</option>
+                                 </select>
                                  <br/>
-                                 <label id="txt-duracao">Duracao</label>
-                                 <input id="txt-duracao" name="txt-duracao" type="text" class="form-control" placeholder="Duração (em semestres)">
                                  <br/>
-                                 <label id="txt-vagas">Vagas</label>
-                                 <input id="txt-vagas" name="txt-vagas" type="text" class="form-control" placeholder="Vagas">
+                                 <label id="txt-duracao">Duracao (em semestres)</label><br/>
+                                 <input id="txt-duracao" name="txt-duracao" type="number" min="1" placeholder="mínimo: 1"><br/>
+                                 <br/>
+                                 <label id="txt-vagas">Vagas</label><br/>
+                                 <input id="txt-vagas" name="txt-vagas" type="number" min="0" placeholder="mínimo: 0"><br/>
+
                                  <br/>
                                  <label id="txt-turnos">Turnos</label><br/>
                                  <select id="txt-turnos" name="txt-turnos">

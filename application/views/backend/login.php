@@ -25,6 +25,9 @@
 
                     </div>
                 </div>
+                <a href="<?php echo base_url() ?>"><i class="fa fa-arrow-left"></i> Voltar ao site </a>
             </div>
+
         </div>
+
     </div>

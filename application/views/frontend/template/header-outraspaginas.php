@@ -1,4 +1,5 @@
-    <body data-spy="scroll" data-target=".navbar-desktop" style="margin-top: 100px;" >
+
+    <body data-spy="scroll" data-target=".navbar-desktop" style="overflow-x: hidden !important; margin-top: 100px;">
         <!-- Start your project here-->
         <!--Navbar-->
 
@@ -32,7 +33,7 @@
                         </li></center>
 
                         <center><li class="nav-item menu" >
-                            <a href=""><img src="/iceb/assets/frontend/img/icones/instituto.png" class="icone">
+                            <a href="<?php echo base_url('/diretoria') ?>"><img src="/iceb/assets/frontend/img/icones/instituto.png" class="icone">
                             <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >O Instituto</span></a>
 
                         </li></center>
