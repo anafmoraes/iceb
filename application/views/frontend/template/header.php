@@ -4,7 +4,7 @@
 
         <div class='preloader'><div class='loaded'>&nbsp;</div></div>
 
-        <nav class="navbar navbar-fixed-top bg-faded"  style="  background-color: rgba(0,0,0,0); height: 90px; padding-bottom: 10px;">
+        <nav class="navbar navbar-fixed-top bg-faded"  style="  background-color: rgba(0,0,0,0); height: 90px; padding-bottom: 10px;margin-bottom:20px; ">
             <!--Collapse button-->
             <div class="container">
                 <a href="#" data-activates="mobile-menu" class="button-collapse left"><i class="fa fa-bars " style="font-size: 30px;"></i></a>
@@ -64,20 +64,25 @@
 
 
                         <center><li class="nav-item menu">
-                            <a href=""><img src="/iceb/assets/frontend/img/icones/agenda.png" class="icone" ">
+                            <a href=""><img src="/iceb/assets/frontend/img/icones/agenda.png" class="icone" >
                             <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Agenda</span></a>
                         </li></center>
 
+
                         <center><li class="nav-item menu dropdown" >
-                            <a data-toggle="dropdown"><img src="/iceb/assets/frontend/img/icones/pesquisa.png" class="icone"">
+                            <a data-toggle="dropdown"><img src="/iceb/assets/frontend/img/icones/pesquisa.png" class="icone">
                             <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Pós-graduação</span></a>
-                        
+                       
                          <ul class="dropdown-menu drop-ul">
-                                <?php foreach($posgraduacao as $pos){ ?>
-                          <li ><a class="drop-li" href="<?php echo($pos->titulo)?>"> <?php echo $pos->titulo?> <hr></a>
-                            </li> 
-                            <?php }?>  
-                            </li></center>
+                            <?php foreach($posgraduacao as $pos){ ?>
+                              <li ><a class="drop-li focus" data-target="#no" data-toggle="modal" > <?php echo $pos->titulo?> </a></li> 
+                                
+                            
+                                </ul>
+                                <?php }?>  
+                             </li></center>
+
+                            
 
 
                         <center><li class="nav-item menu" style="margin: 0px 5px 0px 5px ">
@@ -116,9 +121,19 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#!">Agenda</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#newsletter">Pesquisa</a>
-                        </li>
+                        
+                            <li class="nav-item menu dropdown" >
+                            <a data-toggle="dropdown">
+                            <span class="nav-link" >Pós-graduação</span></a>
+                       
+                         <ul class="dropdown-menu drop-ul">
+                            <?php foreach($posgraduacao as $pos){ ?>
+                              <li ><a class="drop-li focus" data-target="#no" data-toggle="modal" > <?php echo $pos->titulo?> </a></li> 
+                                
+                            
+                                </ul>
+                                <?php }?>  
+                             </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#newsletter">Noticias</a>
                         </li>
@@ -131,3 +146,28 @@
             </div>
         </nav>
         <!--/.Navbar-->
+ <div class=" modal fade"  role="dialog"  id="no" style="background: rgba(0,0,0,0); ">
+
+
+                <div class="modal-content">
+                        <div class="modal-header">
+                                <h2 class="modal-title" id="myModalLabel"><?php echo $pos->titulo?></h2>
+                        </div>
+                        <div class="modal-body">
+                            <center>
+
+                            <?php echo($pos->video) ?>
+                            <br>
+                            <a href=" <?php echo $pos->link?>" class="btn" >Veja Mais</a>
+                            </center>
+                         </div>
+
+                        <div class="modal-footer"  >
+                            
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        </div>
+                    </div>
+        
+ </div>
+                            
+                                    

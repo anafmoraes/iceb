@@ -17,7 +17,7 @@ class Home extends CI_Controller {
 		$this->load->model('Departamentos_model','modeldepartamentos'); // Acessoa ao model.v
 		$dados['cursos'] = $this->modelcursos->listar_cursos();
 		$dados['noticias'] = $this->modelnoticias->noticias_home(); // Traz os dados do model noticias_model.
-		$dados['departamentos'] = $this->modeldepartamentos->listar_cursos();
+		$dados['departamentos'] = $this->modeldepartamentos->listar_depts();
 		$dados['posgraduacao'] = $this->modelposgraduacao->listar_cursos();
 		$dados['titulo'] = 'ICEB';
 		$dados['subtitulo'] = 'Início';

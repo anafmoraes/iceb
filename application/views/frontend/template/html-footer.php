@@ -35,6 +35,8 @@
         <!-- MDB core JavaScript -->
         <script type="text/javascript" src="/iceb/assets/frontend/js/materialize.js"></script>
 
+        <script type="text/javascript" src=" https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+
         <script>
             $(".button-collapse").sideNav();
         </script>

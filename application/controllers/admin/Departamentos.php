@@ -9,7 +9,7 @@ class Departamentos extends CI_Controller {
 			redirect(base_url('admin/login'));
 		}
 
-        $this->load->model('Departamentos_model','modelcursos'); // Acessoa ao model.
+        $this->load->model('Departamentos_model','modeldept'); // Acessoa ao model.
 
 	}
 
@@ -17,7 +17,7 @@ class Departamentos extends CI_Controller {
 	{
 
         $this->load->library('table');
-        $dados['cursos'] = $this->modelcursos->listar_cursos(); // Traz os dados do model noticias_model.
+        $dados['depts'] = $this->modeldept->listar_depts(); // Traz os dados do model noticias_model.
 
 		$dados['titulo']= 'Painel Administrativo';
         $dados['subtitulo'] = 'Departamentos';
@@ -47,7 +47,7 @@ class Departamentos extends CI_Controller {
             $link = $this->input->post('txt-link');
 
 
-            if($this->modelcursos->adicionar($titulo, $link)){
+            if($this->modeldept->adicionar($titulo, $link)){
                 redirect(base_url('admin/departamentos'));
             }
             else{
@@ -58,7 +58,7 @@ class Departamentos extends CI_Controller {
 
     public function remover($id)
     {
-        if($this->modelcursos->remover($id)){
+        if($this->modeldept->remover($id)){
             redirect(base_url('admin/departamentos'));
         }
         else{
@@ -69,7 +69,7 @@ class Departamentos extends CI_Controller {
     public function pagina_alterar($id)
     {
         $this->load->library('table');
-        $dados['cursos'] = $this->modelcursos->listar_curso($id); // Traz os dados do model noticias_model.
+        $dados['cursos'] = $this->modeldept->listar_dept($id); // Traz os dados do model noticias_model.
 
 		$dados['titulo']= 'Painel Administrativo';
         $dados['subtitulo'] = 'Departamentos';
@@ -99,7 +99,7 @@ class Departamentos extends CI_Controller {
             $link = $this->input->post('txt-link');
 
 
-            if($this->modelcursos->alterar($id, $titulo,  $link)){
+            if($this->modeldept->alterar($id, $titulo,  $link)){
                 redirect(base_url('admin/departamentos'));
             }
             else{

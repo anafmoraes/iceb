@@ -28,6 +28,9 @@
                                  <label id="txt-link">Link</label>
                                  <input id="txt-link" name="txt-link" type="text" class="form-control" placeholder="Link">
                                  <br/>
+                                 <label id="txt-link">Link do video</label>
+                                 <input id="txt-link" name="txt-video" type="text" class="form-control" placeholder="Link do video" >
+                                 <br/>
 
                              <button type="submit" class="btn btn-primary">Cadastrar</button>
                             <?php
@@ -63,10 +66,10 @@
                                         <div class="modal-content">
 
                                             <div class="modal-header">
-                                                <h4 class="modal-title" id="myModalLabel2">Exclusão de curso</h4>
+                                                <h4 class="modal-title" id="myModalLabel2">Exclusão de Pós-graduação</h4>
                                             </div>
                                             <div class="modal-body">
-                                                <h4>Deseja Realmente excluir o curso '.$curso->titulo.'?</h4>
+                                                <h4>Deseja Realmente excluir o curso de pós-graduação '.$curso->titulo.'?</h4>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>

@@ -29,6 +29,11 @@
                                  <label id="txt-link">Link</label>
                                  <input id="txt-link" name="txt-link" type="text" class="form-control" placeholder="Link" value="<?php echo $curso->link ?>">
                                  <br/>
+                                 <label id="txt-link">Link do video</label>
+                                 <input id="txt-link" name="txt-video" type="text" class="form-control" placeholder="Link do video" value="<?php echo
+                                  htmlspecialchars($curso->video) ?>">
+                                 <br/>
+
 
                              </div>
                              <button type="submit" class="btn btn-primary">Salvar Alterações</button>
