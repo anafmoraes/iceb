@@ -5,7 +5,7 @@ class Posgraduacao_model extends CI_Model {
   // Variáveis de instância da classe notícias - vindo do banco de dados.
   public $id;
   public $titulo;
-
+  public $video;
   public $link;
 
 
@@ -25,15 +25,15 @@ class Posgraduacao_model extends CI_Model {
     }
 
     public function conteudo_pos($id){
-        $this->db->select('  pos-graduaçao.id,   pos-graduaçao.titulo,    pos-graduaçao.link');
+        $this->db->select('  pos-graduaçao.id,   pos-graduaçao.titulo,    pos-graduaçao.link,  pos-graduaçao.video ');
         $this->db->from('pos-graduaçao');
         $this->db->where('id = '.$id);
         return $this->db->get()->result();
     }
 
-    public function adicionar($titulo,  $link){
+    public function adicionar($titulo,  $link, $video){
         $dados['titulo'] = $titulo;
-
+         $dados['video'] = $video;
         $dados['link'] = $link;
 
         return $this->db->insert('pos-graduaçao',$dados);
@@ -44,9 +44,9 @@ class Posgraduacao_model extends CI_Model {
         return $this->db->delete('pos-graduaçao');
     }
 
-    public function alterar($id, $titulo,  $link){
+    public function alterar($id, $titulo,  $link, $video){
         $dados['titulo'] = $titulo;
-       
+         $dados['video'] = $video;
 
         $dados['link'] = $link;
 

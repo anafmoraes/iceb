@@ -15,6 +15,7 @@
 
         <!-- Material Design Bootstrap -->
         <link href="/iceb/assets/frontend/css/materialize.css" rel="stylesheet">
+    
 
         <!-- Magnific-popup css -->
         <link href="/iceb/assets/frontend/css/magnific-popup.css" rel="stylesheet">
@@ -34,4 +35,9 @@
 
         <link href="/iceb/assets/frontend/css/responsive.css" rel="stylesheet">
         <link href="/iceb/assets/frontend/css/style.css" rel="stylesheet">
+        
+         <link href="/iceb/assets/frontend/css/media.css" rel="stylesheet">
+
+
+        
     </head>

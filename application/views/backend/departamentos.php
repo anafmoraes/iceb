@@ -54,7 +54,7 @@
                         <div class="col-lg-12">
                             <?php
                                 $this->table->set_heading("Nome do Departamento","Alterar Dados","Excluir Departamento");
-                                foreach($cursos as $curso){
+                                foreach($depts as $curso){
                                     $nomecurso = $curso->titulo;
                                     $alterar = anchor(base_url('admin/departamentos/pagina_alterar/'.$curso->id),'<button type="button" class="btn btn-link"><span style="color:#337ab7"><i class="fa fa-refresh fa-fw"></i>Alterar</span></button>');
                                     $excluir = $excluir= '<button type="button" class="btn btn-link" data-toggle="modal" data-target=".excluir-modal-'.$curso->id.'"><span style="color:red"><i class="fa fa-remove fa-fw"></i> Excluir</span></button>';
@@ -63,10 +63,10 @@
                                         <div class="modal-content">
 
                                             <div class="modal-header">
-                                                <h4 class="modal-title" id="myModalLabel2">Exclusão de curso</h4>
+                                                <h4 class="modal-title" id="myModalLabel2">Exclusão de departamento</h4>
                                             </div>
                                             <div class="modal-body">
-                                                <h4>Deseja Realmente excluir o curso '.$curso->titulo.'?</h4>
+                                                <h4>Deseja Realmente excluir o departamento '.$curso->titulo.'?</h4>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>

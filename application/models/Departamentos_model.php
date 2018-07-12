@@ -13,18 +13,18 @@ class Departamentos_model extends CI_Model {
 		parent::__construct();
 	}
 
-    public function listar_cursos(){
+    public function listar_depts(){
         $this->db->order_by('titulo','ASC');
         return $this->db->get('departamento')->result();
     }
 
-    public function listar_curso($id){
+    public function listar_dept($id){
         $this->db->from('departamento');
         $this->db->where('departamento.id',$id);
         return $this->db->get()->result();
     }
 
-    public function conteudo_pos($id){
+    public function conteudo_dept($id){
         $this->db->select('departamento.id,   departamento.titulo,    departamento.link');
         $this->db->from('departamento');
         $this->db->where('id = '.$id);

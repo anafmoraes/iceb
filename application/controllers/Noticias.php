@@ -12,7 +12,17 @@ class Noticias extends CI_Controller {
 	{
 		$this->load->model('noticias_model','modelnoticias'); // Acessoa ao model.
 		$dados['noticias'] = $this->modelnoticias->listar_noticias(); // Traz os dados do model noticias_model.
+		/*----------------------PARA DROPDOWN-----------------------------*/
+		$this->load->model('noticias_model','modelnoticias'); // Acessoa ao model.
+		$this->load->model('cursos_model','modelcursos'); // Acessoa ao model.
+		$this->load->model('Posgraduacao_model','modelposgraduacao'); // Acessoa ao model.
+		$this->load->model('Departamentos_model','modeldepartamentos'); // Acessoa ao model.v
+		$dados['cursos'] = $this->modelcursos->listar_cursos();
+		$dados['noticias'] = $this->modelnoticias->noticias_home(); // Traz os dados do model noticias_model.
+		$dados['departamentos'] = $this->modeldepartamentos->listar_depts();
+		$dados['posgraduacao'] = $this->modelposgraduacao->listar_cursos();
 
+		/*---------------------------------------------------------------*/
 		$dados['titulo']= 'ICEB';
     $dados['subtitulo'] = 'Notícias';
 

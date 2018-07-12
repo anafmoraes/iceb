@@ -9,7 +9,7 @@ class Posgraduacao extends CI_Controller {
 			redirect(base_url('admin/login'));
 		}
 
-        $this->load->model('Posgraduacao_model','modelcursos'); // Acessoa ao model.
+        $this->load->model('Posgraduacao_model','modelpos'); // Acessoa ao model.
 
 	}
 
@@ -17,7 +17,7 @@ class Posgraduacao extends CI_Controller {
 	{
 
         $this->load->library('table');
-        $dados['cursos'] = $this->modelcursos->listar_cursos(); // Traz os dados do model noticias_model.
+        $dados['cursos'] = $this->modelpos->listar_cursos(); // Traz os dados do model noticias_model.
 
 		$dados['titulo']= 'Painel Administrativo';
         $dados['subtitulo'] = 'Pós-graduação';
@@ -29,25 +29,25 @@ class Posgraduacao extends CI_Controller {
 
 		$this->load->view('backend/template/html-footer');
 	}
-
     public function inserir()
     {
         $this->load->library('form_validation');
         $this->form_validation->set_rules('txt-curso','Nome',
-            'required|min_length[3]');
-
-        $this->form_validation->set_rules('txt-link','Link',
+            'required|min_length[3]');        
+     $this->form_validation->set_rules('txt-link','Link',
             'required|min_length[10]');
-     
+     $this->form_validation->set_rules('txt-video','Link do video',
+            'required|min_length[10]');
         if($this->form_validation->run() == FALSE){
             $this->index();
         }
         else{
             $titulo = $this->input->post('txt-curso');
             $link = $this->input->post('txt-link');
+             $video = $this->input->post('txt-video');
 
 
-            if($this->modelcursos->adicionar($titulo, $link)){
+            if($this->modelpos->adicionar($titulo, $link, $video)){
                 redirect(base_url('admin/posgraduacao'));
             }
             else{
@@ -58,7 +58,7 @@ class Posgraduacao extends CI_Controller {
 
     public function remover($id)
     {
-        if($this->modelcursos->remover($id)){
+        if($this->modelpos->remover($id)){
             redirect(base_url('admin/posgraduacao'));
         }
         else{
@@ -69,7 +69,7 @@ class Posgraduacao extends CI_Controller {
     public function pagina_alterar($id)
     {
         $this->load->library('table');
-        $dados['cursos'] = $this->modelcursos->listar_curso($id); // Traz os dados do model noticias_model.
+        $dados['cursos'] = $this->modelpos->listar_curso($id); // Traz os dados do model noticias_model.
 
 		$dados['titulo']= 'Painel Administrativo';
         $dados['subtitulo'] = 'Pós - Graduação';
@@ -90,16 +90,17 @@ class Posgraduacao extends CI_Controller {
 
         $this->form_validation->set_rules('txt-link','Link',
             'required|min_length[10]');
-       
+
+         $this->form_validation->set_rules('txt-video','Link do Video',
+            'required|min_length[10]');
         if($this->form_validation->run() == FALSE){
             $this->index();
         }
         else{
             $titulo = $this->input->post('txt-curso');
             $link = $this->input->post('txt-link');
-
-
-            if($this->modelcursos->alterar($id, $titulo,  $link)){
+            $video = $this->input->post('txt-video');
+            if($this->modelpos->alterar($id, $titulo,  $link, $video)){
                 redirect(base_url('admin/posgraduacao'));
             }
             else{

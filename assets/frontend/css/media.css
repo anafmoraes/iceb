@@ -1,0 +1,64 @@
+
+
+
+
+/*
+    max-width : tamanho max da tela em pixels 
+    min-width : tamanho min da tela em pixels 
+    Dentro você coloca as classes que só funcionarão pra esse tamanho de tela
+
+  
+
+*/
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+     #img-home{
+
+        width: 250px !important;
+        
+    }
+
+
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    #img-home{
+        width: 300px  !important;
+        
+    }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+     #img-home{
+        width: 400px  !important;
+        
+    }
+
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    #img-home{
+        width: 300px  !important;
+        
+    }
+
+
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+ #img-home{
+        width: 600px  !important;
+        
+    }
+
+
+}
