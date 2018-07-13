@@ -10,6 +10,18 @@ class Diretoria extends CI_Controller {
 
 	public function index()
 	{
+
+
+		$this->load->model('noticias_model','modelnoticias'); // Acessoa ao model.
+		$this->load->model('cursos_model','modelcursos'); // Acessoa ao model.
+		$this->load->model('Posgraduacao_model','modelposgraduacao'); // Acessoa ao model.
+		$this->load->model('Departamentos_model','modeldepartamentos'); // Acessoa ao model.v
+		$dados['listacursos'] = $this->modelcursos->listar_cursos();
+	
+		$dados['noticias'] = $this->modelnoticias->noticias_home(); // Traz os dados do model noticias_model.
+		$dados['departamentos'] = $this->modeldepartamentos->listar_depts();
+		$dados['posgraduacao'] = $this->modelposgraduacao->listar_cursos();
+
 		$this->load->model('diretoria_model','modeldiretoria'); // Acessoa ao model.
 		$dados['diretoria'] = $this->modeldiretoria->listar_nomes(); // Traz os dados do model diretoria_model.
 
