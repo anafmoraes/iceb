@@ -41,7 +41,7 @@
                             <span  style=" display: block;margin-top: -45px;" >Departamentos</span></a>
                             <ul class="dropdown-menu drop-ul">
                                 <?php foreach($departamentos as $departamento){ ?>
-                          <li ><a class="drop-li" href="<?php echo ($departamento->link)?>"> <?php echo $departamento->titulo?> <hr></a>
+                          <li ><a class="drop-li" href="<?php echo ($departamento->link)?>" target="_blank"> <?php echo $departamento->titulo?> <hr></a>
                             </li>
                             <?php }?>
 
@@ -53,8 +53,8 @@
                             <a data-toggle="dropdown"><img src="/iceb/assets/frontend/img/icones/ensino.png" class="icone" >
                             <span class="nav-link" style=" display: block;margin-top: -45px;" >Ensino</span></a>
                             <ul class="dropdown-menu drop-ul">
-                                <?php foreach($cursos as $curso){ ?>
-                          <li ><a class="drop-li" href="<?php echo base_url('/cursos/'. $curso->id .'/'.  $curso->titulo)?>"> <?php echo $curso->titulo?> <hr></a>
+                                <?php foreach($listacursos as $listacurso){ ?>
+                          <li ><a class="drop-li" href="<?php echo base_url('/cursos/'. $listacurso->id .'/'.  $listacurso->titulo)?>"> <?php echo $listacurso->titulo?> <hr></a>
                             </li>
                             <?php }?>
 
@@ -110,7 +110,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#portfolio">Ensino</a>
-                            
+
                         </li>
 
                         <li class="nav-item">
@@ -159,7 +159,7 @@
 
                         <div class="modal-footer"  >
 
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
                         </div>
                     </div>
 
