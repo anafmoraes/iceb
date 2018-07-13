@@ -15,18 +15,18 @@ class Posgraduacao_model extends CI_Model {
 
     public function listar_cursos(){
         $this->db->order_by('titulo','ASC');
-        return $this->db->get('pos-graduaçao')->result();
+        return $this->db->get('pos-graduacao')->result();
     }
 
     public function listar_curso($id){
-        $this->db->from('pos-graduaçao');
-        $this->db->where('pos-graduaçao.id',$id);
+        $this->db->from('pos-graduacao');
+        $this->db->where('pos-graduacao.id',$id);
         return $this->db->get()->result();
     }
 
     public function conteudo_pos($id){
-        $this->db->select('  pos-graduaçao.id,   pos-graduaçao.titulo,    pos-graduaçao.link,  pos-graduaçao.video ');
-        $this->db->from('pos-graduaçao');
+        $this->db->select('  pos-graduacao.id,   pos-graduacao.titulo,    pos-graduacao.link,  pos-graduacao.video ');
+        $this->db->from('pos-graduacao');
         $this->db->where('id = '.$id);
         return $this->db->get()->result();
     }
@@ -36,12 +36,12 @@ class Posgraduacao_model extends CI_Model {
          $dados['video'] = $video;
         $dados['link'] = $link;
 
-        return $this->db->insert('pos-graduaçao',$dados);
+        return $this->db->insert('pos-graduacao',$dados);
     }
 
     public function remover($id){
         $this->db->where('id',$id);
-        return $this->db->delete('pos-graduaçao');
+        return $this->db->delete('pos-graduacao');
     }
 
     public function alterar($id, $titulo,  $link, $video){
@@ -51,6 +51,6 @@ class Posgraduacao_model extends CI_Model {
         $dados['link'] = $link;
 
         $this->db->where('id',$id);
-        return $this->db->update('pos-graduaçao',$dados);
+        return $this->db->update('pos-graduacao',$dados);
     }
 }
