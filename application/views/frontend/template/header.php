@@ -41,10 +41,8 @@
                             <span  style=" display: block;margin-top: -45px;" >Departamentos</span></a>
                             <ul class="dropdown-menu drop-ul">
                                 <?php foreach($departamentos as $departamento){ ?>
-                          <li><a class=" drop-li" href="<?php echo ($departamento->link)?>" target="_blank"> <?php echo $departamento->titulo ?> 
 
-                          </a>
-                          
+                          <li ><a class="drop-li" href="<?php echo ($departamento->link)?>" target="_blank"> <?php echo $departamento->titulo?> <hr></a>
                             </li>
                             <br>
                             <hr>
@@ -108,7 +106,9 @@
                             <a class="nav-link" href=" <?php echo base_url();?>">Inicio <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
+
                             <a class="nav-link" href="<?php echo base_url('/diretoria'); ?>">O Instituto</a>
+
                         </li>
 
                             
@@ -121,7 +121,6 @@
                             <?php }?>
                             </ul>
                         </li>
-                    
 
                        <li class="nav-item  dropdown" >
                             <a data-toggle="dropdown" class="nav-link">Ensino</a>
@@ -132,6 +131,7 @@
                             <?php }?>
 
                           </ul>
+
                         </li>
 
                         <li class="nav-item">
@@ -139,11 +139,13 @@
                         </li>
 
                             <li class="nav-item menu dropdown" >
+
                             <a data-toggle="dropdown">Pós-graduação</a>
                              <ul class="dropdown-menu " style="width: 100%" >
                                 <?php foreach($posgraduacao as $pos){ ?>
                                   <li ><a class="nav-link"  href="<?php echo $pos->link?>"> <?php echo $pos->titulo?> </a></li>
                              </ul>
+
                                 <?php }?>
                              </li>
 

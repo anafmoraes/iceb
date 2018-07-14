@@ -57,7 +57,7 @@ class Cursos extends CI_Controller {
                 echo "Houve um erro no sistema!";
                 echo $this->upload->display_errors();
             }
-        }	
+        }
 	}
 
 	public function pagina_matriz($id)
@@ -99,8 +99,8 @@ class Cursos extends CI_Controller {
             'required');
         $this->form_validation->set_rules('txt-turnos','Turnos',
             'required');
-        $this->form_validation->set_rules('txt-info','Informacoes reconhecimento de curso',
-            'required|min_length[15]');
+        $this->form_validation->set_rules('txt-info','Informacoes reconhecimento de curso'
+            );
         if($this->form_validation->run() == FALSE){
             $this->index();
         }
@@ -182,8 +182,8 @@ class Cursos extends CI_Controller {
             'required');
         $this->form_validation->set_rules('txt-turnos','Turnos',
             'required');
-        $this->form_validation->set_rules('txt-info','Informacoes reconhecimento de curso',
-            'required|min_length[15]');
+        $this->form_validation->set_rules('txt-info','Informacoes reconhecimento de curso'
+            );
         if($this->form_validation->run() == FALSE){
             $this->index();
         }

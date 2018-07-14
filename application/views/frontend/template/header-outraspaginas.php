@@ -44,10 +44,11 @@
                             <span  style=" display: block;margin-top: -45px;" >Departamentos</span></a>
                             <ul class="dropdown-menu drop-ul">
                                 <?php foreach($departamentos as $departamento){ ?>
-                          <li ><a class="drop-li" href="<?php echo ($departamento->link)?>" target="_blank"> <?php echo $departamento->titulo?> </a>
-                            </li>
-                            <br>
-                            <hr>
+                                <li >
+                                  <a class="drop-li" href="<?php echo ($departamento->link)?>" target="_blank"> <?php echo $departamento->titulo?> </a>
+                                 </li>
+                              
+                                  <br><hr>
                             <?php }?>
 
                         </li></center>
@@ -150,6 +151,7 @@
                                 <?php foreach($posgraduacao as $pos){ ?>
                                   <li ><a class="nav-link" href="<?php echo $pos->link?>"> <?php echo $pos->titulo?> </a></li>
                              </ul>
+
                                 <?php }?>
                              </li>
 
