@@ -41,8 +41,11 @@
                             <span  style=" display: block;margin-top: -45px;" >Departamentos</span></a>
                             <ul class="dropdown-menu drop-ul">
                                 <?php foreach($departamentos as $departamento){ ?>
+
                           <li ><a class="drop-li" href="<?php echo ($departamento->link)?>" target="_blank"> <?php echo $departamento->titulo?> <hr></a>
                             </li>
+                            <br>
+                            <hr>
                             <?php }?>
 
                         </li></center>
@@ -100,16 +103,34 @@
 
                     <ul class="side-nav" id="mobile-menu">
                         <li class="nav-item">
-                            <a class="nav-link" href="#home">Inicio <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href=" <?php echo base_url();?>">Inicio <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('/diretorias') ?>">O Instituto</a>
+
+                            <a class="nav-link" href="<?php echo base_url('/diretoria'); ?>">O Instituto</a>
+
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#service">Departamentos</a>
+
+                            
+                        <li class="nav-item  dropdown"  >
+                            <a data-toggle="dropdown" class="nav-link" >Departamentos</a>
+                            <ul class=" dropdown-menu" style="width: 100%">
+                                <?php foreach($departamentos as $departamento){ ?>
+                          <li ><a class="drop-li" href="<?php echo ($departamento->link)?>" target="_blank"> <?php echo $departamento->titulo?> <hr></a>
+                            </li>
+                            <?php }?>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#portfolio">Ensino</a>
+
+                       <li class="nav-item  dropdown" >
+                            <a data-toggle="dropdown" class="nav-link">Ensino</a>
+                            <ul class="dropdown-menu ">
+                                <?php foreach($listacursos as $listacurso){ ?>
+                          <li ><a class="drop-li" href="<?php echo base_url('/cursos/'. $listacurso->id .'/'.  $listacurso->titulo)?>"> <?php echo $listacurso->titulo?> <hr></a>
+                            </li>
+                            <?php }?>
+
+                          </ul>
 
                         </li>
 
@@ -118,17 +139,16 @@
                         </li>
 
                             <li class="nav-item menu dropdown" >
-                            <a data-toggle="dropdown">
-                            <span class="nav-link" >Pós-graduação</span></a>
 
-                         <ul class="dropdown-menu drop-ul">
-                            <?php foreach($posgraduacao as $pos){ ?>
-                              <li ><a class="drop-li focus" data-target="#no" data-toggle="modal" > <?php echo $pos->titulo?> </a></li>
+                            <a data-toggle="dropdown">Pós-graduação</a>
+                             <ul class="dropdown-menu " style="width: 100%" >
+                                <?php foreach($posgraduacao as $pos){ ?>
+                                  <li ><a class="nav-link"  href="<?php echo $pos->link?>"> <?php echo $pos->titulo?> </a></li>
+                             </ul>
 
-
-                                </ul>
                                 <?php }?>
                              </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo base_url('/noticias') ?>">Noticias</a>
                         </li>
