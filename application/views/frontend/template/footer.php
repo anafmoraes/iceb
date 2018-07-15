@@ -48,7 +48,6 @@
                      <center> <h6 class="copyright" style="color: white;">
                         Desenvolvido por <a style="color: white;" href="http://voluta.ufop.br/" target="_blank">Voluta Soluções Digitais
                         </a></h6>
-
                      </center>
                    </div>
         </section>

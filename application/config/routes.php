@@ -54,3 +54,4 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['cursos/(:num)/(:any)'] = 'cursos/index/$1/$2';
 $route['admin/login'] = 'admin/usuarios/login';
+$route['diretoria'] = 'diretoria/index';
