@@ -45,6 +45,10 @@
                 <!-- <br><br> -->
               <!-- </div> -->
                    <div style="background-color: rgba(255,255,255,0.1); padding-top: 15px; padding-bottom: 10px;">
-                     <center><h6 class="copyright" style="color: white;">Desenvolvido por Voluta Soluções Digitais</h6></center>
+                     <center> <h6 class="copyright" style="color: white;">
+                        Desenvolvido por <a style="color: white;" href="http://voluta.ufop.br/" target="_blank">Voluta Soluções Digitais
+                        </a></h6>
+
+                     </center>
                    </div>
         </section>
