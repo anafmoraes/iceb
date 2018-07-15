@@ -51,7 +51,7 @@
                                         </div>
 
                                         <div class="service_btn center">
-                                            <a href="#!" class="btn waves-effect waves-red">&nbsp; MAPA DO ICEB &nbsp; </a>
+                                            <a href="<?php echo base_url('/assets/arquivos/mapa/mapaICEB.pdf')?>" target="_blank" class="btn waves-effect waves-red">&nbsp; MAPA DO ICEB &nbsp; </a>
                                         </div>
                                     </div>
                                 </div>
