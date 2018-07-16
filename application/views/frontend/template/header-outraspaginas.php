@@ -141,9 +141,9 @@
                           </ul>
                         </li>
 
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="#!">Agenda</a>
-                        </li>
+                        </li> -->
 
                             <li class="nav-item menu dropdown" >
                             <a data-toggle="dropdown">Pós-graduação</a>
