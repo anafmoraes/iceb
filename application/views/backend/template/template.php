@@ -35,6 +35,12 @@
                         <a href="<?php echo base_url('admin/diretoria') ?>"><i class="fa fa-university"></i> Diretoria</a>
                     </li>
                     <li>
+                        <a href="<?php echo base_url('admin/mapa') ?>"><i class="fa fa-map"></i> Mapa </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo base_url('admin/salas') ?>"><i class="fa fa-man"></i>Salas </a>
+                    </li>
+                    <li>
                         <a href="<?php echo base_url('admin/usuarios/logout') ?>"><i class="fa fa-sign-out fa-fw"></i> Sair do Sistema</a>
                     </li>
                 </ul>

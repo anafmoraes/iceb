@@ -69,10 +69,10 @@
 
 
 
-                        <center><li class="nav-item menu">
+                        <!-- <center><li class="nav-item menu">
                             <a href=""><img src="/iceb/assets/frontend/img/icones/agenda.png" class="icone" >
                             <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Agenda</span></a>
-                        </li></center>
+                        </li></center> -->
 
 
                         <center><li class="nav-item menu dropdown" >
@@ -141,9 +141,9 @@
                           </ul>
                         </li>
 
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="#!">Agenda</a>
-                        </li>
+                        </li> -->
 
                             <li class="nav-item menu dropdown" >
                             <a data-toggle="dropdown">Pós-graduação</a>
@@ -167,11 +167,12 @@
             </div>
         </nav>
         <!--/.Navbar-->
- <div class=" modal fade"  role="dialog"  id="no" style="background: rgba(0,0,0,0); ">
-
+ <div class=" modal fade modal-dialog modal-lg"  role="dialog"  id="no" style="background: rgba(0,0,0,0); ">
+    <div class="modal-dialog modal-lg">
 
                 <div class="modal-content">
                         <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 <h2 class="modal-title" id="myModalLabel"><?php echo $pos->titulo?></h2>
                         </div>
                         <div class="modal-body">
@@ -179,14 +180,10 @@
 
                             <?php echo($pos->video) ?>
                             <br>
-                            <a href=" <?php echo $pos->link?>" class="btn" >Veja Mais</a>
+                            <a href=" <?php echo $pos->link?>" target="_blank" class="btn" >Veja Mais</a>
                             </center>
                          </div>
-
-                        <div class="modal-footer"  >
-
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                        </div>
                     </div>
+    </div>
 
  </div>

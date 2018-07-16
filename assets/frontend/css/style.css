@@ -701,7 +701,7 @@ a.btn.btn-danger.waves-effects.waves-red:hover
 .drop-ul
 {
     margin: -10px 0px -10px 0px !important;
-    line-height: 20px !important;
-
-
+    line-height: 25px !important;
+    overflow-y: scroll;
+    height: 400px;
 }

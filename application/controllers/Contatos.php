@@ -17,10 +17,13 @@ class Contatos extends CI_Controller {
 		$this->load->model('cursos_model','modelcursos'); // Acessoa ao model.
 		$this->load->model('Posgraduacao_model','modelposgraduacao'); // Acessoa ao model.
 		$this->load->model('Departamentos_model','modeldepartamentos'); // Acessoa ao model.v
+		$this->load->model('Salas_model','modelsalas'); // Acessoa ao model.
+
 		$dados['listacursos'] = $this->modelcursos->listar_cursos();
 		$dados['noticias'] = $this->modelnoticias->noticias_home(); // Traz os dados do model noticias_model.
 		$dados['departamentos'] = $this->modeldepartamentos->listar_depts();
 		$dados['posgraduacao'] = $this->modelposgraduacao->listar_cursos();
+		$dados['salas'] = $this->modelsalas->listar_salas();
 		$dados['titulo']= 'ICEB';
    		 $dados['subtitulo'] = 'Contato';
 
