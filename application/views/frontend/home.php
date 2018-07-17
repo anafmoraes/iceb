@@ -9,7 +9,7 @@
                         <div class="main_about_area">
                             <div class="head_title center m-y-3">
                                 <h2>O ICEB</h2>
-                                <img  src ="/iceb/assets/frontend/img/historia_iceb.png" id="img-home" >
+                                <img  src ="<?php echo base_url('assets/frontend/img/historia_iceb.png') ?>" id="img-home" >
                               
                             </div>
                             

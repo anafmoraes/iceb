@@ -7,7 +7,7 @@
 
 
 
-        <nav class="navbar navbar-fixed-top bg-faded"  style="  background:url('/iceb/assets/frontend/img/ICEBERA.png'); height: 90px; padding-bottom: 10px;margin-bottom:20px; ">
+        <nav class="navbar navbar-fixed-top bg-faded"  style="  background:url('<?php echo base_url('assets/frontend/img/ICEBERA.png') ?>'); height: 90px; padding-bottom: 10px;margin-bottom:20px; ">
             <!--Collapse button-->
             <div class="container">
                 <a href="#" data-activates="mobile-menu" class="button-collapse left"><i class="fa fa-bars " style="font-size: 30px;"></i></a>
@@ -23,31 +23,31 @@
 
                      <!--Navbar Brand-->
                        <span class="nav-item navbar-brand" style="display: inline; margin-left: -65px; margin-right: 5px; margin-top:5px; ">
-                            <a href="http://www.ufop.br/" target="_blank"><img src="/iceb/assets/frontend/img/icones/ufop.png" style="width: 150px"></a>
+                            <a href="http://www.ufop.br/" target="_blank"><img src="<?php echo base_url('assets/frontend/img/icones/ufop.png') ?>" style="width: 150px"></a>
                         </span>
 
                         <center><li class="nav-item menu" >
-                            <a href="<?php echo base_url() ?>"><img src="/iceb/assets/frontend/img/icones/home.png" class="icone">
+                            <a href="<?php echo base_url() ?>"><img src="<?php echo base_url('assets/frontend/img/icones/home.png' )?>" class="icone">
                                 <span style="display: block; margin-top: -45px "> Inicio </span>
                           <span class="sr-only">(current)</span></a>
                         </li></center>
 
                         <center><li class="nav-item menu" >
-                            <a href="<?php echo base_url('/diretoria') ?>"><img src="/iceb/assets/frontend/img/icones/instituto.png" class="icone">
+                            <a href="<?php echo base_url('/diretoria') ?>"><img src="<?php echo base_url('assets/frontend/img/icones/instituto.png' )?>" class="icone">
                             <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >O Instituto</span></a>
 
                         </li></center>
 
 
                         <center><li class="nav-item menu dropdown"  >
-                            <a data-toggle="dropdown"><img src="/iceb/assets/frontend/img/icones/departamento.png" class="icone">
+                            <a data-toggle="dropdown"><img src="<?php echo base_url('assets/frontend/img/icones/departamento.png')?>" class="icone">
                             <span  style=" display: block;margin-top: -45px;" >Departamentos</span></a>
                             <ul class="dropdown-menu drop-ul">
                                 <?php foreach($departamentos as $departamento){ ?>
                                 <li >
-                                  <a class="drop-li" href="<?php echo ($departamento->link)?>" target="_blank"> <?php echo $departamento->titulo?> </a>
+                                  <a class="drop-li" href="<?php echo ($departamento->link)?>" target="_blank"> <?php echo $departamento->titulo?> <hr></a>
                                  </li>
-                              
+
                                   <br><hr>
                             <?php }?>
 
@@ -56,7 +56,7 @@
 
 
                         <center><li class="nav-item menu dropdown" >
-                            <a data-toggle="dropdown"><img src="/iceb/assets/frontend/img/icones/ensino.png" class="icone" >
+                            <a data-toggle="dropdown"><img src="<?php echo base_url('assets/frontend/img/icones/ensino.png')?>" class="icone" >
                             <span class="nav-link"  style=" display: block;margin-top: -45px;" >Ensino</span></a>
                             <ul class="dropdown-menu drop-ul">
                                 <?php foreach($listacursos as $listacurso){ ?>
@@ -70,35 +70,35 @@
 
 
                         <!-- <center><li class="nav-item menu">
-                            <a href=""><img src="/iceb/assets/frontend/img/icones/agenda.png" class="icone" >
+                            <a href=""><img src="<?php echo base_url('assets/frontend/img/icones/agenda.png')?>" class="icone" >
                             <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Agenda</span></a>
                         </li></center> -->
 
 
                         <center><li class="nav-item menu dropdown" >
-                            <a data-toggle="dropdown"><img src="/iceb/assets/frontend/img/icones/pesquisa.png" class="icone">
+                            <a data-toggle="dropdown"><img src="<?php echo base_url('assets/frontend/img/icones/pesquisa.png')?>" class="icone">
                             <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Pós-graduação</span></a>
 
                          <ul class="dropdown-menu drop-ul">
                             <?php foreach($posgraduacao as $pos){ ?>
-                              <li ><a class="drop-li focus" data-target="#no" data-toggle="modal" > <?php echo $pos->titulo?> </a></li>
-
+                              <li ><a class="drop-li focus" data-target="#no" data-toggle="modal" > <?php echo $pos->titulo?> <hr></a></li>
+                              <?php }?>
 
                                 </ul>
-                                <?php }?>
+
                              </li></center>
 
 
 
 
                         <center><li class="nav-item menu" style="margin: 0px 5px 0px 5px ">
-                            <a href="<?php echo base_url('/noticias') ?>"><img src="/iceb/assets/frontend/img/icones/news.png" class="icone">
+                            <a href="<?php echo base_url('/noticias') ?>"><img src="<?php echo base_url('assets/frontend/img/icones/news.png')?>" class="icone">
 
                             <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Noticias</span></a>
                         </li></center>
 
                         <center><li class="nav-item menu" >
-                            <a href="<?php echo base_url('contatos')?>"><img src="/iceb/assets/frontend/img/icones/contato.png" class="icone">
+                            <a href="<?php echo base_url('contatos')?>"><img src="<?php echo base_url('assets/frontend/img/icones/contato.png')?>" class="icone">
                             <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Contato</span></a>
                         </li></center>
 
@@ -118,7 +118,7 @@
                             <a class="nav-link" href="<?php echo base_url('/diretoria'); ?>">O Instituto</a>
                         </li>
 
-                            
+
                         <li class="nav-item  dropdown"  >
                             <a data-toggle="dropdown" class="nav-link" >Departamentos</a>
                             <ul class=" dropdown-menu" style="width: 100%">
@@ -128,7 +128,7 @@
                             <?php }?>
                             </ul>
                         </li>
-                    
+
 
                        <li class="nav-item  dropdown" >
                             <a data-toggle="dropdown" class="nav-link">Ensino</a>
@@ -150,9 +150,10 @@
                              <ul class="dropdown-menu " style="width: 100%" >
                                 <?php foreach($posgraduacao as $pos){ ?>
                                   <li ><a class="nav-link" href="<?php echo $pos->link?>"> <?php echo $pos->titulo?> </a></li>
+                                  <?php }?>
                              </ul>
 
-                                <?php }?>
+
                              </li>
 
                         <li class="nav-item">

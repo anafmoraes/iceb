@@ -14,29 +14,29 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
 
         <!-- Material Design Bootstrap -->
-        <link href="/iceb/assets/frontend/css/materialize.css" rel="stylesheet">
+        <link href="<?php echo base_url('assets/frontend/css/materialize.css') ?>" rel="stylesheet">
     
 
         <!-- Magnific-popup css -->
-        <link href="/iceb/assets/frontend/css/magnific-popup.css" rel="stylesheet">
+        <link href="<?php echo base_url('assets/frontend/css/magnific-popup.css') ?>" rel="stylesheet">
 
         <!-- Bootstrap core CSS -->
-        <link href="/iceb/assets/frontend/css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo base_url('assets/frontend/css/bootstrap.min.css') ?>" rel="stylesheet">
 
         <!-- Material Design Bootstrap -->
-        <!--<link href="css/progressbar.css" rel="stylesheet">-->
+        <!--<link href="<?php echo base_url('css/progressbar.css') ?>" rel="stylesheet">-->
 
         <!-- Material Design Bootstrap -->
-        <link href="/iceb/assets/frontend/css/mdb.min.css" rel="stylesheet">
+        <link href="<?php echo base_url('assets/frontend/css/mdb.min.css') ?>" rel="stylesheet">
 
 
 
         <!-- Your custom styles (optional) -->
 
-        <link href="/iceb/assets/frontend/css/responsive.css" rel="stylesheet">
-        <link href="/iceb/assets/frontend/css/style.css" rel="stylesheet">
+        <link href="<?php echo base_url('assets/frontend/css/responsive.css') ?>" rel="stylesheet">
+        <link href="<?php echo base_url('assets/frontend/css/style.css') ?>" rel="stylesheet">
         
-         <link href="/iceb/assets/frontend/css/media.css" rel="stylesheet">
+         <link href="<?php echo base_url('assets/frontend/css/media.css') ?>" rel="stylesheet">
 
 
         

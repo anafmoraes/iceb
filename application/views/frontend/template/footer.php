@@ -7,7 +7,7 @@
                     <div class="main_footer_area white-text p-b-12">
                         <div class="col-lg-1">
                             <div class="single_f_widget m-t-3 wow fadeInUp">
-                                <img src="/iceb/assets/frontend/img/ufop2.png" alt="logo-iceb" style="width: 60px;">
+                                <img src="<?php echo base_url('assets/frontend/img/ufop2.png')?>" alt="logo-iceb" style="width: 60px;">
                             </div>
                         </div>
                         <div class="col-md-4">
