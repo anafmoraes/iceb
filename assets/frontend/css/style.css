@@ -130,7 +130,8 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 ============================================================*/
 
 .small{
-    background: url("/iceb/assets/frontend/img/ICEBERA.png") no-repeat !important;
+
+    background: url('http://www.novoiceb.ufop.br/assets/frontend/img/ICEBERA.png') no-repeat !important;
     height: 60px;
     color: #000 !important;
     line-height: 75px;
@@ -434,7 +435,7 @@ div.panel.show {
 
 .carousel {
     overflow-x: hidden;
-    position: relative;
+  
     width: 100%;
     height: 450px;
 }
@@ -531,10 +532,11 @@ div.panel.show {
 .main_mix_menu ul li{
     display: inline-block;
     padding: .5rem 1rem;
-    cursor: pointer;
+   
 }
 .main_mix_menu ul li.active {
     color:#d8702b;
+    transform: none !important;
 }
 
 .single_mixi_portfolio .single_portfolio_text h3{

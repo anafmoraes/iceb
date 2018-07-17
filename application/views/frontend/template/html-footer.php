@@ -9,7 +9,7 @@
         <!-- SCRIPTS -->
 
         <!-- JQuery -->
-        <?php echo base_url(''); ?>
+        
         <script type="text/javascript" src="<?php echo base_url('assets/frontend/js/jquery-2.2.3.min.js'); ?>"></script>
 
         <!-- Bootstrap tooltips -->
@@ -47,8 +47,8 @@
             new WOW().init();
         </script>
 
-        <script type="text/javascript" src="/iceb/assets/frontend/js/plugins.js"></script>
-        <script type="text/javascript" src="/iceb/assets/frontend/js/main.js"></script>
+        <script type="text/javascript" src="<?php echo base_url('assets/frontend/js/plugins.js'); ?>"></script>
+        <script type="text/javascript" src="<?php echo base_url('assets/frontend/js/main.js'); ?>"></script>
 
 
     </body>
