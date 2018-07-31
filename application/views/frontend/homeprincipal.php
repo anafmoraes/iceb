@@ -2,8 +2,8 @@
 
 
 
-                    <div style=" width:100%;  background: url('assets/frontend/img/ICEBERA2.png') no-repeat; padding-top: 225px;padding-bottom: 225px;" > 
-
+                    <div class="area-principal" > 
+                        
                     <div class="center-align">
 
                             <img src="<?php echo base_url('assets/frontend/img/logoiceb.png') ?>" class="img-fundoprincipal" >
