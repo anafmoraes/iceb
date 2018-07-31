@@ -131,9 +131,10 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 
 .small{
 
-    background: url('http://www.novoiceb.ufop.br/assets/frontend/img/ICEBERA.png') no-repeat !important;
+    background: url('../img/ICEBERA2.png') no-repeat !important;
     height: 60px;
     color: #000 !important;
+    
     line-height: 75px;
     transition: all 0.3s;
 
@@ -707,3 +708,10 @@ a.btn.btn-danger.waves-effects.waves-red:hover
     overflow-y: scroll;
     height: 400px;
 }
+.img-fundoprincipal
+    {
+
+        width: 250px;  
+        height: 145px;  
+        margin-bottom: 50px;
+    }

@@ -7,7 +7,7 @@
 
 
 
-        <nav class="navbar navbar-fixed-top bg-faded"  style="  background:url('<?php echo base_url('assets/frontend/img/ICEBERA.png') ?>'); height: 90px; padding-bottom: 10px;margin-bottom:20px; ">
+        <nav class="navbar navbar-fixed-top bg-faded"  style="  background:url('<?php echo base_url('assets/frontend/img/ICEBERA2.png') ?>')no-repeat; width: 100%; height: 90px; padding-bottom: 10px;margin-bottom:20px; ">
             <!--Collapse button-->
             <div class="container">
                 <a href="#" data-activates="mobile-menu" class="button-collapse left"><i class="fa fa-bars " style="font-size: 30px;"></i></a>
