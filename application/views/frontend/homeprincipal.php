@@ -1,16 +1,15 @@
-<div id="home" class="slider" >
-            <ul class="slides" >
+<div class="slide">
 
-                <li >
-                    <img src="<?php echo base_url('assets/frontend/img/ICEBERA.png')?>" style="position: absolute" > <!-- random image -->
-                    <div class="caption center-align">
-                        <div class="single_home" >
-                            <img src="<?php echo base_url('assets/frontend/img/logoiceb.png') ?>" style="width: 250px;  height: 145px; margin-left:auto; margin-right: auto; margin-bottom: 50px "  >
+
+
+                    <div class="area-principal" > 
+                        
+                    <div class="center-align">
+
+                            <img src="<?php echo base_url('assets/frontend/img/logoiceb.png') ?>" class="img-fundoprincipal" >
                             <br>
-                            <h2 style="font-size: 125px;">ICEB</h2>
-                        </div>
+                            <h2 style="font-size: 125px; color: white;">ICEB</h2>
+     
                     </div>
-                </li>
-
-            </ul>
+                    </div>
         </div>
