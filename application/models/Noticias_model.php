@@ -7,13 +7,15 @@ class Noticias_model extends CI_Model {
   public $titulo;
   public $link;
   public $data;
+  public $destaque;
+  public $imagem;
 
 	public function __construct(){
 		parent::__construct();
 	}
 
   public function noticias_home(){
-    $this->db->limit(6);
+    $this->db->limit(3);
     $this->db->order_by('data','DESC');
     return $this->db->get('noticias')->result();
   }

@@ -45,7 +45,7 @@
                             <ul class="dropdown-menu drop-ul">
                                 <?php foreach($departamentos as $departamento){ ?>
                                 <li >
-                                  <a class="drop-li" href="<?php echo ($departamento->link)?>" target="_blank"> <?php echo $departamento->titulo?> <hr></a>
+                                  <a class="drop-li" href="<?php echo ($departamento->link)?>" target="_blank"><strong><?php echo $departamento->sigla ?></strong> <?php echo $departamento->titulo?> <hr></a>
                                  </li>
 
                                   <br><hr>
