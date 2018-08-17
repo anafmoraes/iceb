@@ -19,7 +19,7 @@
 
                     <!--Links-->
                     <center>
-                    <ul class="nav navbar-nav hidden-md-down text-uppercase" style="margin-top:10px;  ">
+                    <ul class="nav navbar-nav hidden-md-down" style="margin-top:10px;  ">
 
                      <!--Navbar Brand-->
                        <span class="nav-item navbar-brand" style="display: inline; margin-left: -65px; margin-right: 5px; margin-top:5px; ">
@@ -28,20 +28,20 @@
 
                         <center><li class="nav-item menu" >
                             <a href="<?php echo base_url() ?>"><img src="<?php echo base_url('assets/frontend/img/icones/home.png' )?>" class="icone">
-                                <span style="display: block; margin-top: -45px "> Inicio </span>
+                                <span style="display: block; margin-top: -45px "> INICIO </span>
                           <span class="sr-only">(current)</span></a>
                         </li></center>
 
                         <center><li class="nav-item menu" >
                             <a href="<?php echo base_url('/diretoria') ?>"><img src="<?php echo base_url('assets/frontend/img/icones/instituto.png' )?>" class="icone">
-                            <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >O Instituto</span></a>
+                            <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >O INSTITUTO</span></a>
 
                         </li></center>
 
 
                         <center><li class="nav-item menu dropdown"  >
                             <a data-toggle="dropdown"><img src="<?php echo base_url('assets/frontend/img/icones/departamento.png')?>" class="icone">
-                            <span  style=" display: block;margin-top: -45px;" >Departamentos</span></a>
+                            <span  style=" display: block;margin-top: -45px;" >DEPARTAMENTOS</span></a>
                             <ul class="dropdown-menu drop-ul">
                                 <?php foreach($departamentos as $departamento){ ?>
                                 <li >
@@ -57,7 +57,7 @@
 
                         <center><li class="nav-item menu dropdown" >
                             <a data-toggle="dropdown"><img src="<?php echo base_url('assets/frontend/img/icones/ensino.png')?>" class="icone" >
-                            <span class="nav-link"  style=" display: block;margin-top: -45px;" >Ensino</span></a>
+                            <span class="nav-link"  style=" display: block;margin-top: -45px;" >ENSINO</span></a>
                             <ul class="dropdown-menu drop-ul">
                                 <?php foreach($listacursos as $listacurso){ ?>
                           <li ><a class="drop-li" href="<?php echo base_url('/cursos/'. $listacurso->id .'/'.  $listacurso->titulo)?>"> <?php echo $listacurso->titulo?> <hr></a>
@@ -77,7 +77,7 @@
 
                         <center><li class="nav-item menu dropdown" >
                             <a data-toggle="dropdown"><img src="<?php echo base_url('assets/frontend/img/icones/pesquisa.png')?>" class="icone">
-                            <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Pós-graduação</span></a>
+                            <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >PÓS-GRADUAÇÃO</span></a>
 
                          <ul class="dropdown-menu drop-ul">
                             <?php foreach($posgraduacao as $pos){ ?>
@@ -94,12 +94,12 @@
                         <center><li class="nav-item menu" style="margin: 0px 5px 0px 5px ">
                             <a href="<?php echo base_url('/noticias') ?>"><img src="<?php echo base_url('assets/frontend/img/icones/news.png')?>" class="icone">
 
-                            <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Noticias</span></a>
+                            <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >NOTICIAS</span></a>
                         </li></center>
 
                         <center><li class="nav-item menu" >
                             <a href="<?php echo base_url('contatos')?>"><img src="<?php echo base_url('assets/frontend/img/icones/contato.png')?>" class="icone">
-                            <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >Contato</span></a>
+                            <span class="nav-link" href="#service" style=" display: block;margin-top: -45px;" >CONTATO</span></a>
                         </li></center>
 
                     </ul>
