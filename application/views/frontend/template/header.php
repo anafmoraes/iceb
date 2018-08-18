@@ -163,7 +163,7 @@
             </div>
         </nav>
         <!--/.Navbar-->
- <div class=" modal fade modal-dialog modal-lg"  role="dialog"  id="no" style="background: rgba(0,0,0,0); ">
+ <div class=" modal fade modal-lg"  role="dialog"  id="no" style="background: rgba(0,0,0,0); box-shadow: none; ">
     <div class="modal-dialog modal-lg">
 
                 <div class="modal-content">
