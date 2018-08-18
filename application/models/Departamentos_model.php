@@ -5,7 +5,7 @@ class Departamentos_model extends CI_Model {
   // Variáveis de instância da classe notícias - vindo do banco de dados.
   public $id;
   public $titulo;
-
+  public $sigla;
   public $link;
 
 
@@ -25,7 +25,7 @@ class Departamentos_model extends CI_Model {
     }
 
     public function conteudo_dept($id){
-        $this->db->select('departamento.id,   departamento.titulo,    departamento.link');
+        $this->db->select('departamento.id,   departamento.titulo,    departamento.link, departamento.sigla');
         $this->db->from('departamento');
         $this->db->where('id = '.$id);
         return $this->db->get()->result();
@@ -33,7 +33,7 @@ class Departamentos_model extends CI_Model {
 
     public function adicionar($titulo,  $link){
         $dados['titulo'] = $titulo;
-
+        $dados['sigla'] = $sigla;
         $dados['link'] = $link;
 
         return $this->db->insert('departamento',$dados);
@@ -44,9 +44,9 @@ class Departamentos_model extends CI_Model {
         return $this->db->delete('departamento');
     }
 
-    public function alterar($id, $titulo,  $link){
+    public function alterar($id, $titulo, $sigla,  $link){
         $dados['titulo'] = $titulo;
-    
+        $dados['sigla'] = $sigla;
         $dados['link'] = $link;
 
         $this->db->where('id',$id);

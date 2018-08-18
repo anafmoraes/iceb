@@ -29,7 +29,19 @@
                                  <br/>
                                  <label id="txt-data">Data</label>
                                  <input id="txt-data" name="txt-data" type="date" class="form-control" placeholder="Escolha a data">
-
+                                 <br/>
+                                 <label id="txt-destaque">Tipo de notícia</label>
+                                   <select name="txt-destaque" id="txt-destaque" class="form-control" onchange="alteraDiv()">
+                                     <option value="0">Normal</option>
+                                     <option value="1">Destaque</option>
+                                   </select>
+                                   <br/>
+                                   <div id="form_destaque" style="display:none;">
+                                           <div class="form-group">
+                                               <label id="txt-img">Imagem da Notícia</label>
+                                               <input type="file" class="form-control" id="txt-img" name="txt-img">
+                                           </div>
+                                       </div>
                              </div>
                              <button type="submit" class="btn btn-primary">Cadastrar</button>
                             <?php
@@ -102,6 +114,18 @@
 
 </div>
 <!-- /#wrapper -->
+
+<script type="text/javascript">
+    alteraDiv = function (){
+        if($('#txt-destaque').val() == 0){
+            $("#form_destaque").hide();
+        }
+
+        if($('#txt-destaque').val() == 1){
+            $("#form_destaque").show();
+        }
+    }
+</script>
 
 <!--
 

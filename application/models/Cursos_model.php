@@ -20,6 +20,7 @@ class Cursos_model extends CI_Model {
 	}
 
     public function listar_cursos(){
+        $this->db->order_by('modalidade','ASC');
         $this->db->order_by('titulo','ASC');
         return $this->db->get('cursos')->result();
     }

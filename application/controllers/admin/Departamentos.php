@@ -19,15 +19,15 @@ class Departamentos extends CI_Controller {
         $this->load->library('table');
         $dados['depts'] = $this->modeldept->listar_depts(); // Traz os dados do model noticias_model.
 
-		$dados['titulo']= 'Painel Administrativo';
+				$dados['titulo']= 'Painel Administrativo';
         $dados['subtitulo'] = 'Departamentos';
 
-		$this->load->view('backend/template/html-header', $dados);
+				$this->load->view('backend/template/html-header', $dados);
 
-		$this->load->view('backend/template/template');
+				$this->load->view('backend/template/template');
         $this->load->view('backend/departamentos');
 
-		$this->load->view('backend/template/html-footer');
+				$this->load->view('backend/template/html-footer');
 	}
 
     public function inserir()
@@ -35,19 +35,21 @@ class Departamentos extends CI_Controller {
         $this->load->library('form_validation');
         $this->form_validation->set_rules('txt-curso','Nome',
             'required|min_length[3]');
-
+				$this->form_validation->set_rules('txt-sigla','Sigla',
+            'required|min_length[3]');
         $this->form_validation->set_rules('txt-link','Link',
-            'required|min_length[10]');
-     
+            'required|min_length[3]');
+
         if($this->form_validation->run() == FALSE){
             $this->index();
         }
         else{
             $titulo = $this->input->post('txt-curso');
+						$sigla = $this->input->post('txt-sigla');
             $link = $this->input->post('txt-link');
 
 
-            if($this->modeldept->adicionar($titulo, $link)){
+            if($this->modeldept->adicionar($titulo, $sigla, $link)){
                 redirect(base_url('admin/departamentos'));
             }
             else{
@@ -72,12 +74,12 @@ class Departamentos extends CI_Controller {
         $dados['cursos'] = $this->modeldept->listar_dept($id); // Traz os dados do model noticias_model.
 
 		$dados['titulo']= 'Painel Administrativo';
-        $dados['subtitulo'] = 'Departamentos';
+    $dados['subtitulo'] = 'Departamentos';
 
 		$this->load->view('backend/template/html-header', $dados);
 
 		$this->load->view('backend/template/template');
-        $this->load->view('backend/alterar_departamentos');
+    $this->load->view('backend/alterar_departamentos');
 
 		$this->load->view('backend/template/html-footer');
     }
@@ -87,19 +89,21 @@ class Departamentos extends CI_Controller {
         $this->load->library('form_validation');
         $this->form_validation->set_rules('txt-curso','Nome',
             'required|min_length[3]');
-
+				$this->form_validation->set_rules('txt-sigla','Sigla',
+            'required|min_length[3]');
         $this->form_validation->set_rules('txt-link','Link',
-            'required|min_length[10]');
-       
+            'required|min_length[3]');
+
         if($this->form_validation->run() == FALSE){
             $this->index();
         }
         else{
             $titulo = $this->input->post('txt-curso');
+						$sigla = $this->input->post('txt-sigla');
             $link = $this->input->post('txt-link');
 
 
-            if($this->modeldept->alterar($id, $titulo,  $link)){
+            if($this->modeldept->alterar($id, $titulo, $sigla,  $link)){
                 redirect(base_url('admin/departamentos'));
             }
             else{

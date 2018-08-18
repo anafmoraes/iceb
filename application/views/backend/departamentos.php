@@ -22,7 +22,11 @@
                              <div class="form-group">
                                  <br/>
                                  <label id="txt-curso">Nome do Curso</label>
-                                 <input id="txt-curso" name="txt-curso" type="text" class="form-control" placeholder="Digite o nome do curso de Pós-graduação">
+                                 <input id="txt-curso" name="txt-curso" type="text" class="form-control" placeholder="Digite o nome do departamento">
+                                 <br/>
+
+                                 <label id="txt-sigla">Sigla</label>
+                                 <input id="txt-sigla" name="txt-sigla" type="text" class="form-control" placeholder="Sigla do departamento">
                                  <br/>
 
                                  <label id="txt-link">Link</label>

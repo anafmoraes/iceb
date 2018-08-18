@@ -26,6 +26,9 @@
                                  <label id="txt-curso">Nome do Departamento</label>
                                  <input id="txt-curso" name="txt-curso" type="text" class="form-control" placeholder="Digite o nome do curso" value="<?php echo $curso->titulo ?>">
                                  <br/>
+                                 <label id="txt-sigla">Sigla</label>
+                                 <input id="txt-sigla" name="txt-sigla" type="text" class="form-control" placeholder="Sigla do departamento" value="<?php echo $curso->sigla ?>">
+                                 <br/>
                                  <label id="txt-link">Link</label>
                                  <input id="txt-link" name="txt-link" type="text" class="form-control" placeholder="Matriz Curricular" value="<?php echo $curso->link ?>">
                                  <br/>
