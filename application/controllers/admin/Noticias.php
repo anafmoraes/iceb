@@ -39,6 +39,10 @@ class noticias extends CI_Controller {
             'required');
         $this->form_validation->set_rules('txt-data','Data',
             'required');
+				$this->form_validation->set_rules('txt-destaque','Destaque'
+            );
+				$this->form_validation->set_rules('txt-img','Imagem da Notícia'
+            );
         if($this->form_validation->run() == FALSE){
             $this->index();
         }
@@ -46,10 +50,24 @@ class noticias extends CI_Controller {
             $titulo = $this->input->post('txt-noticia');
             $link = $this->input->post('txt-link');
             $data = $this->input->post('txt-data');
+						$destaque = $this->input->post('txt-destaque');
 
-            if($this->modelnoticias->adicionar($titulo, $link, $data)){
+						$imagem = $_FILES['txt-img'];
+            $original_name = $_FILES['txt-img']['name'];
+            $new_name = strtr(utf8_decode($original_name), utf8_decode(' àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ'), '_aaaaaceeeeiiiinooooouuuuyyAAAAACEEEEIIIINOOOOOUUUUY');;;
+            $configuracao['upload_path'] = './assets/frontend/img/noticiasimg';
+            $configuracao['allowed_types'] = 'jpeg|png|jpg';
+            $configuracao['file_name'] = $new_name;
+            $configuracao['overwrite'] = TRUE;
+            $this->load->library('upload', $configuracao);
+            $this->upload->overwrite = true;
+            $this->upload->initialize($configuracao);
+
+            if($this->upload->do_upload('txt-img') && $destaque != 0){
+							if($this->modelnoticias->adicionar($titulo, $link, $data, $destaque, $imagem)){
                 redirect(base_url('admin/noticias'));
             }
+					}
             else{
                 echo "Houve um erro no sistema!";
             }
