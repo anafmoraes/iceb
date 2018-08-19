@@ -1,4 +1,6 @@
+
 jQuery(document).ready(function () {
+
 
 //Preloader active
     jQuery(window).load(function () {
